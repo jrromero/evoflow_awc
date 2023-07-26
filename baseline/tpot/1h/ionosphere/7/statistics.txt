@@ -1,0 +1,20 @@
+Best ind: 
+Pipeline(steps=[('onehotencoder',
+                 OneHotEncoder(minimum_fraction=0.05, sparse=False)),
+                ('fastica-1', FastICA(random_state=7, tol=0.25)),
+                ('fastica-2', FastICA(random_state=7, tol=0.30000000000000004)),
+                ('pca',
+                 PCA(iterated_power=4, random_state=7,
+                     svd_solver='randomized')),
+                ('extratreesclassifier',
+                 ExtraTreesClassifier(max_features=0.3, min_samples_split=4,
+                                      random_state=7))])
+Performance in train: 
+0.9498529411764706
+
+Performance dic: 
+{'accuracy_score': 0.9658119658119658, 'balanced_accuracy_score': 0.9628571428571429, 'macro_precision_score': 0.9628571428571429, 'macro_recall_score': 0.9628571428571429, 'macro_f1_score': 0.9628571428571429, 'micro_precision_score': 0.9658119658119658, 'micro_recall_score': 0.9658119658119658, 'micro_f1_score': 0.9658119658119658}
+Fit time: 3606.525069952011 seconds
+
+Distinct evaluated pipelines: 1893
+Mean pipeline size: 2.183306920232435

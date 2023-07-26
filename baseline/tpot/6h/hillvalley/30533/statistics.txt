@@ -1,0 +1,23 @@
+Best ind: 
+Pipeline(steps=[('normalizer', Normalizer(norm='max')),
+                ('stackingestimator-1',
+                 StackingEstimator(estimator=RandomForestClassifier(max_features=0.55,
+                                                                    min_samples_leaf=14,
+                                                                    min_samples_split=7,
+                                                                    random_state=30533))),
+                ('standardscaler', StandardScaler()),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=MLPClassifier(alpha=0.1,
+                                                           learning_rate_init=0.1,
+                                                           random_state=30533))),
+                ('kneighborsclassifier',
+                 KNeighborsClassifier(n_neighbors=10, weights='distance'))])
+Performance in train: 
+1.0
+
+Performance dic: 
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+Fit time: 21821.772678375244 seconds
+
+Distinct evaluated pipelines: 1515
+Mean pipeline size: 5.6052805280528055

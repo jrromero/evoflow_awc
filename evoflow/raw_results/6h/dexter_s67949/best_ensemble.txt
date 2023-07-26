@@ -1,0 +1,59 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.9277777777777778, 'balanced_accuracy_score': 0.9278637770897833, 'macro_precision_score': 0.927387431964374, 'macro_recall_score': 0.9278637770897833, 'macro_f1_score': 0.9275967697020329, 'micro_precision_score': 0.9277777777777778, 'micro_recall_score': 0.9277777777777778, 'micro_f1_score': 0.9277777777777778}
+('0', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67949,
+                            sampling_strategy='not minority')),
+                ('1', RobustScaler()), ('2', Normalizer(norm='l1')),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.4063797901521327,
+                                    n_estimators=95, random_state=67949))]))
+('1', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', SimpleImputer()),
+                ('3',
+                 MultinomialNB(alpha=0.6230410025037728, fit_prior=False))]))
+('2', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1', VarianceThreshold()),
+                ('2',
+                 LinearSVC(C=0.07337482033940551, class_weight='balanced',
+                           loss='hinge', random_state=67949,
+                           tol=0.030267494162265405))]))
+('3', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67949, sampling_strategy='minority')),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.4063797901521327,
+                                    random_state=67949))]))
+('4', Pipeline(steps=[('0', Normalizer(norm='l1')),
+                ('1',
+                 SGDClassifier(alpha=7.303757858350726e-06,
+                               epsilon=0.0017140061785052136,
+                               eta0=2.2466386040487545e-07,
+                               l1_ratio=1.5549966181808658e-09,
+                               power_t=0.05477724409890435, random_state=67949,
+                               tol=0.037846539722992595))]))
+('5', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67949,
+                            sampling_strategy='not minority')),
+                ('1', RobustScaler(with_scaling=False)),
+                ('2', Normalizer(norm='l1')),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.4063797901521327,
+                                    n_estimators=95, random_state=67949))]))
+('6', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67949,
+                            sampling_strategy='not minority')),
+                ('1', RobustScaler()), ('2', Normalizer(norm='l1')),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.4063797901521327,
+                                    n_estimators=88, random_state=67949))]))
+('7', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=67949,
+                       sampling_strategy='not majority')),
+                ('1',
+                 RandomOverSampler(random_state=67949,
+                                   sampling_strategy='not majority')),
+                ('2', MultinomialNB(alpha=87.45889300459064))]))
+('8', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.16249875307344538,
+                                    random_state=67949))]))
+('9', Pipeline(steps=[('0', MultinomialNB(alpha=87.45889300459064))]))

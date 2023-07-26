@@ -1,0 +1,57 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0']
+{'accuracy_score': 0.9444444444444444, 'balanced_accuracy_score': 0.9455108359133126, 'macro_precision_score': 0.9441906408198544, 'macro_recall_score': 0.9455108359133126, 'macro_f1_score': 0.9443826473859844, 'micro_precision_score': 0.9444444444444444, 'micro_recall_score': 0.9444444444444444, 'micro_f1_score': 0.9444444444444444}
+('0', Pipeline(steps=[('0', RobustScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 LinearSVC(C=0.7020288895071416, class_weight='balanced',
+                           dual=False, random_state=9,
+                           tol=0.0002797268960351546))]))
+('1', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=9,
+                       sampling_strategy='not majority')),
+                ('1',
+                 MLPClassifier(activation='tanh', alpha=0.001320234367932181,
+                               learning_rate_init=0.2638997126733204,
+                               random_state=9, solver='lbfgs'))]))
+('2', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=5.962786099298243,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=9))]))
+('3', Pipeline(steps=[('0', KNNImputer(n_neighbors=6)),
+                ('1',
+                 MLPClassifier(activation='tanh', alpha=0.0033516097331528806,
+                               learning_rate_init=0.006587388589427102,
+                               random_state=9, solver='lbfgs'))]))
+('4', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 LinearSVC(C=0.7020288895071416, class_weight='balanced',
+                           dual=False, random_state=9,
+                           tol=0.0002797268960351546))]))
+('5', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 LinearSVC(C=0.7020288895071416, class_weight='balanced',
+                           dual=False, random_state=9,
+                           tol=0.0002797268960351546))]))
+('6', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1', VarianceThreshold()),
+                ('2',
+                 LinearSVC(C=0.7020288895071416, class_weight='balanced',
+                           dual=False, random_state=9,
+                           tol=0.0002797268960351546))]))
+('7', Pipeline(steps=[('0',
+                 MLPClassifier(activation='tanh', alpha=0.0033516097331528806,
+                               learning_rate_init=0.006587388589427102,
+                               random_state=9, solver='lbfgs'))]))
+('8', Pipeline(steps=[('0', RobustScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 LogisticRegression(C=16.883376219480414,
+                                    class_weight='balanced', random_state=9))]))
+('9', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 SMOTE(k_neighbors=3, random_state=9,
+                       sampling_strategy='not minority')),
+                ('2', RobustScaler()),
+                ('3',
+                 LogisticRegression(C=4.807690253134309,
+                                    class_weight='balanced', random_state=9))]))

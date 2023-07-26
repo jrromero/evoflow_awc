@@ -1,0 +1,12 @@
+['1', '5', '3', '6', '4', '5', '1', '2', '2', '1', '1', '1', '2', '2', '2', '2', '4', '2', '1', '2', '5', '1', '2', '2', '2', '2', '2', '1', '6', '5', '2', '2', '6', '2', '2', '2', '6', '5', '6', '1', '1', '1', '6', '2', '1', '2', '1', '3', '1', '2', '2', '2', '2', '3', '1', '2', '4', '1', '2', '1', '1', '1', '6', '6', '1', '2', '2', '6', '6', '2', '1', '6']
+{'accuracy_score': 0.7638888888888888, 'balanced_accuracy_score': 0.7439149015235972, 'macro_precision_score': 0.7293476638304224, 'macro_recall_score': 0.7439149015235972, 'macro_f1_score': 0.7196849446849446, 'micro_precision_score': 0.7638888888888888, 'micro_recall_score': 0.7638888888888888, 'micro_f1_score': 0.763888888888889}
+randomOverSampler('minority');randomForest(46,'entropy','sqrt',3,2,False,'balanced_subsample')
+featureAgglomeration(9,'euclidean','average');randomForest(46,'entropy','sqrt',3,2,False,'balanced_subsample')
+featureAgglomeration(9,'euclidean','average');randomForest(18,'gini','sqrt',4,5,False,'balanced')
+featureAgglomeration(9,'euclidean','complete');randomForest(18,'gini','sqrt',4,5,False,'balanced')
+featureAgglomeration(9,'euclidean','average');maxAbsScaler();randomForest(18,'gini','sqrt',4,5,False,'balanced')
+featureAgglomeration(9,'euclidean','average');simpleImputer('most_frequent');maxAbsScaler();randomForest(18,'gini','sqrt',4,5,False,'balanced')
+featureAgglomeration(9,'euclidean','ward');randomForest(18,'gini','sqrt',4,5,False,'balanced')
+varianceThreshold();featureAgglomeration(9,'euclidean','average');randomForest(18,'gini','sqrt',4,5,False,'balanced')
+minMaxScaler();smote('not minority',5);maxAbsScaler();randomForest(26,'gini','log2',5,5,False,'balanced_subsample')
+maxAbsScaler();randomForest(18,'gini','sqrt',4,5,False,'balanced')

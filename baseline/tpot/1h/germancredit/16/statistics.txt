@@ -1,0 +1,31 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('variancethreshold',
+                                                 VarianceThreshold(threshold=0.05)),
+                                                ('featureunion',
+                                                 FeatureUnion(transformer_list=[('pipeline',
+                                                                                 Pipeline(steps=[('featureunion',
+                                                                                                  FeatureUnion(transformer_list=[('functiontransformer-1',
+                                                                                                                                  FunctionTransformer(func=<function copy at 0x7ff4b6f9e5f0>)),
+                                                                                                                                 ('functiontransformer-2',
+                                                                                                                                  F...nc=<function copy at 0x7ff4b6f9e5f0>))])),
+                                                                                                 ('polynomialfeatures',
+                                                                                                  PolynomialFeatures(include_bias=False)),
+                                                                                                 ('robustscaler',
+                                                                                                  RobustScaler()),
+                                                                                                 ('maxabsscaler',
+                                                                                                  MaxAbsScaler()),
+                                                                                                 ('binarizer',
+                                                                                                  Binarizer(threshold=0.2))])),
+                                                                                ('functiontransformer',
+                                                                                 FunctionTransformer(func=<function copy at 0x7ff4b6f9e5f0>))]))])),
+                ('bernoullinb', BernoulliNB(alpha=0.1, fit_prior=False))])
+Performance in train: 
+0.7602043606799704
+
+Performance dic: 
+{'accuracy_score': 0.7233333333333334, 'balanced_accuracy_score': 0.7052434835320267, 'macro_precision_score': 0.6922767497988738, 'macro_recall_score': 0.7052434835320267, 'macro_f1_score': 0.6966337309177744, 'micro_precision_score': 0.7233333333333334, 'micro_recall_score': 0.7233333333333334, 'micro_f1_score': 0.7233333333333334}
+Fit time: 3611.2381319999695 seconds
+
+Distinct evaluated pipelines: 1944
+Mean pipeline size: 30.338991769547324

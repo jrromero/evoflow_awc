@@ -1,0 +1,12 @@
+['1', '2', '3', '6', '4', '5', '1', '2', '1', '1', '1', '1', '2', '2', '2', '2', '4', '2', '1', '2', '5', '1', '2', '2', '2', '2', '2', '6', '6', '5', '2', '2', '6', '2', '2', '2', '6', '2', '6', '3', '1', '1', '6', '2', '1', '2', '2', '3', '1', '2', '2', '2', '2', '3', '1', '2', '4', '1', '2', '1', '2', '1', '6', '6', '1', '2', '2', '6', '6', '2', '1', '6']
+{'accuracy_score': 0.7777777777777778, 'balanced_accuracy_score': 0.748652917131178, 'macro_precision_score': 0.7777777777777778, 'macro_recall_score': 0.748652917131178, 'macro_f1_score': 0.754254548367248, 'micro_precision_score': 0.7777777777777778, 'micro_recall_score': 0.7777777777777778, 'micro_f1_score': 0.7777777777777778}
+maxAbsScaler();randomOverSampler('not majority');randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+maxAbsScaler();randomOverSampler('not majority');varianceThreshold();randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+standardScaler(True,False);randomOverSampler('not majority');robustScaler(False,True);randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+minMaxScaler();randomOverSampler('not majority');standardScaler(True,False);randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+maxAbsScaler();randomOverSampler('not majority');robustScaler(False,False);randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+maxAbsScaler();randomOverSampler('not majority');simpleImputer('mean');randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+simpleImputer('mean');randomOverSampler('not majority');maxAbsScaler();randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+simpleImputer('most_frequent');randomOverSampler('not majority');maxAbsScaler();randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+maxAbsScaler();randomOverSampler('not majority');standardScaler(False,False);randomForest(22,'gini','log2',6,3,False,'balanced_subsample')
+varianceThreshold();maxAbsScaler();randomOverSampler('not majority');randomForest(22,'gini','log2',6,3,False,'balanced_subsample')

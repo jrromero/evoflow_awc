@@ -1,0 +1,39 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator-1',
+                 StackingEstimator(estimator=GradientBoostingClassifier(max_depth=5,
+                                                                        max_features=0.9000000000000001,
+                                                                        min_samples_leaf=12,
+                                                                        min_samples_split=16,
+                                                                        random_state=76083,
+                                                                        subsample=0.8))),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=XGBClassifier(base_score=0.5,
+                                                           booster='gbtree',
+                                                           colsample_bylevel=1,
+                                                           colsample_bynode=1...
+                                                           monotone_constraints='()',
+                                                           n_estimators=100,
+                                                           n_jobs=1,
+                                                           num_parallel_tree=1,
+                                                           random_state=76083,
+                                                           reg_alpha=0,
+                                                           reg_lambda=1,
+                                                           scale_pos_weight=1,
+                                                           subsample=1.0,
+                                                           tree_method='exact',
+                                                           validate_parameters=1,
+                                                           verbosity=0))),
+                ('randomforestclassifier',
+                 RandomForestClassifier(bootstrap=False, max_features=0.05,
+                                        min_samples_leaf=14,
+                                        min_samples_split=9,
+                                        random_state=76083))])
+Performance in train: 
+0.9484516878071669
+
+Performance dic: 
+{'accuracy_score': 0.9498044328552803, 'balanced_accuracy_score': 0.9478654845830663, 'macro_precision_score': 0.9470942207862603, 'macro_recall_score': 0.9478654845830663, 'macro_f1_score': 0.947475728457547, 'micro_precision_score': 0.9498044328552803, 'micro_recall_score': 0.9498044328552803, 'micro_f1_score': 0.9498044328552803}
+Fit time: 3613.1962480545044 seconds
+
+Distinct evaluated pipelines: 446
+Mean pipeline size: 1.7735426008968609

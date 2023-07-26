@@ -1,0 +1,67 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.7, 'balanced_accuracy_score': 0.672155991109315, 'macro_precision_score': 0.6643518518518519, 'macro_recall_score': 0.672155991109315, 'macro_f1_score': 0.6673402000887092, 'micro_precision_score': 0.7, 'micro_recall_score': 0.7, 'micro_f1_score': 0.7}
+('0', Pipeline(steps=[('0', StandardScaler(with_mean=False, with_std=False)),
+                ('1', Normalizer(norm='l1')),
+                ('2',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced',
+                                        criterion='entropy',
+                                        max_features='log2', min_samples_leaf=6,
+                                        min_samples_split=9, n_estimators=44,
+                                        random_state=43384))]))
+('1', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('2', StandardScaler(with_mean=False, with_std=False)),
+                ('3', BernoulliNB(alpha=0.6888820640849247, fit_prior=False))]))
+('2', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('1', KNNImputer(n_neighbors=7, weights='distance')),
+                ('2',
+                 RandomOverSampler(random_state=43384,
+                                   sampling_strategy='not majority')),
+                ('3',
+                 BernoulliNB(alpha=0.013527824433126594, fit_prior=False))]))
+('3', Pipeline(steps=[('0', Normalizer()), ('1', MinMaxScaler()),
+                ('2',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced_subsample',
+                                        criterion='entropy',
+                                        max_features='sqrt', min_samples_leaf=9,
+                                        min_samples_split=7, n_estimators=85,
+                                        random_state=43384))]))
+('4', Pipeline(steps=[('0', MinMaxScaler()), ('1', MaxAbsScaler()),
+                ('2', StandardScaler(with_std=False)),
+                ('3', BernoulliNB(alpha=0.6014735844528811, fit_prior=False))]))
+('5', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 RandomOverSampler(random_state=43384,
+                                   sampling_strategy='minority')),
+                ('2', VarianceThreshold()),
+                ('3', BernoulliNB(alpha=0.6171908518461612, fit_prior=False))]))
+('6', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('1',
+                 RandomOverSampler(random_state=43384,
+                                   sampling_strategy='minority')),
+                ('2', StandardScaler(with_std=False)),
+                ('3', BernoulliNB(alpha=0.14031241589860113, fit_prior=False))]))
+('7', Pipeline(steps=[('0',
+                 RandomForestClassifier(class_weight='balanced',
+                                        criterion='entropy',
+                                        max_features='log2', min_samples_leaf=5,
+                                        min_samples_split=9, n_estimators=44,
+                                        random_state=43384))]))
+('8', Pipeline(steps=[('0', RobustScaler(with_scaling=False)),
+                ('1',
+                 RandomOverSampler(random_state=43384,
+                                   sampling_strategy='not majority')),
+                ('2', StandardScaler(with_mean=False, with_std=False)),
+                ('3',
+                 BernoulliNB(alpha=0.019895384808615836, fit_prior=False))]))
+('9', Pipeline(steps=[('0', VarianceThreshold()), ('1', MinMaxScaler()),
+                ('2', StandardScaler()),
+                ('3', BernoulliNB(alpha=0.5266748788142447, fit_prior=False))]))

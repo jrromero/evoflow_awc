@@ -1,0 +1,36 @@
+['1', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '1', '0', '1', '0', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1', '1', '0', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1']
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+('0', Pipeline(steps=[('0', Normalizer()), ('1', MinMaxScaler()),
+                ('2', KNeighborsClassifier(n_neighbors=1, weights='distance'))]))
+('1', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=32764,
+                                   sampling_strategy='minority')),
+                ('1', Normalizer()),
+                ('2', KNeighborsClassifier(n_neighbors=1))]))
+('2', Pipeline(steps=[('0', Normalizer()),
+                ('1', SimpleImputer(strategy='most_frequent')),
+                ('2', KNeighborsClassifier(n_neighbors=1, weights='distance'))]))
+('3', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 Nystroem(coef0=0.13281625001632924, degree=3,
+                          gamma=0.004979484609592204, kernel='cosine',
+                          n_components=83, random_state=32764)),
+                ('2', MinMaxScaler()),
+                ('3', KNeighborsClassifier(n_neighbors=1))]))
+('4', Pipeline(steps=[('0', KNNImputer(n_neighbors=4, weights='distance')),
+                ('1', Normalizer()),
+                ('2', KNeighborsClassifier(n_neighbors=1))]))
+('5', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer()),
+                ('2', KNeighborsClassifier(n_neighbors=1))]))
+('6', Pipeline(steps=[('0', Normalizer(norm='max')),
+                ('1', KNeighborsClassifier(n_neighbors=1, weights='distance'))]))
+('7', Pipeline(steps=[('0', Normalizer(norm='max')), ('1', MinMaxScaler()),
+                ('2', KNeighborsClassifier(n_neighbors=1, weights='distance'))]))
+('8', Pipeline(steps=[('0', Normalizer(norm='max')),
+                ('1',
+                 KNeighborsClassifier(n_neighbors=4, p=1, weights='distance'))]))
+('9', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=32764,
+                                   sampling_strategy='minority')),
+                ('1', Normalizer()),
+                ('2', KNeighborsClassifier(n_neighbors=1, weights='distance'))]))

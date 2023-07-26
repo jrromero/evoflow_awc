@@ -1,0 +1,67 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0']
+{'accuracy_score': 0.9388888888888889, 'balanced_accuracy_score': 0.9402476780185758, 'macro_precision_score': 0.9388888888888889, 'macro_recall_score': 0.9402476780185758, 'macro_f1_score': 0.9388416988416989, 'micro_precision_score': 0.9388888888888889, 'micro_recall_score': 0.9388888888888889, 'micro_f1_score': 0.9388888888888889}
+('0', Pipeline(steps=[('0', RobustScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 LinearSVC(C=0.7020288895071416, class_weight='balanced',
+                           dual=False, random_state=9,
+                           tol=0.0002797268960351546))]))
+('1', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 PassiveAggressiveClassifier(C=1.4853083094621136,
+                                             fit_intercept=False,
+                                             random_state=9))]))
+('2', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=9,
+                       sampling_strategy='not majority')),
+                ('1',
+                 MLPClassifier(activation='tanh', alpha=0.001320234367932181,
+                               learning_rate_init=0.2638997126733204,
+                               random_state=9, solver='lbfgs'))]))
+('3', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=9,
+                       sampling_strategy='minority')),
+                ('1', RobustScaler()), ('2', VarianceThreshold()),
+                ('3',
+                 PassiveAggressiveClassifier(C=2.062476112049928e-05,
+                                             loss='squared_hinge',
+                                             random_state=9))]))
+('4', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.007387864046564583,
+                                             fit_intercept=False,
+                                             random_state=9))]))
+('5', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1', SimpleImputer(strategy='median')),
+                ('2', KNNImputer(n_neighbors=4)),
+                ('3',
+                 PassiveAggressiveClassifier(C=3.0430481999721595,
+                                             random_state=9))]))
+('6', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=9,
+                       sampling_strategy='minority')),
+                ('1', RobustScaler()), ('2', VarianceThreshold()),
+                ('3',
+                 PassiveAggressiveClassifier(C=0.0013613565785144431,
+                                             loss='squared_hinge',
+                                             random_state=9))]))
+('7', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.10943895675758337,
+                                             fit_intercept=False,
+                                             random_state=9))]))
+('8', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=9,
+                       sampling_strategy='minority')),
+                ('1', RobustScaler(with_centering=False)),
+                ('2', VarianceThreshold()),
+                ('3',
+                 PassiveAggressiveClassifier(C=0.0013613565785144431,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=9))]))
+('9', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1', SimpleImputer(strategy='most_frequent')),
+                ('2', KNNImputer(n_neighbors=4)),
+                ('3',
+                 PassiveAggressiveClassifier(C=0.12180661704901083,
+                                             random_state=9))]))

@@ -1,0 +1,54 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.9388888888888889, 'balanced_accuracy_score': 0.9396284829721362, 'macro_precision_score': 0.9384881422924901, 'macro_recall_score': 0.9396284829721362, 'macro_f1_score': 0.9387963277796668, 'micro_precision_score': 0.9388888888888889, 'micro_recall_score': 0.9388888888888889, 'micro_f1_score': 0.9388888888888889}
+('0', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.00015026240117807917,
+                                             fit_intercept=False,
+                                             random_state=45139))]))
+('1', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=2.260294011252037,
+                                             fit_intercept=False,
+                                             random_state=45139))]))
+('2', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=45139,
+                                   sampling_strategy='minority')),
+                ('1',
+                 RandomUnderSampler(random_state=45139, replacement=True,
+                                    sampling_strategy='not minority')),
+                ('2',
+                 MLPClassifier(activation='logistic',
+                               alpha=0.0007960290507030785,
+                               learning_rate_init=0.013160981503738579,
+                               random_state=45139, solver='lbfgs'))]))
+('3', Pipeline(steps=[('0',
+                 PCA(n_components=0.7911965566271888, random_state=45139,
+                     whiten=True)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.00015026240117807917,
+                                             fit_intercept=False,
+                                             random_state=45139))]))
+('4', Pipeline(steps=[('0', SimpleImputer()), ('1', KNNImputer(n_neighbors=4)),
+                ('2',
+                 RandomUnderSampler(random_state=45139,
+                                    sampling_strategy='not minority')),
+                ('3', MultinomialNB(alpha=28.007928370139354))]))
+('5', Pipeline(steps=[('0', SimpleImputer(strategy='most_frequent')),
+                ('1', StandardScaler(with_std=False)),
+                ('2',
+                 LinearSVC(C=20.347726314528664, class_weight='balanced',
+                           dual=False, random_state=45139,
+                           tol=0.0006465518479115075))]))
+('6', Pipeline(steps=[('0', MultinomialNB(alpha=53.17638065074564, fit_prior=False))]))
+('7', Pipeline(steps=[('0', SimpleImputer()), ('1', VarianceThreshold()),
+                ('2',
+                 LinearSVC(C=0.1920004519516723, class_weight='balanced',
+                           dual=False, random_state=45139,
+                           tol=0.0006465518479115075))]))
+('8', Pipeline(steps=[('0', SimpleImputer(strategy='median')),
+                ('1', VarianceThreshold()),
+                ('2', MultinomialNB(alpha=15.318655327893056))]))
+('9', Pipeline(steps=[('0', SimpleImputer()), ('1', VarianceThreshold()),
+                ('2',
+                 LinearSVC(C=0.1920004519516723, dual=False, random_state=45139,
+                           tol=0.0006465518479115075))]))

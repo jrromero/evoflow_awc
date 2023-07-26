@@ -1,0 +1,68 @@
+['0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '3', '1', '3', '3', '1', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '9', '9', '4', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '3', '3', '7', '3', '3', '3', '3', '3', '6', '1', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '6', '1', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '9', '9', '9', '9', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '2', '9', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '8', '8', '2', '8', '8', '7', '8', '8', '9', '9', '9', '9', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '5', '3', '3', '3', '3', '3', '5', '4', '4', '2', '4', '4', '1', '4', '4', '4', '4', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '9', '9', '8', '9', '9', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '4', '1', '1', '1', '1', '1', '1', '7', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '3', '5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '5', '9', '9', '3', '9', '9', '9', '9', '9', '8', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '2', '1', '1', '1', '1', '1', '1', '1', '2', '2', '4', '2', '4', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '9', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '0', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '1', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '3', '8', '8', '9', '9', '9', '9', '9', '9', '9', '9', '9', '3', '9']
+{'accuracy_score': 0.9329140461215933, 'balanced_accuracy_score': 0.9288364787896854, 'macro_precision_score': 0.9310692303743267, 'macro_recall_score': 0.9288364787896854, 'macro_f1_score': 0.9296620889040843, 'micro_precision_score': 0.9329140461215933, 'micro_recall_score': 0.9329140461215933, 'micro_f1_score': 0.9329140461215933}
+('0', Pipeline(steps=[('0', SelectFwe(alpha=0.002565145955898838)),
+                ('1',
+                 ExtraTreesClassifier(class_weight='balanced_subsample',
+                                      criterion='entropy', max_features='log2',
+                                      n_estimators=94, random_state=43384))]))
+('1', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 ExtraTreesClassifier(criterion='entropy', max_features='log2',
+                                      n_estimators=92, random_state=43384))]))
+('2', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 SMOTE(random_state=43384, sampling_strategy='not minority')),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced_subsample',
+                                      max_features='log2', n_estimators=82,
+                                      random_state=43384))]))
+('3', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384, sampling_strategy='minority')),
+                ('1', VarianceThreshold()),
+                ('2',
+                 ExtraTreesClassifier(max_features='log2', min_samples_split=3,
+                                      n_estimators=92, random_state=43384))]))
+('4', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('1', VarianceThreshold()),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced_subsample',
+                                      max_features='log2', min_samples_split=3,
+                                      n_estimators=92, random_state=43384))]))
+('5', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 RandomOverSampler(random_state=43384,
+                                   sampling_strategy='not majority')),
+                ('3',
+                 MLPClassifier(activation='tanh', alpha=0.008716012390095743,
+                               learning_rate_init=0.0749232640007894,
+                               random_state=43384))]))
+('6', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 RandomOverSampler(random_state=43384,
+                                   sampling_strategy='not minority')),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='sqrt', n_estimators=92,
+                                      random_state=43384))]))
+('7', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_split=3,
+                                      n_estimators=83, random_state=43384))]))
+('8', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('1', VarianceThreshold()),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_split=3,
+                                      n_estimators=92, random_state=43384))]))
+('9', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 ExtraTreesClassifier(criterion='entropy', max_features='log2',
+                                      n_estimators=74, random_state=43384))]))

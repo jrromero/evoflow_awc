@@ -1,0 +1,25 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('variancethreshold',
+                                                 VarianceThreshold(threshold=0.1)),
+                                                ('pipeline',
+                                                 Pipeline(steps=[('standardscaler',
+                                                                  StandardScaler()),
+                                                                 ('featureagglomeration-1',
+                                                                  FeatureAgglomeration(affinity='l1',
+                                                                                       linkage='average')),
+                                                                 ('featureagglomeration-2',
+                                                                  FeatureAgglomeration(affinity='manhattan',
+                                                                                       linkage='average'))]))])),
+                ('binarizer', Binarizer(threshold=0.9)),
+                ('mlpclassifier',
+                 MLPClassifier(learning_rate_init=0.1, random_state=45139))])
+Performance in train: 
+0.9234578444994461
+
+Performance dic: 
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+Fit time: 21612.04169869423 seconds
+
+Distinct evaluated pipelines: 6605
+Mean pipeline size: 3.237547312641938

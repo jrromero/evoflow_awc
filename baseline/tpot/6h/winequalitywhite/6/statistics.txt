@@ -1,0 +1,31 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7f1ddd9365f0>)),
+                                                ('featureunion',
+                                                 FeatureUnion(transformer_list=[('pipeline',
+                                                                                 Pipeline(steps=[('featureunion',
+                                                                                                  FeatureUnion(transformer_list=[('functiontransformer',
+                                                                                                                                  FunctionTransformer(func=<function copy at 0x7f1ddd9365f0>)),
+                                                                                                                                 ('p...
+                                                                                                                                                   RobustScaler())]))])),
+                                                                                                 ('stackingestimator',
+                                                                                                  StackingEstimator(estimator=RandomForestClassifier(criterion='entropy',
+                                                                                                                                                     max_features=0.35000000000000003,
+                                                                                                                                                     min_samples_leaf=2,
+                                                                                                                                                     min_samples_split=13,
+                                                                                                                                                     random_state=6))),
+                                                                                                 ('minmaxscaler',
+                                                                                                  MinMaxScaler())])),
+                                                                                ('functiontransformer',
+                                                                                 FunctionTransformer(func=<function copy at 0x7f1ddd9365f0>))]))])),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6350056662512462
+
+Performance dic: 
+{'accuracy_score': 0.562287270251872, 'balanced_accuracy_score': 0.3858626356525516, 'macro_precision_score': 0.33224430892455786, 'macro_recall_score': 0.3858626356525516, 'macro_f1_score': 0.3466913865471851, 'micro_precision_score': 0.562287270251872, 'micro_recall_score': 0.562287270251872, 'micro_f1_score': 0.562287270251872}
+Fit time: 21660.379942893982 seconds
+
+Distinct evaluated pipelines: 2600
+Mean pipeline size: 12.44

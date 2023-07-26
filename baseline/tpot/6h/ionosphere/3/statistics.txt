@@ -1,0 +1,32 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('pca',
+                                                 PCA(iterated_power=4,
+                                                     random_state=3,
+                                                     svd_solver='randomized')),
+                                                ('stackingestimator',
+                                                 StackingEstimator(estimator=SGDClassifier(alpha=0.01,
+                                                                                           eta0=0.01,
+                                                                                           fit_intercept=False,
+                                                                                           l1_ratio=0.25,
+                                                                                           learning_rate='invscaling',
+                                                                                           loss='modified_huber',
+                                                                                           penalty='elasticnet',
+                                                                                           power_t=1.0,
+                                                                                           random_state=3)))])),
+                ('gradientboostingclassifier',
+                 GradientBoostingClassifier(learning_rate=1.0, max_depth=4,
+                                            max_features=1.0,
+                                            min_samples_leaf=6,
+                                            min_samples_split=18,
+                                            random_state=3,
+                                            subsample=0.9500000000000001))])
+Performance in train: 
+0.9624019607843138
+
+Performance dic: 
+{'accuracy_score': 0.9572649572649573, 'balanced_accuracy_score': 0.9457142857142857, 'macro_precision_score': 0.9615384615384615, 'macro_recall_score': 0.9457142857142857, 'macro_f1_score': 0.95279593318809, 'micro_precision_score': 0.9572649572649573, 'micro_recall_score': 0.9572649572649573, 'micro_f1_score': 0.9572649572649573}
+Fit time: 21669.945376634598 seconds
+
+Distinct evaluated pipelines: 7014
+Mean pipeline size: 3.212147134302823

@@ -1,0 +1,55 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.72, 'balanced_accuracy_score': 0.7106486158819963, 'macro_precision_score': 0.6930555555555555, 'macro_recall_score': 0.7106486158819963, 'macro_f1_score': 0.6973918055622268, 'micro_precision_score': 0.72, 'micro_recall_score': 0.72, 'micro_f1_score': 0.72}
+('0', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 FastICA(n_components=53, random_state=67822, whiten=False)),
+                ('2', RobustScaler()),
+                ('3', GaussianNB(var_smoothing=2.8852696243776886e-09))]))
+('1', Pipeline(steps=[('0', FastICA(fun='exp', n_components=14, random_state=67822)),
+                ('1',
+                 RandomOverSampler(random_state=67822,
+                                   sampling_strategy='minority')),
+                ('2', GaussianNB(var_smoothing=1.4725035205425112e-09))]))
+('2', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 SMOTETomek(random_state=67822,
+                            sampling_strategy='not majority')),
+                ('2',
+                 RandomOverSampler(random_state=67822,
+                                   sampling_strategy='minority')),
+                ('3', GaussianNB(var_smoothing=1.4725035205425112e-09))]))
+('3', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67822,
+                            sampling_strategy='not majority')),
+                ('1',
+                 QuadraticDiscriminantAnalysis(reg_param=0.14094177349267012))]))
+('4', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67822,
+                            sampling_strategy='not majority')),
+                ('1', GaussianNB(var_smoothing=1.4725035205425112e-09))]))
+('5', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67822, sampling_strategy='minority')),
+                ('1', GaussianNB(var_smoothing=1.4725035205425112e-09))]))
+('6', Pipeline(steps=[('0', MinMaxScaler()), ('1', KNNImputer(n_neighbors=6)),
+                ('2', MaxAbsScaler()),
+                ('3', BernoulliNB(alpha=2.746219069604269, fit_prior=False))]))
+('7', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67822,
+                            sampling_strategy='not majority')),
+                ('1', MaxAbsScaler()),
+                ('2',
+                 RandomUnderSampler(random_state=67822, replacement=True,
+                                    sampling_strategy='not minority')),
+                ('3',
+                 MLPClassifier(activation='logistic',
+                               alpha=0.001243778713495717,
+                               learning_rate_init=0.006296480009646411,
+                               random_state=67822, solver='lbfgs'))]))
+('8', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=67822,
+                            sampling_strategy='not majority')),
+                ('1', GaussianNB(var_smoothing=7.2074241615036e-09))]))
+('9', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 FastICA(n_components=53, random_state=67822, whiten=False)),
+                ('2', GaussianNB(var_smoothing=2.8852696243776886e-09))]))

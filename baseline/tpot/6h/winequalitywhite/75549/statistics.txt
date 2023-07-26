@@ -1,0 +1,24 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer-1',
+                                                 FunctionTransformer(func=<function copy at 0x7f35e3c4fe60>)),
+                                                ('functiontransformer-2',
+                                                 FunctionTransformer(func=<function copy at 0x7f35e3c4fe60>))])),
+                ('stackingestimator',
+                 StackingEstimator(estimator=ExtraTreesClassifier(bootstrap=True,
+                                                                  criterion='entropy',
+                                                                  max_features=0.7000000000000001,
+                                                                  min_samples_leaf=5,
+                                                                  min_samples_split=14,
+                                                                  random_state=75549))),
+                ('polynomialfeatures', PolynomialFeatures(include_bias=False)),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6304636630521397
+
+Performance dic: 
+{'accuracy_score': 0.5003403675970047, 'balanced_accuracy_score': 0.35216524713000724, 'macro_precision_score': 0.30374321981254754, 'macro_recall_score': 0.35216524713000724, 'macro_f1_score': 0.31254381290906974, 'micro_precision_score': 0.5003403675970047, 'micro_recall_score': 0.5003403675970047, 'micro_f1_score': 0.5003403675970047}
+Fit time: 21615.265226840973 seconds
+
+Distinct evaluated pipelines: 2502
+Mean pipeline size: 8.349320543565147

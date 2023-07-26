@@ -1,0 +1,23 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator-1',
+                 StackingEstimator(estimator=BernoulliNB(alpha=100.0,
+                                                         fit_prior=False))),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=DecisionTreeClassifier(criterion='entropy',
+                                                                    max_depth=1,
+                                                                    min_samples_leaf=12,
+                                                                    min_samples_split=8,
+                                                                    random_state=32764))),
+                ('randomforestclassifier',
+                 RandomForestClassifier(bootstrap=False, max_features=0.4,
+                                        min_samples_leaf=3,
+                                        random_state=32764))])
+Performance in train: 
+0.8659452066776628
+
+Performance dic: 
+{'accuracy_score': 0.7916666666666666, 'balanced_accuracy_score': 0.7567354143441101, 'macro_precision_score': 0.79898058930317, 'macro_recall_score': 0.7567354143441101, 'macro_f1_score': 0.7685818080554924, 'micro_precision_score': 0.7916666666666666, 'micro_recall_score': 0.7916666666666666, 'micro_f1_score': 0.7916666666666666}
+Fit time: 3606.669831752777 seconds
+
+Distinct evaluated pipelines: 2482
+Mean pipeline size: 4.0656728444802575

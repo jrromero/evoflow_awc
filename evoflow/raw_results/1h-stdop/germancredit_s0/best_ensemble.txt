@@ -1,0 +1,66 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.7166666666666667, 'balanced_accuracy_score': 0.7029197817740958, 'macro_precision_score': 0.6876138433515483, 'macro_recall_score': 0.7029197817740958, 'macro_f1_score': 0.6919359710057384, 'micro_precision_score': 0.7166666666666667, 'micro_recall_score': 0.7166666666666667, 'micro_f1_score': 0.7166666666666667}
+('0', Pipeline(steps=[('0', SelectPercentile(percentile=60.87803823431123)),
+                ('1',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('1', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', SelectPercentile(percentile=60.87803823431123)),
+                ('2',
+                 FastICA(algorithm='deflation', fun='cube', n_components=94,
+                         random_state=0)),
+                ('3',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('2', Pipeline(steps=[('0', SelectPercentile(percentile=70.62778102813868)),
+                ('1',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('3', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', SelectPercentile(percentile=59.688099307009246)),
+                ('2',
+                 FastICA(algorithm='deflation', fun='cube', n_components=94,
+                         random_state=0)),
+                ('3',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('4', Pipeline(steps=[('0', SelectPercentile(percentile=60.87803823431123)),
+                ('1',
+                 LinearSVC(C=7.170165616837634, class_weight='balanced',
+                           dual=False, penalty='l1', random_state=0,
+                           tol=0.007593515095021363))]))
+('5', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', SelectPercentile(percentile=60.87803823431123)),
+                ('2',
+                 FastICA(algorithm='deflation', fun='cube', n_components=47,
+                         random_state=0)),
+                ('3',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('6', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', SelectPercentile(percentile=60.87803823431123)),
+                ('2',
+                 Nystroem(coef0=-0.7867395385950542, degree=3,
+                          gamma=0.006928749591288204, kernel='poly',
+                          n_components=91, random_state=0)),
+                ('3',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('7', Pipeline(steps=[('0', SelectPercentile(percentile=61.073870829729124)),
+                ('1',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('8', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', SelectPercentile(percentile=49.64304468596911)),
+                ('2',
+                 FastICA(algorithm='deflation', fun='cube', n_components=94,
+                         random_state=0)),
+                ('3',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('9', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', SelectPercentile(percentile=59.688099307009246)),
+                ('2', FastICA(fun='exp', n_components=54, random_state=0)),
+                ('3',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))

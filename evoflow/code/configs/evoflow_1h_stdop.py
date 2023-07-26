@@ -1,0 +1,11 @@
+{"grammar": "grammars/classification.xml",
+ "generations": 100,
+ "pop_size": 100,
+ "cxpb": 0.8,
+ "mutpb": 0.2,
+ "timeout": 3600,
+ "eval_timeout": 360,
+ "elite_size": 10,
+ "crossover": "cx_branches",
+ "mutation": "mut_branch",
+ "outdir": "output/evoflow-1h-stdop"}

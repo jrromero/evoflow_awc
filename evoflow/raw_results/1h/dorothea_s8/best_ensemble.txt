@@ -1,0 +1,67 @@
+['0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+{'accuracy_score': 0.9449275362318841, 'balanced_accuracy_score': 0.748015873015873, 'macro_precision_score': 0.7596153846153846, 'macro_recall_score': 0.748015873015873, 'macro_f1_score': 0.7536547784584162, 'micro_precision_score': 0.9449275362318841, 'micro_recall_score': 0.9449275362318841, 'micro_f1_score': 0.9449275362318841}
+('0', Pipeline(steps=[('0',
+                 SGDClassifier(alpha=5.449207855899399e-06,
+                               class_weight='balanced',
+                               epsilon=0.07208800250714696,
+                               eta0=0.00681594772611444,
+                               l1_ratio=1.8136618728446198e-05,
+                               loss='perceptron', power_t=0.07516241470857109,
+                               random_state=8, tol=0.04603317276167841))]))
+('1', Pipeline(steps=[('0',
+                 SGDClassifier(alpha=2.6742906171020926e-06,
+                               class_weight='balanced',
+                               epsilon=1.0835439328321801e-05,
+                               eta0=0.015686680734499747,
+                               l1_ratio=4.5087217614490893e-07,
+                               loss='perceptron', power_t=0.11636686627427545,
+                               random_state=8, tol=1.856786862317147e-05))]))
+('2', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='cube', n_components=48,
+                         random_state=8)),
+                ('1', SelectPercentile(percentile=30.25784810205308)),
+                ('2', Normalizer()),
+                ('3',
+                 KNeighborsClassifier(n_neighbors=13, weights='distance'))]))
+('3', Pipeline(steps=[('0', SelectFwe(alpha=0.030201173216271467)),
+                ('1', FeatureAgglomeration(linkage='complete', n_clusters=19)),
+                ('2',
+                 MLPClassifier(activation='tanh', alpha=0.012309754177094751,
+                               learning_rate_init=0.5853015879129175,
+                               random_state=8, solver='sgd'))]))
+('4', Pipeline(steps=[('0',
+                 SGDClassifier(alpha=6.544938666460504e-06,
+                               epsilon=5.130558280071865e-05,
+                               eta0=0.0023259111145761727,
+                               l1_ratio=0.06582398037263909,
+                               loss='modified_huber',
+                               power_t=0.3143743096628591, random_state=8,
+                               tol=0.00044038587121361704))]))
+('5', Pipeline(steps=[('0', MinMaxScaler()), ('1', Normalizer(norm='l1')),
+                ('2', KNNImputer(n_neighbors=3)),
+                ('3', KNeighborsClassifier(n_neighbors=10, p=1))]))
+('6', Pipeline(steps=[('0', SelectFwe(alpha=0.02036510484322373)),
+                ('1',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      criterion='entropy', max_features='log2',
+                                      min_samples_leaf=11, min_samples_split=10,
+                                      n_estimators=27, random_state=8))]))
+('7', Pipeline(steps=[('0',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced',
+                                        criterion='entropy',
+                                        max_features='sqrt',
+                                        min_samples_leaf=14,
+                                        min_samples_split=5, n_estimators=39,
+                                        random_state=8))]))
+('8', Pipeline(steps=[('0',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='sqrt', min_samples_leaf=19,
+                                      min_samples_split=18, n_estimators=78,
+                                      random_state=8))]))
+('9', Pipeline(steps=[('0', VarianceThreshold()), ('1', RobustScaler()),
+                ('2', StandardScaler(with_std=False)),
+                ('3',
+                 PassiveAggressiveClassifier(C=8.02486964416513,
+                                             loss='squared_hinge',
+                                             random_state=8))]))

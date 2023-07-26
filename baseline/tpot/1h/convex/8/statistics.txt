@@ -1,0 +1,29 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator',
+                 StackingEstimator(estimator=RandomForestClassifier(criterion='entropy',
+                                                                    max_features=0.2,
+                                                                    min_samples_leaf=12,
+                                                                    min_samples_split=13,
+                                                                    random_state=8))),
+                ('xgbclassifier',
+                 XGBClassifier(base_score=0.5, booster='gbtree',
+                               colsample_bylevel=1, colsample_bynode=1,
+                               colsample_bytree=1, gamma=0, gpu_id=-1,
+                               importance_type='gain',
+                               interaction_constraints='', learning_rate=1.0,
+                               max_delta_step=0, max_depth=9,
+                               min_child_weight=15, missing=nan,
+                               monotone_constraints='()', n_estimators=100,
+                               n_jobs=1, num_parallel_tree=1, random_state=8,
+                               reg_alpha=0, reg_lambda=1, scale_pos_weight=1,
+                               subsample=0.4, tree_method='exact',
+                               validate_parameters=1, verbosity=0))])
+Performance in train: 
+0.7410943688639394
+
+Performance dic: 
+{'accuracy_score': 0.73454, 'balanced_accuracy_score': 0.73454, 'macro_precision_score': 0.7347969350928338, 'macro_recall_score': 0.73454, 'macro_f1_score': 0.7344673578102239, 'micro_precision_score': 0.73454, 'micro_recall_score': 0.73454, 'micro_f1_score': 0.7345399999999999}
+Fit time: 3806.4777550697327 seconds
+
+Distinct evaluated pipelines: 54
+Mean pipeline size: 1.3703703703703705

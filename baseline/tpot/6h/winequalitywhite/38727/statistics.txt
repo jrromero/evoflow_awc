@@ -1,0 +1,27 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('pipeline',
+                                                 Pipeline(steps=[('featureunion',
+                                                                  FeatureUnion(transformer_list=[('functiontransformer',
+                                                                                                  FunctionTransformer(func=<function copy at 0x7f69d2eeae60>)),
+                                                                                                 ('stackingestimator',
+                                                                                                  StackingEstimator(estimator=Pipeline(steps=[('stackingestimator',
+                                                                                                                                               StackingEstimator(estimator=LogisticRegression(C=10.0))),
+                                                                                                                                              ('extratreesclassifier',
+                                                                                                                                               ExtraTreesClassifier(criterion='entropy',
+                                                                                                                                                                    max_features=0.6500000000000001,
+                                                                                                                                                                    min_samples_leaf=6))])))])),
+                                                                 ('polynomialfeatures',
+                                                                  PolynomialFeatures(include_bias=False))])),
+                                                ('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7f69d2eeae60>))])),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6348417565229231
+
+Performance dic: 
+{'accuracy_score': 0.5486725663716814, 'balanced_accuracy_score': 0.37776050039536085, 'macro_precision_score': 0.3367348832999223, 'macro_recall_score': 0.37776050039536085, 'macro_f1_score': 0.3473487972566661, 'micro_precision_score': 0.5486725663716814, 'micro_recall_score': 0.5486725663716814, 'micro_f1_score': 0.5486725663716814}
+Fit time: 21614.11390709877 seconds
+
+Distinct evaluated pipelines: 2332
+Mean pipeline size: 30.050600343053173

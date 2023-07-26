@@ -1,0 +1,18 @@
+Best ind: 
+Pipeline(steps=[('normalizer', Normalizer(norm='max')),
+                ('selectpercentile', SelectPercentile(percentile=59)),
+                ('stackingestimator',
+                 StackingEstimator(estimator=MultinomialNB())),
+                ('extratreesclassifier',
+                 ExtraTreesClassifier(criterion='entropy', max_features=0.4,
+                                      min_samples_leaf=20, min_samples_split=8,
+                                      random_state=1))])
+Performance in train: 
+0.9525808281338627
+
+Performance dic: 
+{'accuracy_score': 0.9333333333333333, 'balanced_accuracy_score': 0.9331269349845202, 'macro_precision_score': 0.9331269349845202, 'macro_recall_score': 0.9331269349845202, 'macro_f1_score': 0.9331269349845202, 'micro_precision_score': 0.9333333333333333, 'micro_recall_score': 0.9333333333333333, 'micro_f1_score': 0.9333333333333333}
+Fit time: 21679.43696451187 seconds
+
+Distinct evaluated pipelines: 520
+Mean pipeline size: 1.7326923076923078

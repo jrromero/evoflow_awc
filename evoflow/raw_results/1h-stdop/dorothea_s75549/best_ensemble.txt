@@ -1,0 +1,68 @@
+['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+{'accuracy_score': 0.9507246376811594, 'balanced_accuracy_score': 0.7065696649029982, 'macro_precision_score': 0.8033016832110488, 'macro_recall_score': 0.7065696649029982, 'macro_f1_score': 0.744165757906216, 'micro_precision_score': 0.9507246376811594, 'micro_recall_score': 0.9507246376811594, 'micro_f1_score': 0.9507246376811594}
+('0', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      criterion='entropy', max_features='sqrt',
+                                      min_samples_leaf=12, min_samples_split=11,
+                                      n_estimators=16, random_state=75549))]))
+('1', Pipeline(steps=[('0', PCA(n_components=0.6513279225344666, random_state=75549)),
+                ('1',
+                 AdaBoostClassifier(algorithm='SAMME',
+                                    learning_rate=1.049980947545022,
+                                    n_estimators=57, random_state=75549))]))
+('2', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1', TruncatedSVD(algorithm='arpack', random_state=75549)),
+                ('2', MaxAbsScaler()),
+                ('3',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_leaf=11,
+                                      min_samples_split=12, n_estimators=60,
+                                      random_state=75549))]))
+('3', Pipeline(steps=[('0',
+                 MLPClassifier(activation='tanh', alpha=0.0003116257841847571,
+                               learning_rate_init=0.42491243199897294,
+                               random_state=75549, solver='sgd'))]))
+('4', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True, class_weight='balanced',
+                                      criterion='entropy', max_features='sqrt',
+                                      min_samples_leaf=15, min_samples_split=14,
+                                      n_estimators=82, random_state=75549))]))
+('5', Pipeline(steps=[('0', KNNImputer(weights='distance')), ('1', MaxAbsScaler()),
+                ('2',
+                 MLPClassifier(alpha=0.029171179050138753,
+                               learning_rate_init=0.044953323273504764,
+                               random_state=75549, solver='lbfgs'))]))
+('6', Pipeline(steps=[('0', Normalizer(norm='l1')), ('1', MinMaxScaler()),
+                ('2',
+                 DecisionTreeClassifier(class_weight='balanced',
+                                        criterion='entropy',
+                                        max_depth=1.6122596069945698,
+                                        max_features=0.3980228281273078,
+                                        min_samples_leaf=14,
+                                        min_samples_split=9,
+                                        random_state=75549))]))
+('7', Pipeline(steps=[('0', SelectPercentile(percentile=25.21659177483987)),
+                ('1',
+                 SGDClassifier(alpha=1.3007159476474026e-06, average=True,
+                               epsilon=0.0038173936320422086,
+                               eta0=0.07851161037789532,
+                               l1_ratio=2.1295525537030615e-06,
+                               loss='squared_hinge',
+                               power_t=0.35375974806109256, random_state=75549,
+                               tol=0.006104445443034278))]))
+('8', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1', PCA(n_components=0.970889853551674, random_state=75549)),
+                ('2',
+                 LinearSVC(C=0.001319813831195848, random_state=75549,
+                           tol=0.0014988491649820623))]))
+('9', Pipeline(steps=[('0', SelectFwe(alpha=0.0019776196317718626)),
+                ('1',
+                 RandomUnderSampler(random_state=75549, replacement=True,
+                                    sampling_strategy='not majority')),
+                ('2',
+                 PCA(n_components=0.5422992248165424, random_state=75549,
+                     whiten=True)),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.8814206905813108))]))

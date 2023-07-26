@@ -1,0 +1,48 @@
+['2', '2', '2', '2', '1', '2', '1', '1', '2', '2', '2', '2', '2', '1', '1', '2', '1', '2', '1', '2', '1', '2', '1', '2', '2', '1', '1', '2', '1', '2', '2', '1', '1', '2', '2', '1', '2', '1', '1', '2', '2', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '2', '2', '1', '1', '2', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '1', '1', '2', '2', '1', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '1', '2', '2', '2', '2', '1', '1', '2', '2', '2', '2']
+{'accuracy_score': 0.9572649572649573, 'balanced_accuracy_score': 0.9457142857142857, 'macro_precision_score': 0.9615384615384615, 'macro_recall_score': 0.9457142857142857, 'macro_f1_score': 0.95279593318809, 'micro_precision_score': 0.9572649572649573, 'micro_recall_score': 0.9572649572649573, 'micro_f1_score': 0.9572649572649573}
+('0', Pipeline(steps=[('0', SelectPercentile(percentile=75.96912610550864)),
+                ('1', Normalizer(norm='max')), ('2', MaxAbsScaler()),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.32464798666139755,
+                                    n_estimators=52, random_state=2))]))
+('1', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.08490939869369504,
+                                    n_estimators=88, random_state=2))]))
+('2', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 AdaBoostClassifier(learning_rate=0.08490939869369504,
+                                    n_estimators=88, random_state=2))]))
+('3', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.08490939869369504,
+                                    n_estimators=88, random_state=2))]))
+('4', Pipeline(steps=[('0', SelectPercentile(percentile=73.72090525466545)),
+                ('1', Normalizer(norm='max')), ('2', MaxAbsScaler()),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.33325288370865475,
+                                    n_estimators=52, random_state=2))]))
+('5', Pipeline(steps=[('0', MinMaxScaler()), ('1', MaxAbsScaler()),
+                ('2',
+                 AdaBoostClassifier(learning_rate=0.09484338405995972,
+                                    n_estimators=100, random_state=2))]))
+('6', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.08490939869369504,
+                                    n_estimators=55, random_state=2))]))
+('7', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1', KNNImputer(n_neighbors=8, weights='distance')),
+                ('2',
+                 RandomOverSampler(random_state=2,
+                                   sampling_strategy='not minority')),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.08490939869369504,
+                                    n_estimators=55, random_state=2))]))
+('8', Pipeline(steps=[('0', MinMaxScaler()), ('1', MaxAbsScaler()),
+                ('2',
+                 AdaBoostClassifier(learning_rate=0.09484338405995972,
+                                    n_estimators=100, random_state=2))]))
+('9', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 AdaBoostClassifier(learning_rate=0.08490939869369504,
+                                    n_estimators=56, random_state=2))]))

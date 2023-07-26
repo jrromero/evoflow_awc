@@ -1,0 +1,45 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.9611111111111111, 'balanced_accuracy_score': 0.9619195046439628, 'macro_precision_score': 0.9607213438735178, 'macro_recall_score': 0.9619195046439628, 'macro_f1_score': 0.9610522085870608, 'micro_precision_score': 0.9611111111111111, 'micro_recall_score': 0.9611111111111111, 'micro_f1_score': 0.9611111111111111}
+('0', Pipeline(steps=[('0', MultinomialNB(alpha=15.793865378787, fit_prior=False))]))
+('1', Pipeline(steps=[('0',
+                 AdaBoostClassifier(learning_rate=0.7213367968209304,
+                                    n_estimators=53, random_state=5))]))
+('2', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not minority')),
+                ('1',
+                 SMOTE(k_neighbors=4, random_state=5,
+                       sampling_strategy='minority')),
+                ('2',
+                 PassiveAggressiveClassifier(C=6.217729531239014e-05,
+                                             fit_intercept=False,
+                                             random_state=5))]))
+('3', Pipeline(steps=[('0', SMOTE(random_state=5, sampling_strategy='minority')),
+                ('1',
+                 PassiveAggressiveClassifier(C=6.217729531239014e-05,
+                                             fit_intercept=False,
+                                             random_state=5))]))
+('4', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=4, random_state=5,
+                       sampling_strategy='minority')),
+                ('1',
+                 PassiveAggressiveClassifier(C=8.234105900303557,
+                                             fit_intercept=False,
+                                             random_state=5))]))
+('5', Pipeline(steps=[('0', MaxAbsScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 AdaBoostClassifier(learning_rate=0.7213367968209304,
+                                    n_estimators=53, random_state=5))]))
+('6', Pipeline(steps=[('0', SMOTETomek(random_state=5, sampling_strategy='minority')),
+                ('1',
+                 LinearSVC(C=0.00010631359485895396, loss='hinge',
+                           random_state=5, tol=0.058294986508294726))]))
+('7', Pipeline(steps=[('0', SMOTETomek(random_state=5, sampling_strategy='minority')),
+                ('1',
+                 LinearSVC(C=10.56455301589009, class_weight='balanced',
+                           random_state=5, tol=1.718978020561684e-05))]))
+('8', Pipeline(steps=[('0', BernoulliNB(alpha=0.020942449155473657))]))
+('9', Pipeline(steps=[('0',
+                 LinearSVC(C=0.31623579930736995, class_weight='balanced',
+                           loss='hinge', random_state=5,
+                           tol=8.121072408059201e-05))]))

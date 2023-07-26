@@ -1,0 +1,56 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.95, 'balanced_accuracy_score': 0.9507739938080495, 'macro_precision_score': 0.9496047430830039, 'macro_recall_score': 0.9507739938080495, 'macro_f1_score': 0.9499242681833637, 'micro_precision_score': 0.95, 'micro_recall_score': 0.95, 'micro_f1_score': 0.9500000000000001}
+('0', Pipeline(steps=[('0', MaxAbsScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 AdaBoostClassifier(algorithm='SAMME',
+                                    learning_rate=0.7438718049891045,
+                                    n_estimators=54, random_state=43384))]))
+('1', Pipeline(steps=[('0', MultinomialNB(alpha=24.618992609744705))]))
+('2', Pipeline(steps=[('0',
+                 MultinomialNB(alpha=23.857364733829176, fit_prior=False))]))
+('3', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='l1')),
+                ('2',
+                 PassiveAggressiveClassifier(C=1.6468294327541695,
+                                             fit_intercept=False,
+                                             random_state=43384))]))
+('4', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('1', RobustScaler(with_centering=False)),
+                ('2',
+                 PassiveAggressiveClassifier(C=1.904326506247985,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=43384))]))
+('5', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('1', RobustScaler()),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.002419357439938235,
+                                             random_state=43384))]))
+('6', Pipeline(steps=[('0',
+                 MultinomialNB(alpha=24.618992609744705, fit_prior=False))]))
+('7', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('1', RobustScaler(with_centering=False)),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.0008972980086788423,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=43384))]))
+('8', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='l1')),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.9094209908938253,
+                                             fit_intercept=False,
+                                             random_state=43384))]))
+('9', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=43384,
+                            sampling_strategy='not minority')),
+                ('1', RobustScaler()),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.0008972980086788423,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=43384))]))

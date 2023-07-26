@@ -1,0 +1,25 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('pipeline',
+                                                 Pipeline(steps=[('stackingestimator',
+                                                                  StackingEstimator(estimator=GradientBoostingClassifier(max_features=0.6000000000000001,
+                                                                                                                         min_samples_leaf=13,
+                                                                                                                         min_samples_split=7,
+                                                                                                                         random_state=8,
+                                                                                                                         subsample=0.5))),
+                                                                 ('minmaxscaler',
+                                                                  MinMaxScaler())])),
+                                                ('robustscaler',
+                                                 RobustScaler())])),
+                ('onehotencoder',
+                 OneHotEncoder(minimum_fraction=0.25, sparse=False)),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6181451571705981
+
+Performance dic: 
+{'accuracy_score': 0.49353301565690944, 'balanced_accuracy_score': 0.3347687103515241, 'macro_precision_score': 0.3113526433523134, 'macro_recall_score': 0.3347687103515241, 'macro_f1_score': 0.31501012630541475, 'micro_precision_score': 0.49353301565690944, 'micro_recall_score': 0.49353301565690944, 'micro_f1_score': 0.4935330156569094}
+Fit time: 21619.716529607773 seconds
+
+Distinct evaluated pipelines: 1770
+Mean pipeline size: 5.145762711864407

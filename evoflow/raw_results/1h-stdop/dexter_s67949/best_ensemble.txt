@@ -1,0 +1,53 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0']
+{'accuracy_score': 0.9555555555555556, 'balanced_accuracy_score': 0.956656346749226, 'macro_precision_score': 0.9553031238424496, 'macro_recall_score': 0.956656346749226, 'macro_f1_score': 0.9555061179087876, 'micro_precision_score': 0.9555555555555556, 'micro_recall_score': 0.9555555555555556, 'micro_f1_score': 0.9555555555555556}
+('0', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=67949,
+                       sampling_strategy='not majority')),
+                ('1', SelectPercentile(percentile=9.6959089604898)),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.08717203533381114,
+                                             loss='squared_hinge',
+                                             random_state=67949))]))
+('1', Pipeline(steps=[('0',
+                 LinearSVC(C=0.0001696961344720407, class_weight='balanced',
+                           dual=False, random_state=67949,
+                           tol=0.0007153856264223285))]))
+('2', Pipeline(steps=[('0',
+                 LogisticRegression(C=0.16801790886467863,
+                                    random_state=67949))]))
+('3', Pipeline(steps=[('0',
+                 LogisticRegression(C=0.03298718752564986,
+                                    class_weight='balanced',
+                                    random_state=67949))]))
+('4', Pipeline(steps=[('0',
+                 LinearSVC(C=2.4580979007981445, dual=False, random_state=67949,
+                           tol=0.0019033109622456133))]))
+('5', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 RandomForestClassifier(class_weight='balanced_subsample',
+                                        criterion='entropy',
+                                        max_features='sqrt',
+                                        min_samples_split=5, n_estimators=71,
+                                        random_state=67949))]))
+('6', Pipeline(steps=[('0', KNNImputer(n_neighbors=3)), ('1', MaxAbsScaler()),
+                ('2', SimpleImputer(strategy='median')),
+                ('3',
+                 RandomForestClassifier(class_weight='balanced_subsample',
+                                        criterion='entropy',
+                                        max_features='sqrt',
+                                        min_samples_split=5, n_estimators=71,
+                                        random_state=67949))]))
+('7', Pipeline(steps=[('0',
+                 LinearSVC(C=0.014641165882521729, class_weight='balanced',
+                           loss='hinge', random_state=67949,
+                           tol=0.002662106787029812))]))
+('8', Pipeline(steps=[('0',
+                 LinearSVC(C=0.11301240459932181, random_state=67949,
+                           tol=0.04207511126563254))]))
+('9', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=67949,
+                       sampling_strategy='not majority')),
+                ('1',
+                 LinearSVC(C=0.0001696961344720407, class_weight='balanced',
+                           dual=False, random_state=67949,
+                           tol=0.0007153856264223285))]))

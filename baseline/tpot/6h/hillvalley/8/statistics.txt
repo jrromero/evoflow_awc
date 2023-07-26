@@ -1,0 +1,21 @@
+Best ind: 
+Pipeline(steps=[('normalizer', Normalizer(norm='max')),
+                ('stackingestimator-1',
+                 StackingEstimator(estimator=KNeighborsClassifier(n_neighbors=10,
+                                                                  p=1))),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=ExtraTreesClassifier(criterion='entropy',
+                                                                  max_features=0.5,
+                                                                  min_samples_split=5,
+                                                                  random_state=8))),
+                ('kneighborsclassifier',
+                 KNeighborsClassifier(n_neighbors=4, p=1))])
+Performance in train: 
+0.9987654320987656
+
+Performance dic: 
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+Fit time: 21831.080295801163 seconds
+
+Distinct evaluated pipelines: 2271
+Mean pipeline size: 6.74108322324967

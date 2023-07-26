@@ -1,0 +1,24 @@
+Best ind: 
+Pipeline(steps=[('pca',
+                 PCA(iterated_power=8, random_state=4,
+                     svd_solver='randomized')),
+                ('selectfwe', SelectFwe(alpha=0.038)),
+                ('stackingestimator',
+                 StackingEstimator(estimator=SGDClassifier(alpha=0.0, eta0=0.1,
+                                                           fit_intercept=False,
+                                                           l1_ratio=1.0,
+                                                           learning_rate='constant',
+                                                           penalty='elasticnet',
+                                                           power_t=0.0,
+                                                           random_state=4))),
+                ('fastica', FastICA(random_state=4, tol=0.9500000000000001)),
+                ('kneighborsclassifier', KNeighborsClassifier(n_neighbors=63))])
+Performance in train: 
+0.9119834010934957
+
+Performance dic: 
+{'accuracy_score': 0.854, 'balanced_accuracy_score': 0.8547822797795562, 'macro_precision_score': 0.8540964922750107, 'macro_recall_score': 0.8547822797795562, 'macro_f1_score': 0.8537634899358894, 'micro_precision_score': 0.854, 'micro_recall_score': 0.854, 'micro_f1_score': 0.854}
+Fit time: 21607.819638490677 seconds
+
+Distinct evaluated pipelines: 3343
+Mean pipeline size: 5.790906371522585

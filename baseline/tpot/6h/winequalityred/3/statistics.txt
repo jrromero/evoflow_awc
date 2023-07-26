@@ -1,0 +1,32 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer-1',
+                                                 FunctionTransformer(func=<function copy at 0x7fb2de78b5f0>)),
+                                                ('functiontransformer-2',
+                                                 FunctionTransformer(func=<function copy at 0x7fb2de78b5f0>))])),
+                ('maxabsscaler', MaxAbsScaler()),
+                ('stackingestimator',
+                 StackingEstimator(estimator=RandomForestClassifier(criterion='ent...
+                                                                    min_samples_split=12,
+                                                                    random_state=3))),
+                ('rfe-1',
+                 RFE(estimator=ExtraTreesClassifier(criterion='entropy',
+                                                    max_features=0.4,
+                                                    random_state=3),
+                     step=0.1)),
+                ('polynomialfeatures', PolynomialFeatures(include_bias=False)),
+                ('rfe-2',
+                 RFE(estimator=ExtraTreesClassifier(criterion='entropy',
+                                                    max_features=0.35000000000000003,
+                                                    random_state=3),
+                     step=0.45)),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.7368557135451195
+
+Performance dic: 
+{'accuracy_score': 0.651031894934334, 'balanced_accuracy_score': 0.38153107672869413, 'macro_precision_score': 0.3815292326976452, 'macro_recall_score': 0.38153107672869413, 'macro_f1_score': 0.3798679002783876, 'micro_precision_score': 0.651031894934334, 'micro_recall_score': 0.651031894934334, 'micro_f1_score': 0.651031894934334}
+Fit time: 21620.07844543457 seconds
+
+Distinct evaluated pipelines: 3251
+Mean pipeline size: 21.339587819132575

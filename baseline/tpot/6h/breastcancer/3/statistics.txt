@@ -1,0 +1,27 @@
+Best ind: 
+Pipeline(steps=[('pca',
+                 PCA(iterated_power=10, random_state=3,
+                     svd_solver='randomized')),
+                ('stackingestimator',
+                 StackingEstimator(estimator=SGDClassifier(alpha=0.001,
+                                                           eta0=0.1,
+                                                           fit_intercept=False,
+                                                           l1_ratio=0.25,
+                                                           learning_rate='constant',
+                                                           penalty='elasticnet',
+                                                           power_t=10.0,
+                                                           random_state=3))),
+                ('extratreesclassifier',
+                 ExtraTreesClassifier(bootstrap=True,
+                                      max_features=0.7000000000000001,
+                                      min_samples_leaf=4, min_samples_split=17,
+                                      random_state=3))])
+Performance in train: 
+0.9788422131147542
+
+Performance dic: 
+{'accuracy_score': 0.9656652360515021, 'balanced_accuracy_score': 0.9649101307189543, 'macro_precision_score': 0.9595784202875142, 'macro_recall_score': 0.9649101307189543, 'macro_f1_score': 0.9621507472384666, 'micro_precision_score': 0.9656652360515021, 'micro_recall_score': 0.9656652360515021, 'micro_f1_score': 0.9656652360515021}
+Fit time: 11364.065356969833 seconds
+
+Distinct evaluated pipelines: 9738
+Mean pipeline size: 2.3074553296364755

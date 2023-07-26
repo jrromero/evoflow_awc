@@ -1,0 +1,56 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.7166666666666667, 'balanced_accuracy_score': 0.7055465750656698, 'macro_precision_score': 0.6889131343144993, 'macro_recall_score': 0.7055465750656698, 'macro_f1_score': 0.6931814079965347, 'micro_precision_score': 0.7166666666666667, 'micro_recall_score': 0.7166666666666667, 'micro_f1_score': 0.7166666666666667}
+('0', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 LogisticRegression(C=0.00782047723771296,
+                                    class_weight='balanced', random_state=5))]))
+('1', Pipeline(steps=[('0', MaxAbsScaler()), ('1', MinMaxScaler()),
+                ('2',
+                 MultinomialNB(alpha=0.9523726141284393, fit_prior=False))]))
+('2', Pipeline(steps=[('0', StandardScaler(with_mean=False)),
+                ('1',
+                 LogisticRegression(C=0.00782047723771296,
+                                    class_weight='balanced', random_state=5))]))
+('3', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 LogisticRegression(C=0.01665815790941024,
+                                    class_weight='balanced', random_state=5))]))
+('4', Pipeline(steps=[('0', SelectPercentile(percentile=60.87451233264858)),
+                ('1',
+                 RandomForestClassifier(class_weight='balanced',
+                                        criterion='entropy',
+                                        max_features='sqrt', min_samples_leaf=8,
+                                        min_samples_split=5, n_estimators=33,
+                                        random_state=5))]))
+('5', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 SGDClassifier(alpha=0.07192173338689674, average=True,
+                               class_weight='balanced',
+                               epsilon=0.012071492991256224,
+                               eta0=7.371184803653063e-07,
+                               l1_ratio=2.379634929428983e-09,
+                               power_t=0.27264768758613794, random_state=5,
+                               tol=0.00035660043545998436))]))
+('6', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 SGDClassifier(alpha=5.413497226481911e-05, average=True,
+                               class_weight='balanced',
+                               epsilon=0.07813506342397503,
+                               eta0=1.7237409416861983e-05,
+                               l1_ratio=0.00023304802430240562,
+                               loss='perceptron', power_t=0.5108471324604725,
+                               random_state=5, tol=0.028721471643075758))]))
+('7', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=4, random_state=5,
+                       sampling_strategy='minority')),
+                ('1',
+                 LogisticRegression(C=0.00782047723771296,
+                                    class_weight='balanced', random_state=5))]))
+('8', Pipeline(steps=[('0', StandardScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 LogisticRegression(C=0.00782047723771296,
+                                    class_weight='balanced', random_state=5))]))
+('9', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 LogisticRegression(C=0.015476962064863719,
+                                    class_weight='balanced', random_state=5))]))

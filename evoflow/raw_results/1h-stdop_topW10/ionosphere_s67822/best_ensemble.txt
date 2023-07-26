@@ -1,0 +1,12 @@
+['2', '2', '2', '2', '1', '2', '1', '2', '1', '2', '2', '2', '2', '1', '1', '1', '1', '2', '1', '1', '1', '2', '1', '2', '1', '1', '1', '2', '1', '2', '2', '1', '1', '2', '2', '1', '2', '1', '1', '2', '2', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '2', '2', '1', '1', '2', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '1', '1', '2', '2', '1', '1', '2', '1', '2', '1', '1', '2', '2', '2', '2', '1', '2', '2', '1', '2', '1', '2', '2', '2', '2', '2']
+{'accuracy_score': 0.9487179487179487, 'balanced_accuracy_score': 0.9495238095238094, 'macro_precision_score': 0.9408468244084682, 'macro_recall_score': 0.9495238095238094, 'macro_f1_score': 0.9448460087994972, 'micro_precision_score': 0.9487179487179487, 'micro_recall_score': 0.9487179487179487, 'micro_f1_score': 0.9487179487179487}
+featureAgglomeration(25,'manhattan','complete');smoteTomek('minority');fastICA(49,'deflation',False,'exp');extraTreesClassifier(42,'entropy','log2',16,2,True,'balanced')
+featureAgglomeration(25,'manhattan','average');fastICA(49,'deflation',False,'exp');extraTreesClassifier(42,'entropy','log2',16,2,True,'balanced')
+varianceThreshold();smoteTomek('minority');fastICA(49,'deflation',False,'exp');extraTreesClassifier(53,'entropy','log2',7,1,True,'balanced')
+fastICA(10,'deflation',True,'cube');randomUnderSampler('not minority',False);maxAbsScaler();extraTreesClassifier(94,'entropy','sqrt',16,1,False,'None')
+fastICA(10,'deflation',True,'cube');randomUnderSampler('not minority',False);minMaxScaler();extraTreesClassifier(94,'entropy','sqrt',16,1,False,'None')
+minMaxScaler();smoteTomek('minority');fastICA(49,'deflation',False,'exp');extraTreesClassifier(42,'entropy','log2',16,2,True,'balanced')
+knnImputer('most_frequent','uniform',10);nystroem('poly',0.0004552583376074902,75,5,0.3251319796860841);gaussianNB(3.464365776867252e-08)
+knnImputer('most_frequent','uniform',3);nystroem('poly',0.0004552583376074902,75,5,0.3251319796860841);gaussianNB(3.464365776867252e-08)
+maxAbsScaler();nystroem('poly',0.0004552583376074902,75,5,0.3251319796860841);gaussianNB(3.464365776867252e-08)
+maxAbsScaler();nystroem('poly',0.0004552583376074902,75,5,0.3251319796860841);gaussianNB(0.00038123176312139826)

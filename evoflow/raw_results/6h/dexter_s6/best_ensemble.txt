@@ -1,0 +1,61 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0']
+{'accuracy_score': 0.9388888888888889, 'balanced_accuracy_score': 0.9396284829721362, 'macro_precision_score': 0.9384881422924901, 'macro_recall_score': 0.9396284829721362, 'macro_f1_score': 0.9387963277796668, 'micro_precision_score': 0.9388888888888889, 'micro_recall_score': 0.9388888888888889, 'micro_f1_score': 0.9388888888888889}
+('0', Pipeline(steps=[('0', SelectPercentile(percentile=2.8708351442799582)),
+                ('1',
+                 SGDClassifier(alpha=0.04792579897573535,
+                               epsilon=0.007324411779330619,
+                               eta0=0.0001249316163366811,
+                               l1_ratio=6.696420385430414e-07,
+                               loss='modified_huber',
+                               power_t=0.9162302848894605, random_state=6,
+                               tol=0.02767032116129565))]))
+('1', Pipeline(steps=[('0', SelectPercentile(percentile=29.96366544405604)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.0008780431855911501,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=6))]))
+('2', Pipeline(steps=[('0', SelectPercentile(percentile=29.991033077322506)),
+                ('1',
+                 LinearSVC(C=0.9163565253007206, class_weight='balanced',
+                           random_state=6, tol=1.827910029304119e-05))]))
+('3', Pipeline(steps=[('0', SelectPercentile(percentile=33.95433823209019)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.00028170130103338884,
+                                             fit_intercept=False,
+                                             random_state=6))]))
+('4', Pipeline(steps=[('0', SelectPercentile(percentile=33.74684166704769)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.006410986797222071,
+                                             random_state=6))]))
+('5', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=4, random_state=6,
+                       sampling_strategy='not minority')),
+                ('1', SimpleImputer()),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.2627903951143095,
+                                             random_state=6))]))
+('6', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=6,
+                       sampling_strategy='not minority')),
+                ('1', VarianceThreshold()),
+                ('2',
+                 PassiveAggressiveClassifier(C=1.2527049495670804e-05,
+                                             fit_intercept=False,
+                                             random_state=6))]))
+('7', Pipeline(steps=[('0', SelectPercentile(percentile=34.19611537550867)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.028524262169911448,
+                                             random_state=6))]))
+('8', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.006410986797222071,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=6))]))
+('9', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 PassiveAggressiveClassifier(C=5.691959335531205,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=6))]))

@@ -1,0 +1,22 @@
+Best ind: 
+Pipeline(steps=[('selectpercentile', SelectPercentile(percentile=94)),
+                ('normalizer-1', Normalizer(norm='max')),
+                ('minmaxscaler', MinMaxScaler()),
+                ('normalizer-2', Normalizer()),
+                ('stackingestimator',
+                 StackingEstimator(estimator=GaussianNB())),
+                ('gradientboostingclassifier',
+                 GradientBoostingClassifier(max_depth=8,
+                                            max_features=0.9000000000000001,
+                                            min_samples_leaf=14,
+                                            min_samples_split=14,
+                                            random_state=6, subsample=0.8))])
+Performance in train: 
+0.9987654320987656
+
+Performance dic: 
+{'accuracy_score': 0.9925742574257426, 'balanced_accuracy_score': 0.9925742574257426, 'macro_precision_score': 0.9925863294365611, 'macro_recall_score': 0.9925742574257426, 'macro_f1_score': 0.9925742119290506, 'micro_precision_score': 0.9925742574257426, 'micro_recall_score': 0.9925742574257426, 'micro_f1_score': 0.9925742574257426}
+Fit time: 21853.150381088257 seconds
+
+Distinct evaluated pipelines: 1209
+Mean pipeline size: 2.1786600496277915

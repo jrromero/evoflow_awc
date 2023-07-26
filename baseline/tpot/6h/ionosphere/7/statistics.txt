@@ -1,0 +1,26 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7fb2117415f0>)),
+                                                ('stackingestimator',
+                                                 StackingEstimator(estimator=Pipeline(steps=[('pca',
+                                                                                              PCA(iterated_power=10,
+                                                                                                  svd_solver='randomized')),
+                                                                                             ('extratreesclassifier',
+                                                                                              ExtraTreesClassifier(max_features=0.35000000000000003,
+                                                                                                                   min_samples_leaf=3,
+                                                                                                                   min_samples_split=8))])))])),
+                ('gradientboostingclassifier',
+                 GradientBoostingClassifier(max_features=0.7500000000000001,
+                                            min_samples_leaf=7,
+                                            min_samples_split=8, random_state=7,
+                                            subsample=0.15000000000000002))])
+Performance in train: 
+0.9557352941176471
+
+Performance dic: 
+{'accuracy_score': 0.9743589743589743, 'balanced_accuracy_score': 0.9642857142857143, 'macro_precision_score': 0.9807692307692308, 'macro_recall_score': 0.9642857142857143, 'macro_f1_score': 0.971677559912854, 'micro_precision_score': 0.9743589743589743, 'micro_recall_score': 0.9743589743589743, 'micro_f1_score': 0.9743589743589743}
+Fit time: 18298.734287261963 seconds
+
+Distinct evaluated pipelines: 9810
+Mean pipeline size: 2.467380224260958

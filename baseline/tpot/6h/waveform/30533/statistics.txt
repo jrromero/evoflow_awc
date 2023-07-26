@@ -1,0 +1,21 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('minmaxscaler',
+                                                 MinMaxScaler()),
+                                                ('stackingestimator',
+                                                 StackingEstimator(estimator=LogisticRegression(C=10.0,
+                                                                                                random_state=30533)))])),
+                ('robustscaler', RobustScaler()),
+                ('extratreesclassifier',
+                 ExtraTreesClassifier(max_features=0.4, min_samples_leaf=2,
+                                      min_samples_split=19,
+                                      random_state=30533))])
+Performance in train: 
+0.9072285663952178
+
+Performance dic: 
+{'accuracy_score': 0.8513333333333334, 'balanced_accuracy_score': 0.8527046091854681, 'macro_precision_score': 0.8515913021263216, 'macro_recall_score': 0.8527046091854681, 'macro_f1_score': 0.8511974652429884, 'micro_precision_score': 0.8513333333333334, 'micro_recall_score': 0.8513333333333334, 'micro_f1_score': 0.8513333333333334}
+Fit time: 21615.154316663742 seconds
+
+Distinct evaluated pipelines: 2490
+Mean pipeline size: 2.2730923694779115

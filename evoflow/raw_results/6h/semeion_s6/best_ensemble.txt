@@ -1,0 +1,68 @@
+['0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '3', '9', '3', '3', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '9', '4', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '2', '2', '2', '9', '3', '3', '9', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '9', '8', '8', '8', '8', '9', '9', '9', '9', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '7', '1', '2', '9', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '7', '8', '9', '9', '9', '9', '9', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '5', '3', '3', '3', '3', '3', '3', '4', '4', '1', '4', '4', '4', '4', '4', '4', '4', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '9', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '9', '9', '2', '9', '9', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '4', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '9', '9', '9', '9', '9', '9', '9', '9', '9', '9', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '2', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '4', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '9', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '0', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '9', '9', '9', '9', '9', '9', '9', '9', '9', '3', '9']
+{'accuracy_score': 0.9559748427672956, 'balanced_accuracy_score': 0.9543808391173968, 'macro_precision_score': 0.9530624946319538, 'macro_recall_score': 0.9543808391173968, 'macro_f1_score': 0.9530951351722665, 'micro_precision_score': 0.9559748427672956, 'micro_recall_score': 0.9559748427672956, 'micro_f1_score': 0.9559748427672956}
+('0', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=48,
+                         random_state=6)),
+                ('1', KNNImputer(n_neighbors=10)), ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.2540466768424464))]))
+('1', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=48,
+                         random_state=6)),
+                ('1', KNNImputer(n_neighbors=10, weights='distance')),
+                ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.07718766367186658))]))
+('2', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=48,
+                         random_state=6)),
+                ('1', KNNImputer(n_neighbors=10)), ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.20849689720163556))]))
+('3', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', n_components=35,
+                         random_state=6)),
+                ('1', KNNImputer(n_neighbors=10, weights='distance')),
+                ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.2009865985836522))]))
+('4', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=48,
+                         random_state=6)),
+                ('1', KNNImputer(n_neighbors=10, weights='distance')),
+                ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.09756764006482133))]))
+('5', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=48,
+                         random_state=6)),
+                ('1', KNNImputer(n_neighbors=10, weights='distance')),
+                ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.06658518030286142))]))
+('6', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=48,
+                         random_state=6)),
+                ('1', KNNImputer(n_neighbors=10, weights='distance')),
+                ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.04103737866451285))]))
+('7', Pipeline(steps=[('0', VarianceThreshold()), ('1', MaxAbsScaler()),
+                ('2', StandardScaler()),
+                ('3',
+                 MLPClassifier(alpha=0.08969536221242802,
+                               learning_rate_init=0.007775695354787389,
+                               random_state=6))]))
+('8', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=48,
+                         random_state=6)),
+                ('1', KNNImputer(n_neighbors=10, weights='distance')),
+                ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.07947970726289943))]))
+('9', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='cube', n_components=27,
+                         random_state=6)),
+                ('1', KNNImputer()), ('2', StandardScaler()),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.10019372022386919))]))

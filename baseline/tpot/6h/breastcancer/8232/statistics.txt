@@ -1,0 +1,31 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator-1',
+                 StackingEstimator(estimator=SGDClassifier(alpha=0.001,
+                                                           eta0=0.1,
+                                                           fit_intercept=False,
+                                                           l1_ratio=0.75,
+                                                           learning_rate='invscaling',
+                                                           loss='log',
+                                                           penalty='elasticnet',
+                                                           power_t=100.0,
+                                                           random_state=8232))),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=RandomForestClassifier(bootstrap=False,
+                                                                    max_features=0.7000000000000001,
+                                                                    min_samples_leaf=16,
+                                                                    min_samples_split=11,
+                                                                    random_state=8232))),
+                ('randomforestclassifier',
+                 RandomForestClassifier(bootstrap=False, criterion='entropy',
+                                        max_features=0.45, min_samples_leaf=16,
+                                        min_samples_split=17,
+                                        random_state=8232))])
+Performance in train: 
+0.9788422131147542
+
+Performance dic: 
+{'accuracy_score': 0.9828326180257511, 'balanced_accuracy_score': 0.9809640522875818, 'macro_precision_score': 0.9809640522875818, 'macro_recall_score': 0.9809640522875818, 'macro_f1_score': 0.9809640522875818, 'micro_precision_score': 0.9828326180257511, 'micro_recall_score': 0.9828326180257511, 'micro_f1_score': 0.9828326180257511}
+Fit time: 10973.17158126831 seconds
+
+Distinct evaluated pipelines: 9498
+Mean pipeline size: 2.007369972625816

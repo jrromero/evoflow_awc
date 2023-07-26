@@ -1,0 +1,44 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.95, 'balanced_accuracy_score': 0.9513931888544891, 'macro_precision_score': 0.95, 'macro_recall_score': 0.9513931888544891, 'macro_f1_score': 0.9499613899613901, 'micro_precision_score': 0.95, 'micro_recall_score': 0.95, 'micro_f1_score': 0.9500000000000001}
+('0', Pipeline(steps=[('0', Normalizer()),
+                ('1', SMOTETomek(random_state=4, sampling_strategy='minority')),
+                ('2',
+                 RandomOverSampler(random_state=4,
+                                   sampling_strategy='not majority')),
+                ('3', MultinomialNB(alpha=1.0689038342962796))]))
+('1', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 LinearSVC(C=0.04341498307419372, dual=False, penalty='l1',
+                           random_state=4, tol=2.326417717127561e-05))]))
+('2', Pipeline(steps=[('0',
+                 LogisticRegression(C=0.1125098790091636, random_state=4))]))
+('3', Pipeline(steps=[('0', SelectPercentile(percentile=78.71881394796159)),
+                ('1',
+                 LogisticRegression(C=0.1125098790091636, random_state=4))]))
+('4', Pipeline(steps=[('0', MultinomialNB(alpha=63.68481613684103))]))
+('5', Pipeline(steps=[('0',
+                 LinearSVC(C=0.0006274089942952286, random_state=4,
+                           tol=0.002371410646059894))]))
+('6', Pipeline(steps=[('0', SelectPercentile(percentile=37.98375198461109)),
+                ('1',
+                 LogisticRegression(C=0.1125098790091636, random_state=4))]))
+('7', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=4,
+                                   sampling_strategy='not minority')),
+                ('1',
+                 PassiveAggressiveClassifier(C=1.013838154965969e-05,
+                                             loss='squared_hinge',
+                                             random_state=4))]))
+('8', Pipeline(steps=[('0', SelectPercentile(percentile=78.71881394796159)),
+                ('1',
+                 SGDClassifier(alpha=0.001939216636712724, average=True,
+                               epsilon=0.00842779959183256,
+                               eta0=9.087681891928928e-05,
+                               l1_ratio=0.0006312735245425808,
+                               loss='squared_hinge',
+                               power_t=0.25567649754180743, random_state=4,
+                               tol=0.004462373538349431))]))
+('9', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=3.74098056590367e-05,
+                                             fit_intercept=False,
+                                             random_state=4))]))

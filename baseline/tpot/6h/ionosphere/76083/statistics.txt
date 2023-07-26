@@ -1,0 +1,41 @@
+Best ind: 
+Pipeline(steps=[('variancethreshold', VarianceThreshold(threshold=0.2)),
+                ('pca',
+                 PCA(iterated_power=4, random_state=76083,
+                     svd_solver='randomized')),
+                ('stackingestimator',
+                 StackingEstimator(estimator=XGBClassifier(base_score=0.5,
+                                                           booster='gbtree',
+                                                           colsample_bylevel=1,
+                                                           colsample_bynode=1,
+                                                           colsample_bytree=1,
+                                                           gamma=0, gpu_id=-1,
+                                                           importance_type='gain',
+                                                           interaction_...
+                                                           min_child_weight=19,
+                                                           missing=nan,
+                                                           monotone_constraints='()',
+                                                           n_estimators=100,
+                                                           n_jobs=1,
+                                                           num_parallel_tree=1,
+                                                           random_state=76083,
+                                                           reg_alpha=0,
+                                                           reg_lambda=1,
+                                                           scale_pos_weight=1,
+                                                           subsample=0.2,
+                                                           tree_method='exact',
+                                                           validate_parameters=1,
+                                                           verbosity=0))),
+                ('extratreesclassifier',
+                 ExtraTreesClassifier(max_features=0.25, min_samples_leaf=3,
+                                      min_samples_split=8,
+                                      random_state=76083))])
+Performance in train: 
+0.9598529411764705
+
+Performance dic: 
+{'accuracy_score': 0.9743589743589743, 'balanced_accuracy_score': 0.9695238095238095, 'macro_precision_score': 0.9746469833119384, 'macro_recall_score': 0.9695238095238095, 'macro_f1_score': 0.9719939360089365, 'micro_precision_score': 0.9743589743589743, 'micro_recall_score': 0.9743589743589743, 'micro_f1_score': 0.9743589743589743}
+Fit time: 15070.26729798317 seconds
+
+Distinct evaluated pipelines: 9885
+Mean pipeline size: 4.281638846737481

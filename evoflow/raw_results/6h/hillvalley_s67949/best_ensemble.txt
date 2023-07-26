@@ -1,0 +1,64 @@
+['1', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '1', '0', '1', '0', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1', '1', '0', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1']
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+('0', Pipeline(steps=[('0', Normalizer(norm='max')),
+                ('1', KNeighborsClassifier(n_neighbors=9))]))
+('1', Pipeline(steps=[('0',
+                 LinearSVC(C=0.0001696961344720407, class_weight='balanced',
+                           dual=False, random_state=67949,
+                           tol=0.0007153856264223285))]))
+('2', Pipeline(steps=[('0', Normalizer()),
+                ('1', FeatureAgglomeration(linkage='average', n_clusters=16)),
+                ('2', MinMaxScaler()),
+                ('3',
+                 RandomForestClassifier(class_weight='balanced_subsample',
+                                        criterion='entropy',
+                                        max_features='sqrt',
+                                        min_samples_split=5, n_estimators=71,
+                                        random_state=67949))]))
+('3', Pipeline(steps=[('0', Normalizer(norm='max')),
+                ('1',
+                 RandomOverSampler(random_state=67949,
+                                   sampling_strategy='not minority')),
+                ('2',
+                 RandomForestClassifier(bootstrap=False, max_features='log2',
+                                        min_samples_leaf=13,
+                                        min_samples_split=3, n_estimators=91,
+                                        random_state=67949))]))
+('4', Pipeline(steps=[('0', Normalizer(norm='l1')),
+                ('1', KNeighborsClassifier(n_neighbors=1))]))
+('5', Pipeline(steps=[('0', Normalizer()),
+                ('1', FeatureAgglomeration(linkage='average', n_clusters=16)),
+                ('2', MinMaxScaler()),
+                ('3',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced_subsample',
+                                        criterion='entropy',
+                                        max_features='sqrt',
+                                        min_samples_split=5, n_estimators=82,
+                                        random_state=67949))]))
+('6', Pipeline(steps=[('0', Normalizer()),
+                ('1',
+                 FeatureAgglomeration(affinity='cosine', linkage='complete',
+                                      n_clusters=16)),
+                ('2', MinMaxScaler()),
+                ('3',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced_subsample',
+                                        criterion='entropy',
+                                        max_features='sqrt',
+                                        min_samples_split=5, n_estimators=82,
+                                        random_state=67949))]))
+('7', Pipeline(steps=[('0', Normalizer(norm='max')),
+                ('1', KNeighborsClassifier(n_neighbors=1))]))
+('8', Pipeline(steps=[('0', Normalizer()),
+                ('1', FeatureAgglomeration(linkage='average', n_clusters=16)),
+                ('2', MinMaxScaler()),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.6617021085307708,
+                                    n_estimators=80, random_state=67949))]))
+('9', Pipeline(steps=[('0', Normalizer()),
+                ('1',
+                 FeatureAgglomeration(affinity='manhattan', linkage='complete',
+                                      n_clusters=16)),
+                ('2', MinMaxScaler()),
+                ('3', KNeighborsClassifier(n_neighbors=1))]))

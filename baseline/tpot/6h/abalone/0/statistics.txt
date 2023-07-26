@@ -1,0 +1,19 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7f72e09735f0>)),
+                                                ('normalizer',
+                                                 Normalizer(norm='l1'))])),
+                ('rfe',
+                 RFE(estimator=ExtraTreesClassifier(max_features=0.9000000000000001),
+                     step=1.0)),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.563054068581647
+
+Performance dic: 
+{'accuracy_score': 0.22585794094173983, 'balanced_accuracy_score': 0.15737817901268208, 'macro_precision_score': 0.09466267720314199, 'macro_recall_score': 0.1510830518521748, 'macro_f1_score': 0.10732832195224602, 'micro_precision_score': 0.22585794094173983, 'micro_recall_score': 0.22585794094173983, 'micro_f1_score': 0.22585794094173983}
+Fit time: 21827.92773580551 seconds
+
+Distinct evaluated pipelines: 840
+Mean pipeline size: 1.8630952380952381

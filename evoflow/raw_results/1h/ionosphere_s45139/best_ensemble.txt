@@ -1,0 +1,61 @@
+['2', '2', '2', '2', '1', '2', '1', '1', '2', '2', '2', '2', '2', '1', '1', '2', '1', '2', '1', '2', '1', '2', '1', '2', '1', '1', '1', '2', '1', '2', '2', '1', '1', '2', '2', '1', '2', '1', '1', '2', '2', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '2', '2', '1', '1', '2', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '1', '1', '2', '2', '1', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '1', '1', '2', '2', '2', '1', '1', '2', '2', '2', '2']
+{'accuracy_score': 0.9572649572649573, 'balanced_accuracy_score': 0.950952380952381, 'macro_precision_score': 0.9558729139922978, 'macro_recall_score': 0.950952380952381, 'macro_f1_score': 0.9533232266815607, 'micro_precision_score': 0.9572649572649573, 'micro_recall_score': 0.9572649572649573, 'micro_f1_score': 0.9572649572649573}
+('0', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2', RobustScaler(with_scaling=False)),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.3420470481123233,
+                                    n_estimators=74, random_state=45139))]))
+('1', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', StandardScaler(with_mean=False, with_std=False)),
+                ('2', VarianceThreshold()),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.5209905927203339,
+                                    n_estimators=79, random_state=45139))]))
+('2', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=45139,
+                       sampling_strategy='not majority')),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True,
+                                      class_weight='balanced_subsample',
+                                      max_features='sqrt', min_samples_leaf=2,
+                                      min_samples_split=3, n_estimators=58,
+                                      random_state=45139))]))
+('3', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.5209905927203339,
+                                    n_estimators=79, random_state=45139))]))
+('4', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', StandardScaler(with_mean=False, with_std=False)),
+                ('2', VarianceThreshold()),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.5209905927203339,
+                                    n_estimators=79, random_state=45139))]))
+('5', Pipeline(steps=[('0', MaxAbsScaler()), ('1', StandardScaler(with_std=False)),
+                ('2', VarianceThreshold()),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.5209905927203339,
+                                    n_estimators=79, random_state=45139))]))
+('6', Pipeline(steps=[('0', MinMaxScaler()), ('1', MaxAbsScaler()),
+                ('2', KNNImputer(n_neighbors=2)),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.5209905927203339,
+                                    n_estimators=79, random_state=45139))]))
+('7', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='cube', n_components=20,
+                         random_state=45139)),
+                ('1', MinMaxScaler()),
+                ('2', RobustScaler(with_centering=False)),
+                ('3',
+                 ExtraTreesClassifier(class_weight='balanced_subsample',
+                                      criterion='entropy', max_features='sqrt',
+                                      min_samples_leaf=2, min_samples_split=3,
+                                      n_estimators=31, random_state=45139))]))
+('8', Pipeline(steps=[('0', MaxAbsScaler()), ('1', StandardScaler()),
+                ('2', VarianceThreshold()),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.5209905927203339,
+                                    n_estimators=79, random_state=45139))]))
+('9', Pipeline(steps=[('0', KNNImputer(n_neighbors=4)), ('1', VarianceThreshold()),
+                ('2',
+                 AdaBoostClassifier(learning_rate=0.6187156066224712,
+                                    n_estimators=79, random_state=45139))]))

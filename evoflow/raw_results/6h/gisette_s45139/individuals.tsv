@@ -1,0 +1,220 @@
+pipeline	fitness	fit_time
+varianceThreshold();normalizer('l1');multinomialNB(0.6196996446818888,True)	0.8838752806227639	5.440165281295776
+nystroem('poly',2.4260153575455186,81,2,0.011404457645798338);smote('not majority',3);lda(0.1865653603261107,29,2.006654708467397e-05)	invalid_ind	invalid_ind
+minMaxScaler();normalizer('l2');linearSvc('l2','squared_hinge',True,0.00045861557968446693,12.312010906610704,'balanced')	0.9607623775984939	6.334110260009766
+maxAbsScaler();maxAbsScaler();smoteTomek('not minority');mlpClassifier(0.020976738730693438,0.0013235267054146716,'sgd','logistic')	invalid_ind	invalid_ind
+minMaxScaler();varianceThreshold();logisticRegression('l2',False,0.0002944047686340512,'balanced')	0.9276270247531144	8.798067569732666
+lda(0.04183338896337463,108,0.031111641359471736)	invalid_ind	invalid_ind
+randomUnderSampler('not majority',False);nystroem('cosine',0.2680711963690395,100,5,0.3560490021958329);selectPercentile(92.36642358015264);multinomialNB(0.011290050388755545,False)	invalid_ind	invalid_ind
+decisionTree('entropy',0.8568578074512936,14,0.7017315941595239,10,'balanced')	0.5	1.625441312789917
+varianceThreshold();maxAbsScaler();randomUnderSampler('minority',True);lda(0.3646377566231336,39,0.001112068090850586)	invalid_ind	invalid_ind
+maxAbsScaler();multinomialNB(21.13761754146238,True)	0.9061843217779926	3.0582191944122314
+normalizer('l2');varianceThreshold();kNN(1,'distance',1)	0.9675535526113016	259.1279282569885
+varianceThreshold();maxAbsScaler();logisticRegression('l1',True,0.01038905962474385,'None')	invalid_ind	invalid_ind
+maxAbsScaler();minMaxScaler();mlpClassifier(0.004498664017902515,0.04196621630158927,'lbfgs','relu')	0.967167865517658	62.233381271362305
+minMaxScaler();smoteTomek('not minority');nystroem('rbf',0.03428086149075574,74,3,0.38596095699027755);decisionTree('entropy',1.6267666279516408,18,0.6645168119918826,5,'balanced')	0.504517453798768	1013.1605997085571
+nystroem('poly',0.14465472277760982,30,3,0.5114259126566492);varianceThreshold();minMaxScaler();decisionTree('entropy',0.010388575087437735,6,0.39269400623651873,2,'None')	0.5	2.0128490924835205
+pca(0.7690503378967926,True);nystroem('poly',0.17966318990990296,76,2,-0.18198535164998453);varianceThreshold();kNN(2,'distance',2)	0.5459475782099288	314.6870141029358
+nystroem('poly',0.007812001850920125,84,3,0.12977932001813874);simpleImputer('most_frequent');kNN(3,'distance',1)	0.9455069119625475	7.764225244522095
+minMaxScaler();normalizer('l1');minMaxScaler();minMaxScaler();kNN(23,'uniform',1)	invalid_ind	invalid_ind
+simpleImputer('median');fastICA(7,'parallel',True,'exp');gaussianNB(6.598316535088387e-09)	0.904836499493942	306.56955194473267
+minMaxScaler();fastICA(93,'deflation',True,'cube');gaussianNB(1.305182814350524e-07)	0.9477052450945683	293.8059046268463
+qda(0.24697325906821355)	0.5644934628953189	93.42652249336243
+robustScaler(False,False);rbfSampler(0.0308125782979276,72);rbfSampler(0.2897923362639154,40);logisticRegression('l2',False,0.00022750990301254986,'balanced')	invalid_ind	invalid_ind
+fastICA(81,'deflation',True,'logcosh');minMaxScaler();varianceThreshold();logisticRegression('l1',False,0.00015985895202830683,'None')	invalid_ind	invalid_ind
+logisticRegression('l2',True,0.019804845457750186,'None')	invalid_ind	invalid_ind
+robustScaler(True,False);decisionTree('gini',0.6395803130790192,8,0.686827100058806,2,'None')	0.5	6.916032552719116
+decisionTree('entropy',0.1409538557101886,10,0.4695835714963803,9,'balanced')	0.5	1.6206443309783936
+nystroem('poly',0.00015697575691054767,87,2,0.9450639232580929);varianceThreshold();simpleImputer('most_frequent');bernoulliNB(0.011005410214246163,True)	0.7555002061718266	3.0279054641723633
+minMaxScaler();maxAbsScaler();standardScaler(False,True);lda(0.3201612668007523,211,0.039726110986860366)	invalid_ind	invalid_ind
+minMaxScaler();minMaxScaler();minMaxScaler();robustScaler(True,True);passiveAggressiveClassifier(True,'hinge',0.00041339812635442637)	invalid_ind	invalid_ind
+maxAbsScaler();standardScaler(True,True);kNN(4,'uniform',2)	0.9332119904536198	265.41836380958557
+varianceThreshold();varianceThreshold();robustScaler(False,False);bernoulliNB(1.197501805140531,False)	invalid_ind	invalid_ind
+simpleImputer('mean');smote('minority',4);varianceThreshold();lda(0.3495315679504275,47,0.03364028461531261)	invalid_ind	invalid_ind
+randomOverSampler('minority');randomUnderSampler('not minority',True);gaussianNB(2.3169036979423529e-07)	0.7783965246510698	4.313369512557983
+simpleImputer('mean');knnImputer('median','uniform',3);randomUnderSampler('not majority',False);multinomialNB(0.9313401513987073,False)	0.9212894277586414	7.037689685821533
+selectPercentile(62.814184164750806);selectFwe(0.02683953985960119);minMaxScaler();sgdClassifier('squared_hinge',1.5495656025639776e-05,0.588022487355246,0.0008867498290072738,0.0017811102247671916,0.0008512168157108822,0.8678948976296776,False,'balanced')	0.9722138689080391	5.998042345046997
+randomUnderSampler('not majority',True);decisionTree('gini',0.3928862495309109,16,0.8693501641192966,15,'balanced')	0.5	1.9204020500183105
+minMaxScaler();maxAbsScaler();bernoulliNB(0.21074255354658497,False)	0.8981507011924645	6.020839691162109
+minMaxScaler();varianceThreshold();smote('minority',5);passiveAggressiveClassifier(False,'squared_hinge',0.002221067336872548)	0.9689934233269885	258.6556091308594
+extraTreesClassifier(62,'entropy','log2',16,18,True,'balanced_subsample')	0.9284962784944042	4.7040205001831055
+mlpClassifier(0.0009567241892851446,0.01657049911643974,'sgd','relu')	0.5	31.786072492599487
+minMaxScaler();maxAbsScaler();randomUnderSampler('not majority',False);minMaxScaler();bernoulliNB(1.7951584240017502,True)	invalid_ind	invalid_ind
+simpleImputer('mean');varianceThreshold();extraTreesClassifier(23,'entropy','log2',3,7,False,'balanced')	0.9458576123219945	7.682553768157959
+knnImputer('mean','uniform',2);maxAbsScaler();maxAbsScaler();adaBoost(91,0.013426448846302208,'SAMME.R',6)	invalid_ind	invalid_ind
+multinomialNB(53.17638065074564,False)	0.9202652327659095	1.4848666191101074
+maxAbsScaler();maxAbsScaler();qda(0.9736721671902463)	invalid_ind	invalid_ind
+knnImputer('mean','uniform',7);rbfSampler(0.017380233701597612,72);qda(0.5262846612121711)	0.49591488227380454	4.586719512939453
+nystroem('cosine',0.02106968056999927,32,4,0.25167964530564024);normalizer('l1');qda(0.4734758472146904)	0.500205338809035	3.1627044677734375
+varianceThreshold();normalizer('l2');maxAbsScaler();mlpClassifier(0.01923106361156016,0.013160981503738579,'adam','tanh')	0.9726745275749611	176.7586121559143
+bernoulliNB(35.752949453461326,False)	0.8861781574486342	3.264423131942749
+varianceThreshold();passiveAggressiveClassifier(True,'squared_hinge',1.2800737585202386)	0.9681870624055046	7.982767820358276
+logisticRegression('l1',True,0.00017612791121624137,'None')	invalid_ind	invalid_ind
+randomForest(75,'gini','sqrt',6,15,True,'None')	0.949085555060373	16.323066234588623
+featureAgglomeration(15,'cosine','complete');knnImputer('median','distance',8);normalizer('l1');lda(0.20898701250746743,50,0.03731281043813562)	invalid_ind	invalid_ind
+pca(0.7432660995358848,True);featureAgglomeration(17,'manhattan','average');varianceThreshold();lda(0.5952973022669645,211,0.002636523831922419)	invalid_ind	invalid_ind
+rbfSampler(0.019317958273054086,26);standardScaler(True,True);multinomialNB(0.613034922084913,False)	invalid_ind	invalid_ind
+varianceThreshold();maxAbsScaler();nystroem('sigmoid',0.0002759867181903057,84,5,-0.4035057657895207);minMaxScaler();randomForest(20,'gini','sqrt',13,10,False,'balanced_subsample')	0.9330962010237785	11.046620845794678
+passiveAggressiveClassifier(False,'squared_hinge',1.1092147154617345e-05)	0.9681870624055046	5.226219177246094
+robustScaler(True,True);linearSvc('l2','hinge',False,0.009690834649442393,2.5894559681325044,'None')	invalid_ind	invalid_ind
+randomOverSampler('minority');robustScaler(True,False);normalizer('max');logisticRegression('l2',True,0.0001118531912095836,'None')	invalid_ind	invalid_ind
+adaBoost(66,0.7356984086193674,'SAMME.R',4)	0.961646209145699	205.92287063598633
+minMaxScaler();multinomialNB(98.16501575188991,True)	0.8956820538879008	3.1247003078460693
+randomUnderSampler('not minority',True);extraTreesClassifier(15,'entropy','sqrt',19,3,False,'balanced')	0.9620293971869	5.387725114822388
+selectPercentile(8.429651914611897);maxAbsScaler();maxAbsScaler();varianceThreshold();lda(0.06592332285197577,230,4.942961149789064e-05)	invalid_ind	invalid_ind
+bernoulliNB(0.36739193354109995,True)	0.8973368431136528	3.306532621383667
+minMaxScaler();passiveAggressiveClassifier(False,'squared_hinge',1.6736533882895263e-05)	0.971855671391264	26.19274592399597
+rbfSampler(0.46667309415482966,74);randomUnderSampler('minority',True);minMaxScaler();decisionTree('entropy',0.7924027949216339,14,0.26927661226405475,8,'None')	invalid_ind	invalid_ind
+adaBoost(52,0.03628567418146246,'SAMME',10)	0.8518228505025178	161.99756932258606
+minMaxScaler();minMaxScaler();randomForest(56,'entropy','log2',10,6,True,'None')	invalid_ind	invalid_ind
+minMaxScaler();nystroem('poly',0.01838254043078118,13,3,0.23610106711699674);standardScaler(True,False);bernoulliNB(2.6821833081627693,True)	0.6892474103569064	3.4668757915496826
+varianceThreshold();varianceThreshold();varianceThreshold();selectFwe(0.017416826397020146);randomForest(11,'entropy','log2',2,2,True,'balanced')	invalid_ind	invalid_ind
+varianceThreshold();nystroem('rbf',0.030022197378571765,88,2,-0.5070802548183511);maxAbsScaler();randomForest(68,'entropy','log2',9,11,True,'None')	0.5	6.428699970245361
+randomOverSampler('not minority');knnImputer('median','distance',10);varianceThreshold();adaBoost(76,0.2604694940914726,'SAMME',6)	0.9231820434751823	167.40694451332092
+varianceThreshold();pca(0.7908968400979428,True);selectPercentile(33.26606947986192);linearSvc('l1','squared_hinge',False,0.002367548890562271,0.0042122218248902485,'None')	0.9425492833967122	296.350460767746
+minMaxScaler();randomForest(78,'entropy','sqrt',17,18,False,'None')	0.9570587818785377	35.74829626083374
+minMaxScaler();robustScaler(True,True);normalizer('max');kNN(4,'distance',1)	0.939153487635938	274.1639144420624
+truncatedSVD(34,'arpack');smoteTomek('not minority');logisticRegression('l1',True,4.668450361872832,'balanced')	invalid_ind	invalid_ind
+featureAgglomeration(2,'euclidean','average');maxAbsScaler();minMaxScaler();logisticRegression('l1',True,0.5992741139584185,'None')	invalid_ind	invalid_ind
+robustScaler(True,False);nystroem('cosine',0.0007783899010949138,24,2,-0.06857462061577557);varianceThreshold();multinomialNB(2.019866215953942,False)	invalid_ind	invalid_ind
+robustScaler(False,False);multinomialNB(0.07081629936995947,True)	0.9216951072718261	2.261737108230591
+pca(0.7911965566271888,True);passiveAggressiveClassifier(False,'hinge',0.00015026240117807917)	0.964703799809239	299.03524518013
+varianceThreshold();maxAbsScaler();randomOverSampler('not majority');bernoulliNB(0.17445778932340475,False)	0.8979453623834296	7.520085096359253
+simpleImputer('mean');randomOverSampler('not minority');varianceThreshold();qda(0.28059898785817383)	0.5601913441153563	96.6423716545105
+linearSvc('l1','hinge',False,0.00012728046096497302,0.02359271330272781,'balanced')	invalid_ind	invalid_ind
+selectPercentile(65.86867115699592);pca(0.9537885378995343,False);varianceThreshold();bernoulliNB(0.04141918968716763,False)	0.8345048335839327	170.11739039421082
+minMaxScaler();robustScaler(False,False);smoteTomek('minority');multinomialNB(19.881380850443787,False)	0.9065850031862919	1272.458057641983
+varianceThreshold();maxAbsScaler();passiveAggressiveClassifier(False,'hinge',0.0006058952122145862)	0.9693966037877304	11.536236763000488
+fastICA(10,'parallel',False,'logcosh');varianceThreshold();varianceThreshold();bernoulliNB(0.33223549246877687,False)	invalid_ind	invalid_ind
+smote('not minority',3);maxAbsScaler();randomForest(22,'gini','sqrt',18,16,True,'balanced_subsample')	0.9435813920555123	8.103485822677612
+varianceThreshold();logisticRegression('l1',False,19.352705019452486,'None')	invalid_ind	invalid_ind
+minMaxScaler();multinomialNB(41.52229392586121,False)	0.9018672086833742	3.1408801078796387
+smote('minority',3);maxAbsScaler();extraTreesClassifier(13,'gini','sqrt',14,18,True,'None')	0.936444514788143	257.13341426849365
+knnImputer('most_frequent','distance',5);qda(0.9563602220346231)	0.7181206292614051	95.12327337265015
+selectPercentile(62.55271309320778);smoteTomek('not minority');maxAbsScaler();linearSvc('l1','squared_hinge',False,0.03416307539591945,0.0004504307570909979,'balanced')	0.5	661.1358692646027
+logisticRegression('l2',True,0.0009205668020103541,'balanced')	invalid_ind	invalid_ind
+varianceThreshold();minMaxScaler();smote('minority',5);extraTreesClassifier(11,'gini','sqrt',12,10,True,'balanced_subsample')	0.9486848736520737	255.7050724029541
+varianceThreshold();maxAbsScaler();logisticRegression('l2',False,0.000783488677901958,'balanced')	0.94208862472979	9.453150272369385
+minMaxScaler();maxAbsScaler();nystroem('sigmoid',0.0038010632546550682,91,4,0.4476883268911236);lda(0.9092273153125836,178,0.005011000930888393)	invalid_ind	invalid_ind
+randomForest(90,'entropy','log2',13,3,True,'balanced_subsample')	0.9566680966800089	11.02777099609375
+knnImputer('mean','uniform',10);mlpClassifier(0.002912940175161179,0.02503635083421735,'adam','logistic')	0.8416171368356166	64.93755650520325
+varianceThreshold();pca(0.9789557881925574,False);truncatedSVD(14,'arpack');kNN(17,'distance',1)	0.687725903928094	299.6931183338165
+minMaxScaler();minMaxScaler();randomForest(79,'gini','sqrt',10,11,True,'balanced_subsample')	invalid_ind	invalid_ind
+smote('not minority',3);maxAbsScaler();randomForest(22,'entropy','log2',18,16,True,'None')	0.9407716240925316	4.882720947265625
+knnImputer('mean','uniform',7);rbfSampler(0.017380233701597612,72);extraTreesClassifier(15,'entropy','sqrt',15,3,False,'balanced')	0.5091940139363824	4.7509965896606445
+qda(0.1770195792566911)	0.5636721076591793	91.98873233795166
+minMaxScaler();passiveAggressiveClassifier(True,'squared_hinge',0.00015026240117807917)	0.9702229571287553	14.474541664123535
+pca(0.5776318491011281,True);passiveAggressiveClassifier(True,'hinge',1.6736533882895263e-05)	0.9614608627562049	299.89708137512207
+randomOverSampler('minority');randomUnderSampler('not minority',False);mlpClassifier(0.0005277159055723774,0.013160981503738579,'adam','tanh')	0.83811388181981	63.17712640762329
+varianceThreshold();normalizer('max');maxAbsScaler();gaussianNB(5.1566134495919615e-06)	0.774973239313427	8.623099327087402
+maxAbsScaler();minMaxScaler();mlpClassifier(0.004498664017902515,0.0015248478359216604,'lbfgs','relu')	0.967167865517658	65.292227268219
+nystroem('poly',0.14465472277760982,21,3,0.12977932001813874);varianceThreshold();minMaxScaler();decisionTree('entropy',1.1618455200643638,6,0.39269400623651873,2,'None')	0.6768662715387082	1.8553755283355713
+nystroem('poly',0.007812001850920125,84,3,0.5114259126566492);simpleImputer('most_frequent');kNN(3,'distance',1)	0.9455069119625475	7.779778718948364
+minMaxScaler();qda(0.2416614791045233)	0.8852480934312407	93.85301280021667
+varianceThreshold();randomForest(78,'entropy','sqrt',17,18,False,'None')	0.9587114885605874	31.474807262420654
+simpleImputer('median');varianceThreshold();multinomialNB(0.049504147939807695,True)	0.9216951072718261	14.8114755153656
+robustScaler(False,False);extraTreesClassifier(23,'entropy','log2',3,7,False,'balanced')	0.9466764685056915	3.7252707481384277
+multinomialNB(53.17638065074564,False)	0.9202652327659095	1.464400291442871
+minMaxScaler();sgdClassifier('squared_hinge',3.51268133396023e-06,0.0076864620466887,0.0037371873227481727,0.0006560723347284577,2.907501867640967e-05,0.748271480967857,False,'balanced')	0.9659358326634484	4.971605539321899
+minMaxScaler();mlpClassifier(0.0009567241892851446,0.01657049911643974,'sgd','tanh')	0.9616437100932563	131.05847883224487
+multinomialNB(93.87460578990733,False)	0.9202652327659095	1.4475197792053223
+knnImputer('median','distance',2);maxAbsScaler();maxAbsScaler();adaBoost(91,0.013426448846302208,'SAMME.R',6)	invalid_ind	invalid_ind
+varianceThreshold();minMaxScaler();maxAbsScaler();sgdClassifier('log',1.3384136739310485e-05,4.747206717918968e-08,5.1882456971772985e-05,0.00018195354169933648,0.05317788420305325,0.5951405401608474,True,'balanced')	0.9694016018926158	18.212698698043823
+normalizer('l2');varianceThreshold();logisticRegression('l2',False,0.00011772964983685435,'balanced')	0.8919101507345133	6.138192415237427
+robustScaler(False,False);rbfSampler(0.0308125782979276,72);rbfSampler(0.2897923362639154,40);kNN(1,'distance',1)	invalid_ind	invalid_ind
+selectPercentile(49.840726658668274);standardScaler(True,False);selectFwe(0.03289739013474887);randomForest(22,'gini','sqrt',18,16,True,'balanced_subsample')	0.9513492800646421	7.043574571609497
+randomUnderSampler('minority',True);randomOverSampler('not majority');maxAbsScaler();passiveAggressiveClassifier(False,'hinge',0.00015026240117807917)	invalid_ind	invalid_ind
+selectPercentile(78.8869946695585);varianceThreshold();varianceThreshold();passiveAggressiveClassifier(False,'hinge',0.00015026240117807917)	invalid_ind	invalid_ind
+maxAbsScaler();minMaxScaler();mlpClassifier(0.004498664017902515,0.04016246240785421,'lbfgs','tanh')	0.9630760836516155	54.11972713470459
+pca(0.7911965566271888,False);decisionTree('gini',0.6395803130790192,8,0.686827100058806,2,'None')	0.5	295.7374725341797
+robustScaler(True,False);passiveAggressiveClassifier(False,'hinge',0.00015026240117807917)	0.9708339754509749	10.221161365509033
+simpleImputer('median');fastICA(7,'parallel',False,'exp');gaussianNB(1.246861648029916e-05)	invalid_ind	invalid_ind
+randomOverSampler('not majority');knnImputer('mean','distance',2);varianceThreshold();adaBoost(76,0.2604694940914726,'SAMME',6)	0.924802262475478	168.8211236000061
+maxAbsScaler();minMaxScaler();bernoulliNB(0.36739193354109995,True)	0.8973368431136528	5.819983959197998
+minMaxScaler();bernoulliNB(0.02965508045233839,True)	0.8987642185671266	4.566008567810059
+maxAbsScaler();standardScaler(True,True);logisticRegression('l2',True,12.05358424711467,'balanced')	invalid_ind	invalid_ind
+minMaxScaler();rbfSampler(0.0308125782979276,72);rbfSampler(0.2897923362639154,40);kNN(4,'uniform',2)	invalid_ind	invalid_ind
+mlpClassifier(0.0009567241892851446,0.01657049911643974,'sgd','tanh')	0.5091427833613088	40.27339768409729
+minMaxScaler();normalizer('max');linearSvc('l2','squared_hinge',True,0.00045861557968446693,12.312010906610704,'balanced')	0.9593424993023479	5.7094502449035645
+smote('not minority',2);multinomialNB(98.16501575188991,True)	0.9202652327659095	2.0995378494262695
+minMaxScaler();maxAbsScaler();randomForest(22,'gini','sqrt',5,16,False,'None')	0.9523509835853906	11.23818850517273
+decisionTree('gini',0.6395803130790192,8,0.686827100058806,2,'None')	0.5	1.542412281036377
+robustScaler(True,True);randomForest(90,'entropy','log2',13,3,False,'balanced_subsample')	0.9611605599543506	27.11133050918579
+bernoulliNB(0.08345941151293496,True)	0.8985588797580917	3.147826910018921
+robustScaler(False,False);rbfSampler(0.0308125782979276,45);rbfSampler(0.2897923362639154,40);bernoulliNB(11.403690017043667,True)	invalid_ind	invalid_ind
+knnImputer('most_frequent','uniform',5);randomForest(78,'entropy','log2',17,10,False,'None')	0.9531873331361858	10.962314128875732
+minMaxScaler();qda(0.15632987769539242)	0.897370580321628	93.69457221031189
+bernoulliNB(28.625168238080747,False)	0.8873851997784172	3.1229445934295654
+randomOverSampler('not majority');smoteTomek('not majority');rbfSampler(0.0539880209924548,48);sgdClassifier('squared_hinge',7.540793885260826e-05,0.031696668009564465,6.017195579441038e-05,0.09459150993741176,0.0004340827550760703,0.7506338206661683,False,'None')	0.5053654655942954	1038.740005493164
+simpleImputer('most_frequent');knnImputer('median','uniform',3);randomUnderSampler('not minority',False);bernoulliNB(38.98333475900438,True)	0.8849611189090802	18.65649390220642
+varianceThreshold();maxAbsScaler();randomOverSampler('not majority');multinomialNB(6.9413016092875175,False)	0.9135140425921838	5.6025731563568115
+selectPercentile(62.55271309320778);smoteTomek('not minority');maxAbsScaler();linearSvc('l1','squared_hinge',False,0.03416307539591945,1.0054981216885073,'None')	0.9704133016231345	649.9318335056305
+nystroem('cosine',0.02106968056999927,32,4,0.02770467878637195);normalizer('l1');qda(0.5865809673234096)	0.5	2.9639267921447754
+randomUnderSampler('not minority',True);bernoulliNB(35.752949453461326,False)	0.8853692974747075	3.397956371307373
+extraTreesClassifier(15,'entropy','sqrt',19,3,True,'balanced')	0.9554310657209142	3.7411928176879883
+simpleImputer('median');varianceThreshold();randomForest(90,'entropy','log2',13,3,True,'None')	0.9603492009279815	21.905762910842896
+extraTreesClassifier(23,'entropy','log2',3,7,False,'balanced')	0.9466764685056915	3.1712000370025635
+minMaxScaler();extraTreesClassifier(15,'gini','sqrt',19,3,False,'balanced')	0.9627757808497611	6.900285482406616
+randomUnderSampler('minority',True);multinomialNB(0.8583042240151799,True)	invalid_ind	invalid_ind
+pca(0.7690503378967926,True);nystroem('poly',0.0006220708647314583,76,2,-0.18198535164998453);varianceThreshold();kNN(2,'distance',2)	0.5260592858541137	302.46078658103943
+passiveAggressiveClassifier(False,'squared_hinge',0.10621378923407301)	0.9681870624055046	5.231471061706543
+adaBoost(51,0.03628567418146246,'SAMME',4)	0.8516200107459253	148.73875617980957
+maxAbsScaler();mlpClassifier(0.005622277350594469,0.049317047788513105,'adam','relu')	0.875521781324581	220.20638298988342
+fastICA(2,'parallel',True,'cube');smote('minority',5);extraTreesClassifier(11,'gini','sqrt',12,10,True,'balanced_subsample')	0.7008850810734263	286.026487827301
+simpleImputer('mean');varianceThreshold();bernoulliNB(28.25321865876478,False)	0.8875855404825671	9.711129903793335
+randomOverSampler('not majority');extraTreesClassifier(23,'entropy','log2',3,7,False,'balanced')	0.9438492071756125	3.4268505573272705
+qda(0.5878215282741694)	0.5808930780412427	93.7084333896637
+knnImputer('median','distance',5);adaBoost(69,0.03628567418146246,'SAMME.R',10)	0.8730185637945613	152.8341498374939
+multinomialNB(0.09831235470918831,True)	0.9216951072718261	1.4403376579284668
+varianceThreshold();maxAbsScaler();nystroem('cosine',0.0007783899010949138,24,2,-0.06857462061577557);varianceThreshold();bernoulliNB(0.36739193354109995,True)	invalid_ind	invalid_ind
+minMaxScaler();maxAbsScaler();maxAbsScaler();mlpClassifier(0.01923106361156016,0.013160981503738579,'adam','tanh')	invalid_ind	invalid_ind
+simpleImputer('median');normalizer('l2');nystroem('sigmoid',0.0038010632546550682,91,4,0.4476883268911236);lda(0.9092273153125836,178,0.005011000930888393)	invalid_ind	invalid_ind
+varianceThreshold();maxAbsScaler();randomForest(22,'gini','sqrt',18,16,True,'balanced_subsample')	0.9454169460746134	8.586092948913574
+smote('not minority',3);maxAbsScaler();varianceThreshold();kNN(3,'distance',1)	0.9556059993918972	258.92738819122314
+varianceThreshold();bernoulliNB(0.33223549246877687,False)	0.8977450216792798	7.300307750701904
+smote('minority',2);maxAbsScaler();randomForest(22,'gini','sqrt',18,13,True,'balanced_subsample')	0.9497240629594611	263.3086507320404
+maxAbsScaler();maxAbsScaler();randomForest(20,'gini','sqrt',13,10,False,'balanced_subsample')	invalid_ind	invalid_ind
+varianceThreshold();maxAbsScaler();nystroem('sigmoid',0.0002759867181903057,73,3,-0.4035057657895207);minMaxScaler();qda(0.6568888857302017)	0.8310636383704513	6.554925918579102
+rbfSampler(0.0015865698374648686,26);standardScaler(True,True);multinomialNB(0.020258251126101256,True)	invalid_ind	invalid_ind
+varianceThreshold();pca(0.7123979381657028,True);selectPercentile(33.26606947986192);linearSvc('l1','squared_hinge',False,0.0006411607025323328,0.0765130412010532,'None')	0.9643031184009396	297.75626134872437
+maxAbsScaler();passiveAggressiveClassifier(False,'hinge',3.727132559154151)	0.9681870624055046	6.465419054031372
+minMaxScaler();smoteTomek('not minority');nystroem('rbf',0.03428086149075574,74,3,0.38596095699027755);adaBoost(66,0.7356984086193674,'SAMME',4)	0.5096509240246407	1025.368907213211
+linearSvc('l1','hinge',False,9.698303004622315e-05,8.224212329843846,'balanced')	invalid_ind	invalid_ind
+truncatedSVD(34,'randomized');mlpClassifier(0.002912940175161179,0.02503635083421735,'adam','tanh')	0.61940555872565	6.409153461456299
+knnImputer('median','uniform',10);smoteTomek('not minority');logisticRegression('l1',True,4.668450361872832,'balanced')	invalid_ind	invalid_ind
+minMaxScaler();mlpClassifier(0.0014618619457727364,0.0014209307477163586,'lbfgs','logistic')	0.9683749078474412	64.99416184425354
+selectPercentile(62.814184164750806);selectFwe(0.02683953985960119);minMaxScaler();bernoulliNB(0.36739193354109995,True)	0.8944770941018196	5.677776098251343
+minMaxScaler();robustScaler(False,False);smoteTomek('minority');gaussianNB(9.682772779490958e-09)	0.7369580700651003	1275.3303797245026
+simpleImputer('median');fastICA(21,'parallel',True,'cube');multinomialNB(19.881380850443787,False)	invalid_ind	invalid_ind
+maxAbsScaler();minMaxScaler();mlpClassifier(0.0870553989461892,0.04196621630158927,'lbfgs','relu')	0.9659433298207765	63.14699673652649
+fastICA(85,'deflation',False,'cube');varianceThreshold();randomOverSampler('minority');bernoulliNB(0.21074255354658497,False)	invalid_ind	invalid_ind
+rbfSampler(0.46667309415482966,74);randomUnderSampler('minority',True);minMaxScaler();multinomialNB(19.881380850443787,False)	invalid_ind	invalid_ind
+minMaxScaler();robustScaler(False,False);smoteTomek('minority');decisionTree('entropy',0.7924027949216339,14,0.26927661226405475,8,'None')	0.5	1291.8931455612183
+selectPercentile(62.814184164750806);selectFwe(0.015652496895393248);minMaxScaler();sgdClassifier('squared_hinge',1.5495656025639776e-05,0.588022487355246,2.3223520262184866e-05,0.0017811102247671916,0.0008512168157108822,0.8678948976296776,False,'balanced')	0.9716353382675736	5.807599306106567
+randomOverSampler('minority');multinomialNB(98.16501575188991,True)	0.9196517153912473	1.7211332321166992
+smote('not minority',2);extraTreesClassifier(42,'entropy','log2',3,7,False,'balanced')	0.9503550737012217	5.091405630111694
+normalizer('l2');varianceThreshold();mlpClassifier(0.02289150470567597,0.01657049911643974,'sgd','tanh')	0.9683899021620969	681.7169997692108
+minMaxScaler();logisticRegression('l1',False,0.00011772964983685435,'balanced')	invalid_ind	invalid_ind
+maxAbsScaler();varianceThreshold();varianceThreshold();passiveAggressiveClassifier(False,'hinge',3.727132559154151)	invalid_ind	invalid_ind
+adaBoost(91,0.04266316519315352,'SAMME',9)	0.8601267852605886	264.8046061992645
+selectPercentile(49.840726658668274);standardScaler(True,True);selectFwe(0.03289739013474887);randomForest(22,'gini','sqrt',18,16,True,'balanced_subsample')	0.9513492800646421	7.701206684112549
+varianceThreshold();normalizer('l1');maxAbsScaler();mlpClassifier(0.01923106361156016,0.003136142798285592,'adam','tanh')	0.9736812292005947	243.4890160560608
+maxAbsScaler();minMaxScaler();passiveAggressiveClassifier(False,'squared_hinge',0.00015026240117807917)	0.9702229571287553	15.725317239761353
+rbfSampler(0.002056772415680169,89);fastICA(41,'deflation',False,'cube');normalizer('l1');mlpClassifier(0.02375069022428227,0.23255903316475438,'adam','logistic')	0.5	9.116712093353271
+fastICA(67,'deflation',False,'exp');randomUnderSampler('not minority',True);mlpClassifier(0.010011261618716915,0.024213271256063314,'sgd','relu')	invalid_ind	invalid_ind
+extraTreesClassifier(11,'gini','sqrt',12,10,True,'balanced_subsample')	0.9499194055587257	3.085085391998291
+varianceThreshold();minMaxScaler();maxAbsScaler();extraTreesClassifier(15,'entropy','sqrt',19,3,True,'balanced')	0.9541990328667047	7.52420711517334
+sgdClassifier('log',1.3384136739310485e-05,4.747206717918968e-08,5.1882456971772985e-05,0.002266451943803536,0.05317788420305325,0.5951405401608474,True,'balanced')	0.9691937640311382	6.3856894969940186
+varianceThreshold();pca(0.9095456392782223,True);selectPercentile(2.626854511232013);multinomialNB(0.012407859768659473,True)	invalid_ind	invalid_ind
+minMaxScaler();maxAbsScaler();maxAbsScaler();randomUnderSampler('not minority',True);linearSvc('l1','hinge',False,0.015603060441165361,0.15651243363691092,'balanced')	invalid_ind	invalid_ind
+simpleImputer('mean');varianceThreshold();decisionTree('gini',0.6395803130790192,8,0.1557633796555158,2,'None')	0.5	6.0908894538879395
+pca(0.7911965566271888,False);multinomialNB(0.049504147939807695,True)	invalid_ind	invalid_ind
+robustScaler(True,False);passiveAggressiveClassifier(False,'hinge',0.13408852257952505)	0.9708339754509749	10.130827188491821
+smoteTomek('not majority');passiveAggressiveClassifier(False,'squared_hinge',1.696097916248527e-05)	0.9690009204843164	1285.3694324493408
+randomOverSampler('not majority');maxAbsScaler();selectFwe(0.04770239216020532);sgdClassifier('squared_hinge',3.51268133396023e-06,0.0076864620466887,0.0037371873227481727,0.0006560723347284577,2.907501867640967e-05,0.748271480967857,False,'balanced')	0.9736587377286113	5.436006307601929
+maxAbsScaler();linearSvc('l1','squared_hinge',False,0.0006411607025323328,0.0765130412010532,'balanced')	0.9724541944512705	8.913938522338867
+varianceThreshold();pca(0.7123979381657028,True);selectPercentile(18.875246752325104);passiveAggressiveClassifier(False,'hinge',1.4627481235494106e-05)	0.9584007730402224	297.01448464393616
+varianceThreshold();maxAbsScaler();maxAbsScaler();featureAgglomeration(3,'cosine','ward');qda(0.9378887920729019)	invalid_ind	invalid_ind
+minMaxScaler();bernoulliNB(0.04445041235050268,True)	0.8983535409490567	4.478225231170654
+knnImputer('median','distance',5);mlpClassifier(0.004498664017902515,0.04016246240785421,'lbfgs','tanh')	0.947577793419995	691.4581360816956
+maxAbsScaler();minMaxScaler();adaBoost(69,0.03628567418146246,'SAMME.R',5)	0.8730185637945613	203.09436130523682

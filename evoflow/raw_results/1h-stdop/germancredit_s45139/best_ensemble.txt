@@ -1,0 +1,61 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.7133333333333334, 'balanced_accuracy_score': 0.6925641543746212, 'macro_precision_score': 0.6810410334346504, 'macro_recall_score': 0.6925641543746212, 'macro_f1_score': 0.684981684981685, 'micro_precision_score': 0.7133333333333334, 'micro_recall_score': 0.7133333333333334, 'micro_f1_score': 0.7133333333333335}
+('0', Pipeline(steps=[('0', Normalizer(norm='max')),
+                ('1',
+                 RandomForestClassifier(class_weight='balanced',
+                                        criterion='entropy',
+                                        max_features='sqrt',
+                                        min_samples_leaf=20,
+                                        min_samples_split=11, n_estimators=63,
+                                        random_state=45139))]))
+('1', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 SGDClassifier(alpha=0.00651918957052108,
+                               class_weight='balanced',
+                               epsilon=2.2515816055078713e-05,
+                               eta0=0.007304238679724233,
+                               l1_ratio=1.352854816742839e-05,
+                               loss='modified_huber', power_t=0.354527384360863,
+                               random_state=45139,
+                               tol=0.0004071745888391488))]))
+('2', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=45139,
+                            sampling_strategy='not minority')),
+                ('1', BernoulliNB(alpha=0.21074255354658497, fit_prior=False))]))
+('3', Pipeline(steps=[('0',
+                 Nystroem(coef0=0.23741317270459739, degree=3,
+                          gamma=9.616194539534056e-05, kernel='poly',
+                          n_components=95, random_state=45139)),
+                ('1',
+                 LogisticRegression(C=0.013915698830009428,
+                                    class_weight='balanced',
+                                    random_state=45139))]))
+('4', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=45139,
+                            sampling_strategy='not minority')),
+                ('1',
+                 BernoulliNB(alpha=0.014503843215945325, fit_prior=False))]))
+('5', Pipeline(steps=[('0', StandardScaler(with_mean=False)),
+                ('1', KNNImputer(n_neighbors=10, weights='distance')),
+                ('2',
+                 LogisticRegression(C=0.013915698830009428,
+                                    class_weight='balanced',
+                                    random_state=45139))]))
+('6', Pipeline(steps=[('0', RobustScaler(with_scaling=False)),
+                ('1', BernoulliNB(alpha=0.21074255354658497, fit_prior=False))]))
+('7', Pipeline(steps=[('0', StandardScaler(with_mean=False)),
+                ('1',
+                 LogisticRegression(C=0.013915698830009428,
+                                    class_weight='balanced',
+                                    random_state=45139))]))
+('8', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 RandomOverSampler(random_state=45139,
+                                   sampling_strategy='minority')),
+                ('2', BernoulliNB(alpha=0.21074255354658497, fit_prior=False))]))
+('9', Pipeline(steps=[('0', StandardScaler(with_mean=False)),
+                ('1', KNNImputer(n_neighbors=10, weights='distance')),
+                ('2',
+                 LogisticRegression(C=3.869011639497537,
+                                    class_weight='balanced',
+                                    random_state=45139))]))

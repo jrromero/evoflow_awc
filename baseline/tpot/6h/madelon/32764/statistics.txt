@@ -1,0 +1,25 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer-1',
+                                                 FunctionTransformer(func=<function copy at 0x7fb6be6f2e60>)),
+                                                ('functiontransformer-2',
+                                                 FunctionTransformer(func=<function copy at 0x7fb6be6f2e60>))])),
+                ('normalizer', Normalizer(norm='l1')),
+                ('rfe',
+                 RFE(estimator=ExtraTreesClassifier(max_features=1.0,
+                                                    random_state=32764),
+                     step=0.2)),
+                ('extratreesclassifier',
+                 ExtraTreesClassifier(criterion='entropy',
+                                      max_features=0.7500000000000001,
+                                      min_samples_leaf=11, min_samples_split=18,
+                                      random_state=32764))])
+Performance in train: 
+0.8477399920973874
+
+Performance dic: 
+{'accuracy_score': 0.8538461538461538, 'balanced_accuracy_score': 0.8540132547864506, 'macro_precision_score': 0.8553496475805813, 'macro_recall_score': 0.8540132547864506, 'macro_f1_score': 0.853729791615947, 'micro_precision_score': 0.8538461538461538, 'micro_recall_score': 0.8538461538461538, 'micro_f1_score': 0.8538461538461538}
+Fit time: 23121.33122444153 seconds
+
+Distinct evaluated pipelines: 348
+Mean pipeline size: 1.6752873563218391

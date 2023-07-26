@@ -1,0 +1,64 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.7133333333333334, 'balanced_accuracy_score': 0.7056981208324914, 'macro_precision_score': 0.687511512249033, 'macro_recall_score': 0.7056981208324914, 'macro_f1_score': 0.6913875598086126, 'micro_precision_score': 0.7133333333333334, 'micro_recall_score': 0.7133333333333334, 'micro_f1_score': 0.7133333333333335}
+('0', Pipeline(steps=[('0',
+                 LinearSVC(C=0.054202717030627026, class_weight='balanced',
+                           dual=False, random_state=75549,
+                           tol=0.00035228144436595817))]))
+('1', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 SMOTETomek(random_state=75549,
+                            sampling_strategy='not majority')),
+                ('2',
+                 ExtraTreesClassifier(bootstrap=True, class_weight='balanced',
+                                      max_features='sqrt', min_samples_leaf=17,
+                                      n_estimators=30, random_state=75549))]))
+('2', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 ExtraTreesClassifier(bootstrap=True,
+                                      class_weight='balanced_subsample',
+                                      criterion='entropy', max_features='log2',
+                                      min_samples_leaf=5, min_samples_split=9,
+                                      n_estimators=13, random_state=75549))]))
+('3', Pipeline(steps=[('0',
+                 ExtraTreesClassifier(bootstrap=True,
+                                      class_weight='balanced_subsample',
+                                      criterion='entropy', max_features='log2',
+                                      min_samples_leaf=5, min_samples_split=9,
+                                      n_estimators=13, random_state=75549))]))
+('4', Pipeline(steps=[('0', SelectPercentile(percentile=77.65143447539826)),
+                ('1', SimpleImputer(strategy='median')),
+                ('2',
+                 LinearSVC(C=0.054202717030627026, class_weight='balanced',
+                           dual=False, random_state=75549,
+                           tol=0.00035228144436595817))]))
+('5', Pipeline(steps=[('0', SelectPercentile(percentile=86.8290490130329)),
+                ('1', MaxAbsScaler()),
+                ('2',
+                 LinearSVC(C=0.054202717030627026, class_weight='balanced',
+                           dual=False, random_state=75549,
+                           tol=0.00035228144436595817))]))
+('6', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1', KNNImputer(n_neighbors=3, weights='distance')),
+                ('2',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced_subsample',
+                                        max_features='log2', min_samples_leaf=5,
+                                        n_estimators=15, random_state=75549))]))
+('7', Pipeline(steps=[('0', SelectPercentile(percentile=82.83301693997143)),
+                ('1', MinMaxScaler()),
+                ('2',
+                 LinearSVC(C=0.054202717030627026, class_weight='balanced',
+                           dual=False, random_state=75549,
+                           tol=0.00035228144436595817))]))
+('8', Pipeline(steps=[('0', SelectPercentile(percentile=82.8257822350683)),
+                ('1', MinMaxScaler()),
+                ('2',
+                 LinearSVC(C=0.054202717030627026, class_weight='balanced',
+                           dual=False, random_state=75549,
+                           tol=0.00035228144436595817))]))
+('9', Pipeline(steps=[('0', SelectPercentile(percentile=86.8290490130329)),
+                ('1', MinMaxScaler()),
+                ('2',
+                 LinearSVC(C=0.054202717030627026, class_weight='balanced',
+                           dual=False, random_state=75549,
+                           tol=0.00035228144436595817))]))

@@ -1,0 +1,60 @@
+['1', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '1', '0', '1', '0', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1', '1', '0', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1']
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+('0', Pipeline(steps=[('0',
+                 Nystroem(coef0=0.531471328653875, degree=5,
+                          gamma=0.0020861530389419017, kernel='cosine',
+                          n_components=90, random_state=76083)),
+                ('1', MinMaxScaler()),
+                ('2', KNeighborsClassifier(n_neighbors=2))]))
+('1', Pipeline(steps=[('0',
+                 Nystroem(coef0=0.531471328653875, degree=5,
+                          gamma=0.0020861530389419017, kernel='cosine',
+                          n_components=90, random_state=76083)),
+                ('1', KNNImputer(n_neighbors=9)),
+                ('2', KNeighborsClassifier(n_neighbors=2))]))
+('2', Pipeline(steps=[('0', Normalizer()), ('1', KNNImputer(n_neighbors=9)),
+                ('2', KNeighborsClassifier(n_neighbors=2))]))
+('3', Pipeline(steps=[('0', Normalizer()),
+                ('1', SimpleImputer(strategy='most_frequent')),
+                ('2', KNeighborsClassifier(n_neighbors=2))]))
+('4', Pipeline(steps=[('0',
+                 Nystroem(coef0=0.531471328653875, degree=5,
+                          gamma=0.0020861530389419017, kernel='cosine',
+                          n_components=90, random_state=76083)),
+                ('1',
+                 SMOTE(k_neighbors=3, random_state=76083,
+                       sampling_strategy='minority')),
+                ('2', KNeighborsClassifier(n_neighbors=2))]))
+('5', Pipeline(steps=[('0', Normalizer(norm='l1')), ('1', VarianceThreshold()),
+                ('2',
+                 SMOTE(k_neighbors=3, random_state=76083,
+                       sampling_strategy='minority')),
+                ('3', KNeighborsClassifier(n_neighbors=2))]))
+('6', Pipeline(steps=[('0',
+                 Nystroem(coef0=0.531471328653875, degree=5,
+                          gamma=0.0020861530389419017, kernel='cosine',
+                          n_components=90, random_state=76083)),
+                ('1', KNeighborsClassifier(n_neighbors=2))]))
+('7', Pipeline(steps=[('0', Normalizer(norm='l1')), ('1', VarianceThreshold()),
+                ('2', MaxAbsScaler()),
+                ('3', KNeighborsClassifier(n_neighbors=2))]))
+('8', Pipeline(steps=[('0',
+                 Nystroem(coef0=0.531471328653875, degree=5,
+                          gamma=0.0020861530389419017, kernel='cosine',
+                          n_components=90, random_state=76083)),
+                ('1', VarianceThreshold()),
+                ('2',
+                 SMOTE(k_neighbors=3, random_state=76083,
+                       sampling_strategy='minority')),
+                ('3', KNeighborsClassifier(n_neighbors=2))]))
+('9', Pipeline(steps=[('0',
+                 Nystroem(coef0=0.531471328653875, degree=5,
+                          gamma=0.0020861530389419017, kernel='cosine',
+                          n_components=90, random_state=76083)),
+                ('1',
+                 FeatureAgglomeration(affinity='cosine', linkage='average',
+                                      n_clusters=23)),
+                ('2',
+                 SMOTE(k_neighbors=3, random_state=76083,
+                       sampling_strategy='minority')),
+                ('3', KNeighborsClassifier(n_neighbors=2))]))

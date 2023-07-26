@@ -1,0 +1,27 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator-1',
+                 StackingEstimator(estimator=MultinomialNB(alpha=0.001))),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=ExtraTreesClassifier(bootstrap=True,
+                                                                  criterion='entropy',
+                                                                  max_features=0.9500000000000001,
+                                                                  min_samples_leaf=13,
+                                                                  min_samples_split=19,
+                                                                  random_state=8))),
+                ('nystroem',
+                 Nystroem(gamma=0.55, kernel='poly', n_components=4,
+                          random_state=8)),
+                ('randomforestclassifier',
+                 RandomForestClassifier(bootstrap=False,
+                                        max_features=0.6500000000000001,
+                                        min_samples_leaf=2, min_samples_split=9,
+                                        random_state=8))])
+Performance in train: 
+0.9789959016393442
+
+Performance dic: 
+{'accuracy_score': 0.9785407725321889, 'balanced_accuracy_score': 0.9747140522875817, 'macro_precision_score': 0.9776015124116391, 'macro_recall_score': 0.9747140522875817, 'macro_f1_score': 0.9761334070841784, 'micro_precision_score': 0.9785407725321889, 'micro_recall_score': 0.9785407725321889, 'micro_f1_score': 0.9785407725321889}
+Fit time: 3614.6373908519745 seconds
+
+Distinct evaluated pipelines: 3180
+Mean pipeline size: 2.4569182389937105

@@ -1,0 +1,39 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator',
+                 StackingEstimator(estimator=XGBClassifier(base_score=0.5,
+                                                           booster='gbtree',
+                                                           colsample_bylevel=1,
+                                                           colsample_bynode=1,
+                                                           colsample_bytree=1,
+                                                           gamma=0, gpu_id=-1,
+                                                           importance_type='gain',
+                                                           interaction_constraints='',
+                                                           learning_rate=0.001,
+                                                           max_delta_step=0,
+                                                           max_depth=10,
+                                                           min_child_weight=2,
+                                                           missing=nan,
+                                                           monotone_constraints='()',
+                                                           n_estimators=100,
+                                                           n_jobs=1,
+                                                           num_parallel_tree=1,
+                                                           objective='multi:softprob',
+                                                           random_state=8,
+                                                           reg_alpha=0,
+                                                           reg_lambda=1,
+                                                           scale_pos_weight=None,
+                                                           subsample=0.9000000000000001,
+                                                           tree_method='exact',
+                                                           validate_parameters=1,
+                                                           verbosity=0))),
+                ('standardscaler', StandardScaler()),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6777635137849328
+
+Performance dic: 
+{'accuracy_score': 0.5947467166979362, 'balanced_accuracy_score': 0.31454652207583894, 'macro_precision_score': 0.3220117393049724, 'macro_recall_score': 0.31454652207583894, 'macro_f1_score': 0.3160431388357276, 'micro_precision_score': 0.5947467166979362, 'micro_recall_score': 0.5947467166979362, 'micro_f1_score': 0.5947467166979362}
+Fit time: 3617.859654903412 seconds
+
+Distinct evaluated pipelines: 699
+Mean pipeline size: 1.9413447782546496

@@ -1,0 +1,67 @@
+['good', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad']
+{'accuracy_score': 0.6766666666666666, 'balanced_accuracy_score': 0.6469488785613255, 'macro_precision_score': 0.6397281329554734, 'macro_recall_score': 0.6469488785613255, 'macro_f1_score': 0.6422908138805916, 'micro_precision_score': 0.6766666666666666, 'micro_recall_score': 0.6766666666666666, 'micro_f1_score': 0.6766666666666666}
+('0', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 SMOTETomek(random_state=5, sampling_strategy='not minority')),
+                ('2',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not majority')),
+                ('3', BernoulliNB(alpha=2.213620578916749, fit_prior=False))]))
+('1', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 SMOTETomek(random_state=5, sampling_strategy='not minority')),
+                ('2',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not majority')),
+                ('3', BernoulliNB(alpha=3.075058716161747, fit_prior=False))]))
+('2', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1', SMOTETomek(random_state=5, sampling_strategy='minority')),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='sqrt', min_samples_leaf=18,
+                                      min_samples_split=3, n_estimators=16,
+                                      random_state=5))]))
+('3', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 SMOTETomek(random_state=5, sampling_strategy='not minority')),
+                ('2',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not majority')),
+                ('3', BernoulliNB(alpha=0.03161000421054115, fit_prior=False))]))
+('4', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 SMOTETomek(random_state=5, sampling_strategy='not minority')),
+                ('2',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not majority')),
+                ('3', BernoulliNB(alpha=9.42297618284471, fit_prior=False))]))
+('5', Pipeline(steps=[('0', FastICA(n_components=40, random_state=5)),
+                ('1', BernoulliNB(alpha=0.5944472033508315, fit_prior=False))]))
+('6', Pipeline(steps=[('0', StandardScaler(with_std=False)),
+                ('1',
+                 SMOTETomek(random_state=5, sampling_strategy='not minority')),
+                ('2',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not minority')),
+                ('3', BernoulliNB(alpha=0.1310315831001241, fit_prior=False))]))
+('7', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 SMOTETomek(random_state=5, sampling_strategy='not minority')),
+                ('2',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not majority')),
+                ('3', BernoulliNB(alpha=1.6965804398991606))]))
+('8', Pipeline(steps=[('0', SelectPercentile(percentile=78.5511013184071)),
+                ('1',
+                 SMOTETomek(random_state=5, sampling_strategy='not minority')),
+                ('2',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not majority')),
+                ('3', BernoulliNB(alpha=1.8474646957941658))]))
+('9', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 SMOTETomek(random_state=5, sampling_strategy='not minority')),
+                ('2',
+                 RandomOverSampler(random_state=5,
+                                   sampling_strategy='not majority')),
+                ('3', BernoulliNB(alpha=26.17787757712939))]))

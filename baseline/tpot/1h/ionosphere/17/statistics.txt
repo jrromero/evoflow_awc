@@ -1,0 +1,27 @@
+Best ind: 
+Pipeline(steps=[('fastica-1',
+                 FastICA(random_state=17, tol=0.15000000000000002)),
+                ('fastica-2', FastICA(random_state=17, tol=1.0)),
+                ('pca-1',
+                 PCA(iterated_power=9, random_state=17,
+                     svd_solver='randomized')),
+                ('maxabsscaler', MaxAbsScaler()),
+                ('pca-2',
+                 PCA(iterated_power=2, random_state=17,
+                     svd_solver='randomized')),
+                ('gradientboostingclassifier',
+                 GradientBoostingClassifier(learning_rate=0.5, max_depth=6,
+                                            max_features=0.25,
+                                            min_samples_leaf=4,
+                                            min_samples_split=3,
+                                            random_state=17,
+                                            subsample=0.9000000000000001))])
+Performance in train: 
+0.9516176470588235
+
+Performance dic: 
+{'accuracy_score': 0.9743589743589743, 'balanced_accuracy_score': 0.9695238095238095, 'macro_precision_score': 0.9746469833119384, 'macro_recall_score': 0.9695238095238095, 'macro_f1_score': 0.9719939360089365, 'micro_precision_score': 0.9743589743589743, 'micro_recall_score': 0.9743589743589743, 'micro_f1_score': 0.9743589743589743}
+Fit time: 3607.231278657913 seconds
+
+Distinct evaluated pipelines: 2084
+Mean pipeline size: 7.023992322456814

@@ -1,0 +1,60 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.7166666666666667, 'balanced_accuracy_score': 0.6924126086077995, 'macro_precision_score': 0.6829578750180123, 'macro_recall_score': 0.6924126086077995, 'macro_f1_score': 0.6865434966994873, 'micro_precision_score': 0.7166666666666667, 'micro_recall_score': 0.7166666666666667, 'micro_f1_score': 0.7166666666666667}
+('0', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 SMOTE(k_neighbors=2, random_state=3,
+                       sampling_strategy='minority')),
+                ('2',
+                 MultinomialNB(alpha=0.019915429665058812, fit_prior=False))]))
+('1', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 SMOTE(k_neighbors=2, random_state=3,
+                       sampling_strategy='minority')),
+                ('2', MultinomialNB(alpha=0.3987788253820294))]))
+('2', Pipeline(steps=[('0', SMOTE(random_state=3, sampling_strategy='not majority')),
+                ('1', MinMaxScaler()), ('2', VarianceThreshold()),
+                ('3',
+                 MLPClassifier(activation='logistic', alpha=0.08416855744190609,
+                               learning_rate_init=0.10295353043910836,
+                               random_state=3, solver='lbfgs'))]))
+('3', Pipeline(steps=[('0', VarianceThreshold()), ('1', RobustScaler()),
+                ('2',
+                 SGDClassifier(alpha=7.448680598818629e-06, average=True,
+                               class_weight='balanced',
+                               epsilon=0.0030379323281546017,
+                               eta0=4.171620876934391e-05,
+                               l1_ratio=1.2386136506783467e-09, loss='log',
+                               power_t=0.3898712328891275, random_state=3,
+                               tol=1.492119795954643e-05))]))
+('4', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 RandomOverSampler(random_state=3,
+                                   sampling_strategy='minority')),
+                ('2', MultinomialNB(alpha=36.87139881943498, fit_prior=False))]))
+('5', Pipeline(steps=[('0', VarianceThreshold()), ('1', MinMaxScaler()),
+                ('2', MaxAbsScaler()),
+                ('3', SelectPercentile(percentile=61.71901459265013)),
+                ('4',
+                 MultinomialNB(alpha=0.08508110956906412, fit_prior=False))]))
+('6', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 SMOTE(k_neighbors=2, random_state=3,
+                       sampling_strategy='minority')),
+                ('2', MultinomialNB(alpha=0.019915429665058812))]))
+('7', Pipeline(steps=[('0', VarianceThreshold()), ('1', MinMaxScaler()),
+                ('2', MaxAbsScaler()),
+                ('3', SelectPercentile(percentile=61.99201344111327)),
+                ('4',
+                 MultinomialNB(alpha=0.017107245477803918, fit_prior=False))]))
+('8', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 SMOTE(k_neighbors=4, random_state=3,
+                       sampling_strategy='minority')),
+                ('2', SelectPercentile(percentile=50.28721014193498)),
+                ('3',
+                 MultinomialNB(alpha=0.3327388176675209, fit_prior=False))]))
+('9', Pipeline(steps=[('0', MinMaxScaler()), ('1', MaxAbsScaler()),
+                ('2',
+                 SMOTE(k_neighbors=2, random_state=3,
+                       sampling_strategy='minority')),
+                ('3', MultinomialNB(alpha=0.15546959374062388))]))

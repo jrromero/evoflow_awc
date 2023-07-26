@@ -1,0 +1,64 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0']
+{'accuracy_score': 0.9611111111111111, 'balanced_accuracy_score': 0.9619195046439628, 'macro_precision_score': 0.9607213438735178, 'macro_recall_score': 0.9619195046439628, 'macro_f1_score': 0.9610522085870608, 'micro_precision_score': 0.9611111111111111, 'micro_recall_score': 0.9611111111111111, 'micro_f1_score': 0.9611111111111111}
+('0', Pipeline(steps=[('0', SMOTETomek(random_state=0, sampling_strategy='minority')),
+                ('1', SelectPercentile(percentile=30.125627486826108)),
+                ('2',
+                 LinearSVC(C=0.06232120056358629, class_weight='balanced',
+                           loss='hinge', random_state=0,
+                           tol=0.0028224388643861083))]))
+('1', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.0012772023573329192,
+                                             loss='squared_hinge',
+                                             random_state=0))]))
+('2', Pipeline(steps=[('0',
+                 RandomUnderSampler(random_state=0,
+                                    sampling_strategy='not minority')),
+                ('1',
+                 RandomOverSampler(random_state=0,
+                                   sampling_strategy='not majority')),
+                ('2',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('3', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=0, sampling_strategy='not minority')),
+                ('1',
+                 RandomOverSampler(random_state=0,
+                                   sampling_strategy='minority')),
+                ('2',
+                 LogisticRegression(C=13.132837104682535,
+                                    class_weight='balanced', random_state=0))]))
+('4', Pipeline(steps=[('0', SelectPercentile(percentile=7.739684788817911)),
+                ('1', RobustScaler(with_centering=False, with_scaling=False)),
+                ('2',
+                 RandomUnderSampler(random_state=0,
+                                    sampling_strategy='not minority')),
+                ('3',
+                 SGDClassifier(alpha=0.013207034656876223, average=True,
+                               epsilon=0.0001226969567216874,
+                               eta0=0.0013565096580156488,
+                               l1_ratio=1.0042622756980224e-06, loss='log',
+                               power_t=0.8232112436296896, random_state=0,
+                               tol=0.001745511764199436))]))
+('5', Pipeline(steps=[('0', SimpleImputer()),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.00530389344540593,
+                                             fit_intercept=False,
+                                             random_state=0))]))
+('6', Pipeline(steps=[('0',
+                 LinearSVC(C=1.389735569479977, dual=False, random_state=0,
+                           tol=0.00010363344570766862))]))
+('7', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=3.511595279855097e-05,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=0))]))
+('8', Pipeline(steps=[('0', SimpleImputer(strategy='most_frequent')),
+                ('1',
+                 LinearSVC(C=1.389735569479977, dual=False, random_state=0,
+                           tol=0.00010363344570766862))]))
+('9', Pipeline(steps=[('0', SimpleImputer()),
+                ('1',
+                 LinearSVC(C=0.06232120056358629, class_weight='balanced',
+                           loss='hinge', random_state=0,
+                           tol=0.00666748454419246))]))

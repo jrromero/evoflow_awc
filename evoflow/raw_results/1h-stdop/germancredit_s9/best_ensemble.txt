@@ -1,0 +1,50 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.7133333333333334, 'balanced_accuracy_score': 0.6978177409577693, 'macro_precision_score': 0.6834707646176912, 'macro_recall_score': 0.6978177409577693, 'macro_f1_score': 0.6876664568301776, 'micro_precision_score': 0.7133333333333334, 'micro_recall_score': 0.7133333333333334, 'micro_f1_score': 0.7133333333333335}
+('0', Pipeline(steps=[('0', MinMaxScaler()), ('1', StandardScaler(with_std=False)),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.0010613012501766161,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=9))]))
+('1', Pipeline(steps=[('0', RobustScaler()), ('1', Normalizer()),
+                ('2', BernoulliNB(alpha=0.7754147335002256, fit_prior=False))]))
+('2', Pipeline(steps=[('0', RobustScaler()), ('1', MaxAbsScaler()),
+                ('2',
+                 FastICA(algorithm='deflation', fun='exp', n_components=42,
+                         random_state=9)),
+                ('3',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced',
+                                        max_features='log2', min_samples_leaf=6,
+                                        min_samples_split=7, n_estimators=46,
+                                        random_state=9))]))
+('3', Pipeline(steps=[('0', StandardScaler(with_std=False)),
+                ('1',
+                 LinearSVC(C=7.749510476074227, class_weight='balanced',
+                           dual=False, random_state=9,
+                           tol=0.0006339192197655306))]))
+('4', Pipeline(steps=[('0', StandardScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=1.7026465443035956e-05,
+                                             fit_intercept=False,
+                                             random_state=9))]))
+('5', Pipeline(steps=[('0', VarianceThreshold()), ('1', MaxAbsScaler()),
+                ('2',
+                 SMOTETomek(random_state=9, sampling_strategy='not majority')),
+                ('3',
+                 ExtraTreesClassifier(class_weight='balanced_subsample',
+                                      max_features='sqrt', min_samples_leaf=3,
+                                      min_samples_split=20, n_estimators=25,
+                                      random_state=9))]))
+('6', Pipeline(steps=[('0',
+                 RandomUnderSampler(random_state=9, replacement=True,
+                                    sampling_strategy='not majority')),
+                ('1', StandardScaler(with_std=False)),
+                ('2', BernoulliNB(alpha=0.33511513280799937, fit_prior=False))]))
+('7', Pipeline(steps=[('0', StandardScaler()),
+                ('1', BernoulliNB(alpha=0.33511513280799937, fit_prior=False))]))
+('8', Pipeline(steps=[('0', StandardScaler(with_std=False)),
+                ('1', BernoulliNB(alpha=0.33511513280799937, fit_prior=False))]))
+('9', Pipeline(steps=[('0', MinMaxScaler()), ('1', MaxAbsScaler()),
+                ('2',
+                 MultinomialNB(alpha=0.3007912024350419, fit_prior=False))]))

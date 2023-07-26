@@ -1,0 +1,22 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7fc07bc165f0>)),
+                                                ('stackingestimator',
+                                                 StackingEstimator(estimator=LogisticRegression(C=0.001,
+                                                                                                random_state=14)))])),
+                ('polynomialfeatures', PolynomialFeatures(include_bias=False)),
+                ('binarizer', Binarizer(threshold=0.6000000000000001)),
+                ('nystroem',
+                 Nystroem(gamma=0.0, kernel='additive_chi2', n_components=7,
+                          random_state=14)),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.9772028688524591
+
+Performance dic: 
+{'accuracy_score': 0.9914163090128756, 'balanced_accuracy_score': 0.9934640522875817, 'macro_precision_score': 0.9878048780487805, 'macro_recall_score': 0.9934640522875817, 'macro_f1_score': 0.9905376868096166, 'micro_precision_score': 0.9914163090128756, 'micro_recall_score': 0.9914163090128756, 'micro_f1_score': 0.9914163090128756}
+Fit time: 3928.680332183838 seconds
+
+Distinct evaluated pipelines: 6071
+Mean pipeline size: 27.603360237193215

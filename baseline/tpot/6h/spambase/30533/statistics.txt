@@ -1,0 +1,30 @@
+Best ind: 
+Pipeline(steps=[('minmaxscaler', MinMaxScaler()),
+                ('stackingestimator',
+                 StackingEstimator(estimator=ExtraTreesClassifier(max_features=0.3,
+                                                                  min_samples_leaf=20,
+                                                                  min_samples_split=8,
+                                                                  random_state=30533))),
+                ('xgbclassifier',
+                 XGBClassifier(base_score=0.5, booster='gbtree',
+                               colsample_bylevel=1, colsample_bynode=1,
+                               colsample_bytree=1, gamma=0, gpu_id=-1,
+                               importance_type='gain',
+                               interaction_constraints='', learning_rate=0.5,
+                               max_delta_step=0, max_depth=8,
+                               min_child_weight=1, missing=nan,
+                               monotone_constraints='()', n_estimators=100,
+                               n_jobs=1, num_parallel_tree=1,
+                               random_state=30533, reg_alpha=0, reg_lambda=1,
+                               scale_pos_weight=1, subsample=1.0,
+                               tree_method='exact', validate_parameters=1,
+                               verbosity=0))])
+Performance in train: 
+0.9504331400859556
+
+Performance dic: 
+{'accuracy_score': 0.9563233376792699, 'balanced_accuracy_score': 0.9535320088300221, 'macro_precision_score': 0.9548722023336578, 'macro_recall_score': 0.9535320088300221, 'macro_f1_score': 0.9541904844680078, 'micro_precision_score': 0.9563233376792699, 'micro_recall_score': 0.9563233376792699, 'micro_f1_score': 0.9563233376792699}
+Fit time: 21655.147483825684 seconds
+
+Distinct evaluated pipelines: 1720
+Mean pipeline size: 2.1168604651162792

@@ -1,0 +1,27 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7fe16d4585f0>)),
+                                                ('pipeline',
+                                                 Pipeline(steps=[('pca',
+                                                                  PCA(iterated_power=8,
+                                                                      random_state=11,
+                                                                      svd_solver='randomized')),
+                                                                 ('selectpercentile',
+                                                                  SelectPercentile(percentile=88))]))])),
+                ('gradientboostingclassifier',
+                 GradientBoostingClassifier(max_depth=4,
+                                            max_features=0.15000000000000002,
+                                            min_samples_leaf=5,
+                                            min_samples_split=18,
+                                            random_state=11,
+                                            subsample=0.9000000000000001))])
+Performance in train: 
+0.9506372549019607
+
+Performance dic: 
+{'accuracy_score': 0.9658119658119658, 'balanced_accuracy_score': 0.9523809523809523, 'macro_precision_score': 0.9746835443037974, 'macro_recall_score': 0.9523809523809523, 'macro_f1_score': 0.962012987012987, 'micro_precision_score': 0.9658119658119658, 'micro_recall_score': 0.9658119658119658, 'micro_f1_score': 0.9658119658119658}
+Fit time: 3605.7410628795624 seconds
+
+Distinct evaluated pipelines: 1812
+Mean pipeline size: 2.316225165562914

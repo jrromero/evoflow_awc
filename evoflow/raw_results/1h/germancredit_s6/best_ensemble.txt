@@ -1,0 +1,55 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.6966666666666667, 'balanced_accuracy_score': 0.6696807435845625, 'macro_precision_score': 0.661343003986743, 'macro_recall_score': 0.6696807435845625, 'macro_f1_score': 0.6644171552900395, 'micro_precision_score': 0.6966666666666667, 'micro_recall_score': 0.6966666666666667, 'micro_f1_score': 0.6966666666666667}
+('0', Pipeline(steps=[('0', SMOTE(random_state=6, sampling_strategy='not majority')),
+                ('1', GaussianNB(var_smoothing=5.452734478916939e-09))]))
+('1', Pipeline(steps=[('0', SMOTE(random_state=6, sampling_strategy='not majority')),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True, class_weight='balanced',
+                                      max_features='sqrt', min_samples_leaf=10,
+                                      min_samples_split=3, n_estimators=59,
+                                      random_state=6))]))
+('2', Pipeline(steps=[('0',
+                 RandomUnderSampler(random_state=6,
+                                    sampling_strategy='not minority')),
+                ('1', GaussianNB(var_smoothing=1.069531040379812e-08))]))
+('3', Pipeline(steps=[('0', SMOTE(random_state=6, sampling_strategy='minority')),
+                ('1', GaussianNB(var_smoothing=2.4187993058777806e-09))]))
+('4', Pipeline(steps=[('0', Normalizer()), ('1', MaxAbsScaler()),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced_subsample',
+                                      max_features='sqrt', min_samples_leaf=16,
+                                      min_samples_split=9, n_estimators=39,
+                                      random_state=6))]))
+('5', Pipeline(steps=[('0', SMOTE(random_state=6, sampling_strategy='minority')),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True, class_weight='balanced',
+                                      max_features='sqrt', min_samples_leaf=10,
+                                      min_samples_split=3, n_estimators=59,
+                                      random_state=6))]))
+('6', Pipeline(steps=[('0', SimpleImputer(strategy='most_frequent')),
+                ('1',
+                 RandomOverSampler(random_state=6,
+                                   sampling_strategy='minority')),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='sqrt', min_samples_leaf=11,
+                                      min_samples_split=14, n_estimators=69,
+                                      random_state=6))]))
+('7', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=6,
+                                   sampling_strategy='not majority')),
+                ('1', GaussianNB(var_smoothing=1.5350033677596827e-08))]))
+('8', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=6,
+                                   sampling_strategy='not majority')),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True,
+                                      class_weight='balanced_subsample',
+                                      max_features='sqrt', min_samples_leaf=11,
+                                      min_samples_split=20, n_estimators=73,
+                                      random_state=6))]))
+('9', Pipeline(steps=[('0', SMOTE(random_state=6, sampling_strategy='minority')),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True, max_features='sqrt',
+                                      min_samples_leaf=10, min_samples_split=3,
+                                      n_estimators=59, random_state=6))]))

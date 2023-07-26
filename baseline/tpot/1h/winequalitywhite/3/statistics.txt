@@ -1,0 +1,39 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator',
+                 StackingEstimator(estimator=XGBClassifier(base_score=0.5,
+                                                           booster='gbtree',
+                                                           colsample_bylevel=1,
+                                                           colsample_bynode=1,
+                                                           colsample_bytree=1,
+                                                           gamma=0, gpu_id=-1,
+                                                           importance_type='gain',
+                                                           interaction_constraints='',
+                                                           learning_rate=0.1,
+                                                           max_delta_step=0,
+                                                           max_depth=10,
+                                                           min_child_weight=8,
+                                                           missing=nan,
+                                                           monotone_constraints='()',
+                                                           n_estimators=100,
+                                                           n_jobs=1,
+                                                           num_parallel_tree=1,
+                                                           objective='multi:softprob',
+                                                           random_state=3,
+                                                           reg_alpha=0,
+                                                           reg_lambda=1,
+                                                           scale_pos_weight=None,
+                                                           subsample=0.45,
+                                                           tree_method='exact',
+                                                           validate_parameters=1,
+                                                           verbosity=0))),
+                ('polynomialfeatures', PolynomialFeatures(include_bias=False)),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6225539965542708
+
+Performance dic: 
+{'accuracy_score': 0.5684138869979578, 'balanced_accuracy_score': 0.49153162781517346, 'macro_precision_score': 0.35172392069197966, 'macro_recall_score': 0.49153162781517346, 'macro_f1_score': 0.3541363752419998, 'micro_precision_score': 0.5684138869979578, 'micro_recall_score': 0.5684138869979578, 'micro_f1_score': 0.5684138869979578}
+Fit time: 3635.9862382411957 seconds
+
+Distinct evaluated pipelines: 513
+Mean pipeline size: 40.70955165692008

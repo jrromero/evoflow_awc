@@ -1,0 +1,62 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0']
+{'accuracy_score': 0.95, 'balanced_accuracy_score': 0.9507739938080495, 'macro_precision_score': 0.9496047430830039, 'macro_recall_score': 0.9507739938080495, 'macro_f1_score': 0.9499242681833637, 'micro_precision_score': 0.95, 'micro_recall_score': 0.95, 'micro_f1_score': 0.9500000000000001}
+('0', Pipeline(steps=[('0', SMOTETomek(random_state=0, sampling_strategy='minority')),
+                ('1', SelectPercentile(percentile=30.125627486826108)),
+                ('2',
+                 LinearSVC(C=0.06232120056358629, class_weight='balanced',
+                           loss='hinge', random_state=0,
+                           tol=0.0028224388643861083))]))
+('1', Pipeline(steps=[('0', SMOTETomek(random_state=0, sampling_strategy='minority')),
+                ('1',
+                 RandomOverSampler(random_state=0,
+                                   sampling_strategy='not majority')),
+                ('2', SelectPercentile(percentile=30.125627486826108)),
+                ('3',
+                 LinearSVC(C=0.06232120056358629, class_weight='balanced',
+                           loss='hinge', random_state=0,
+                           tol=0.0028224388643861083))]))
+('2', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.0012772023573329192,
+                                             loss='squared_hinge',
+                                             random_state=0))]))
+('3', Pipeline(steps=[('0', SMOTETomek(random_state=0, sampling_strategy='minority')),
+                ('1', SelectPercentile(percentile=30.125627486826108)),
+                ('2',
+                 LinearSVC(C=0.06232120056358629, dual=False, random_state=0,
+                           tol=0.0028224388643861083))]))
+('4', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=0, sampling_strategy='not majority')),
+                ('1', SelectPercentile(percentile=33.660202956046)),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.0013322236629419667,
+                                             fit_intercept=False,
+                                             random_state=0))]))
+('5', Pipeline(steps=[('0', SMOTETomek(random_state=0, sampling_strategy='minority')),
+                ('1', SelectPercentile(percentile=30.125627486826108)),
+                ('2',
+                 LinearSVC(C=2.3223907028742916, loss='hinge', random_state=0,
+                           tol=0.004457076926805412))]))
+('6', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=0, sampling_strategy='not majority')),
+                ('1', SelectPercentile(percentile=34.81199352864134)),
+                ('2',
+                 PassiveAggressiveClassifier(C=7.026169144790056,
+                                             random_state=0))]))
+('7', Pipeline(steps=[('0', SMOTETomek(random_state=0, sampling_strategy='minority')),
+                ('1', SelectPercentile(percentile=34.81199352864134)),
+                ('2',
+                 LogisticRegression(C=13.132837104682535, random_state=0))]))
+('8', Pipeline(steps=[('0', SMOTETomek(random_state=0, sampling_strategy='minority')),
+                ('1', SelectPercentile(percentile=34.81199352864134)),
+                ('2',
+                 PassiveAggressiveClassifier(C=7.026169144790056,
+                                             fit_intercept=False,
+                                             random_state=0))]))
+('9', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=0, sampling_strategy='not majority')),
+                ('1', SelectPercentile(percentile=34.81199352864134)),
+                ('2',
+                 PassiveAggressiveClassifier(C=7.026169144790056,
+                                             fit_intercept=False,
+                                             random_state=0))]))

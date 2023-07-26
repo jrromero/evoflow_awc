@@ -1,0 +1,61 @@
+['2', '2', '2', '2', '1', '2', '1', '1', '2', '2', '2', '2', '2', '1', '1', '2', '1', '2', '1', '2', '1', '2', '1', '2', '2', '1', '1', '2', '1', '2', '2', '1', '1', '2', '2', '1', '2', '1', '1', '2', '2', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '2', '2', '1', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '1', '1', '2', '2', '1', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '1', '1', '2', '2', '2', '1', '1', '2', '2', '2', '2']
+{'accuracy_score': 0.9401709401709402, 'balanced_accuracy_score': 0.9271428571428572, 'macro_precision_score': 0.9423076923076923, 'macro_recall_score': 0.9271428571428572, 'macro_f1_score': 0.9339143064633261, 'micro_precision_score': 0.9401709401709402, 'micro_recall_score': 0.9401709401709402, 'micro_f1_score': 0.9401709401709402}
+('0', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 RandomOverSampler(random_state=2,
+                                   sampling_strategy='not minority')),
+                ('2',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))
+('1', Pipeline(steps=[('0',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))
+('2', Pipeline(steps=[('0', SelectPercentile(percentile=90.82717940460667)),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.35831021954733894,
+                                    n_estimators=87, random_state=2))]))
+('3', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))
+('4', Pipeline(steps=[('0', SelectPercentile(percentile=90.82717940460667)),
+                ('1', Normalizer(norm='max')),
+                ('2',
+                 RandomOverSampler(random_state=2,
+                                   sampling_strategy='not minority')),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))
+('5', Pipeline(steps=[('0', SelectPercentile(percentile=90.82717940460667)),
+                ('1', RobustScaler()),
+                ('2',
+                 RandomOverSampler(random_state=2,
+                                   sampling_strategy='not minority')),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))
+('6', Pipeline(steps=[('0', SelectPercentile(percentile=90.82717940460667)),
+                ('1', KNNImputer(n_neighbors=4, weights='distance')),
+                ('2',
+                 RandomOverSampler(random_state=2,
+                                   sampling_strategy='not minority')),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))
+('7', Pipeline(steps=[('0', SelectPercentile(percentile=90.82717940460667)),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))
+('8', Pipeline(steps=[('0', SelectPercentile(percentile=90.82717940460667)),
+                ('1', Normalizer(norm='max')), ('2', RobustScaler()),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))
+('9', Pipeline(steps=[('0', SelectPercentile(percentile=90.82717940460667)),
+                ('1', StandardScaler(with_std=False)),
+                ('2',
+                 RandomOverSampler(random_state=2,
+                                   sampling_strategy='not minority')),
+                ('3',
+                 AdaBoostClassifier(learning_rate=0.1681047714488116,
+                                    n_estimators=74, random_state=2))]))

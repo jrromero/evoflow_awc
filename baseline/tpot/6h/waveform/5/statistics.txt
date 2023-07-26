@@ -1,0 +1,27 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator-1',
+                 StackingEstimator(estimator=LogisticRegression(random_state=5))),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=GradientBoostingClassifier(max_depth=2,
+                                                                        max_features=0.7500000000000001,
+                                                                        min_samples_leaf=17,
+                                                                        random_state=5,
+                                                                        subsample=0.1))),
+                ('stackingestimator-3',
+                 StackingEstimator(estimator=KNeighborsClassifier(n_neighbors=46,
+                                                                  p=1,
+                                                                  weights='distance'))),
+                ('gradientboostingclassifier',
+                 GradientBoostingClassifier(learning_rate=0.001, max_depth=8,
+                                            max_features=0.1,
+                                            min_samples_leaf=14, random_state=5,
+                                            subsample=0.05))])
+Performance in train: 
+0.9074382051680692
+
+Performance dic: 
+{'accuracy_score': 0.854, 'balanced_accuracy_score': 0.8552189432688442, 'macro_precision_score': 0.8541085438356961, 'macro_recall_score': 0.8552189432688442, 'macro_f1_score': 0.8539376626148832, 'micro_precision_score': 0.854, 'micro_recall_score': 0.854, 'micro_f1_score': 0.854}
+Fit time: 21639.49667429924 seconds
+
+Distinct evaluated pipelines: 1992
+Mean pipeline size: 2.2143574297188753

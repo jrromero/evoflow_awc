@@ -1,0 +1,30 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('pipeline-1',
+                                                 Pipeline(steps=[('featureunion',
+                                                                  FeatureUnion(transformer_list=[('functiontransformer',
+                                                                                                  FunctionTransformer(func=<function copy at 0x7fb3c8145e60>)),
+                                                                                                 ('pca',
+                                                                                                  PCA(iterated_power=8,
+                                                                                                      random_state=45139,
+                                                                                                      svd_solver='randomized'))])),
+                                                                 ('variancethreshold-1',
+                                                                  VarianceThreshold(threshold=0.0001)),
+                                                                 ('variancethreshold-2',
+                                                                  VarianceThreshold(threshold=0.001))])),
+                                                ('pipeline-2',
+                                                 Pipeline(steps=[('fastica',
+                                                                  FastICA(random_state=45139,
+                                                                          tol=0.9500000000000001)),
+                                                                 ('robustscaler',
+                                                                  RobustScaler())]))])),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6260105009658805
+
+Performance dic: 
+{'accuracy_score': 0.42818243703199454, 'balanced_accuracy_score': 0.2785178890966367, 'macro_precision_score': 0.2534909574742101, 'macro_recall_score': 0.2785178890966367, 'macro_f1_score': 0.25590755148053945, 'micro_precision_score': 0.42818243703199454, 'micro_recall_score': 0.42818243703199454, 'micro_f1_score': 0.42818243703199454}
+Fit time: 21662.3459546566 seconds
+
+Distinct evaluated pipelines: 2089
+Mean pipeline size: 9.548109143130684

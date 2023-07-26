@@ -1,0 +1,31 @@
+Best ind: 
+Pipeline(steps=[('minmaxscaler-1', MinMaxScaler()),
+                ('stackingestimator-1',
+                 StackingEstimator(estimator=RandomForestClassifier(max_features=0.8500000000000001,
+                                                                    min_samples_leaf=10,
+                                                                    min_samples_split=19,
+                                                                    random_state=67949))),
+                ('polynomialfeatures', PolynomialFeatures(include_bias=False)),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=DecisionTreeClassifier(criterion='entropy',
+                                                                    max_depth=8,
+                                                                    min_samples_leaf=13,
+                                                                    min_samples_split=14,
+                                                                    random_state=67949))),
+                ('rfe',
+                 RFE(estimator=ExtraTreesClassifier(criterion='entropy',
+                                                    max_features=0.25,
+                                                    random_state=67949),
+                     step=0.2)),
+                ('minmaxscaler-2', MinMaxScaler()),
+                ('maxabsscaler', MaxAbsScaler()),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.7292057708068692
+
+Performance dic: 
+{'accuracy_score': 0.5816135084427767, 'balanced_accuracy_score': 0.3563588773925685, 'macro_precision_score': 0.336549018614236, 'macro_recall_score': 0.3563588773925685, 'macro_f1_score': 0.3355959089783764, 'micro_precision_score': 0.5816135084427767, 'micro_recall_score': 0.5816135084427767, 'micro_f1_score': 0.5816135084427767}
+Fit time: 21619.236788272858 seconds
+
+Distinct evaluated pipelines: 3097
+Mean pipeline size: 54.54794962867291

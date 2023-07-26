@@ -1,0 +1,43 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1']
+{'accuracy_score': 0.9555555555555556, 'balanced_accuracy_score': 0.956656346749226, 'macro_precision_score': 0.9553031238424496, 'macro_recall_score': 0.956656346749226, 'macro_f1_score': 0.9555061179087876, 'micro_precision_score': 0.9555555555555556, 'micro_recall_score': 0.9555555555555556, 'micro_f1_score': 0.9555555555555556}
+('0', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', MultinomialNB(alpha=0.17755040316399678))]))
+('1', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer()),
+                ('2', MultinomialNB(alpha=0.17755040316399678))]))
+('2', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 LinearSVC(C=0.004886912159900333, dual=False, random_state=1,
+                           tol=0.000273223042302117))]))
+('3', Pipeline(steps=[('0',
+                 AdaBoostClassifier(algorithm='SAMME',
+                                    learning_rate=0.5251000007520308,
+                                    n_estimators=57, random_state=1))]))
+('4', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 AdaBoostClassifier(algorithm='SAMME',
+                                    learning_rate=0.5251000007520308,
+                                    n_estimators=57, random_state=1))]))
+('5', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=3.4588948851918495,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=1))]))
+('6', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=0.7975655419949319,
+                                             loss='squared_hinge',
+                                             random_state=1))]))
+('7', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=0.37478313380370143,
+                                             fit_intercept=False,
+                                             random_state=1))]))
+('8', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=0.05058699882948137,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=1))]))
+('9', Pipeline(steps=[('0', SelectPercentile(percentile=97.00173287140562)),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.00015412724854153316,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=1))]))

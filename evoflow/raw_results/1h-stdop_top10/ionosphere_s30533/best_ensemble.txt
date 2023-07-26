@@ -1,0 +1,12 @@
+['2', '2', '2', '2', '1', '2', '1', '1', '1', '2', '2', '2', '2', '1', '1', '1', '1', '2', '1', '1', '1', '2', '1', '2', '1', '1', '1', '2', '1', '1', '2', '1', '1', '1', '2', '1', '2', '1', '1', '1', '2', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '2', '2', '1', '1', '2', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '1', '1', '2', '2', '1', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '1', '2', '2', '1', '2', '1', '1', '2', '2', '2', '2']
+{'accuracy_score': 0.9316239316239316, 'balanced_accuracy_score': 0.9414285714285714, 'macro_precision_score': 0.9198369565217391, 'macro_recall_score': 0.9414285714285714, 'macro_f1_score': 0.9277777777777778, 'micro_precision_score': 0.9316239316239316, 'micro_recall_score': 0.9316239316239316, 'micro_f1_score': 0.9316239316239316}
+fastICA(62,'deflation',False,'exp');varianceThreshold();smoteTomek('not majority');extraTreesClassifier(77,'entropy','sqrt',12,2,True,'balanced')
+fastICA(62,'deflation',False,'exp');smoteTomek('minority');extraTreesClassifier(77,'entropy','sqrt',12,2,True,'balanced')
+fastICA(62,'deflation',False,'exp');varianceThreshold();smoteTomek('minority');extraTreesClassifier(77,'entropy','sqrt',12,2,True,'balanced')
+fastICA(62,'deflation',False,'exp');smoteTomek('not majority');extraTreesClassifier(77,'entropy','sqrt',12,2,True,'balanced')
+fastICA(62,'deflation',False,'exp');smoteTomek('not majority');simpleImputer('mean');extraTreesClassifier(77,'entropy','sqrt',12,2,True,'balanced')
+fastICA(62,'deflation',False,'exp');knnImputer('median','distance',9);smoteTomek('not majority');extraTreesClassifier(77,'entropy','sqrt',12,2,True,'balanced')
+fastICA(62,'deflation',False,'exp');standardScaler(True,False);smoteTomek('not majority');extraTreesClassifier(77,'entropy','sqrt',12,2,True,'balanced')
+fastICA(62,'deflation',False,'exp');extraTreesClassifier(95,'gini','sqrt',11,2,False,'balanced_subsample')
+fastICA(62,'deflation',False,'exp');varianceThreshold();extraTreesClassifier(95,'gini','sqrt',11,2,False,'balanced_subsample')
+fastICA(62,'deflation',False,'exp');minMaxScaler();extraTreesClassifier(95,'gini','sqrt',11,2,False,'balanced_subsample')

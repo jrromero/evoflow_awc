@@ -1,0 +1,29 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator-1',
+                 StackingEstimator(estimator=RandomForestClassifier(bootstrap=False,
+                                                                    criterion='entropy',
+                                                                    max_features=0.05,
+                                                                    min_samples_leaf=3,
+                                                                    min_samples_split=16,
+                                                                    random_state=5))),
+                ('stackingestimator-2',
+                 StackingEstimator(estimator=GradientBoostingClassifier(learning_rate=1.0,
+                                                                        max_depth=1,
+                                                                        max_features=1.0,
+                                                                        min_samples_leaf=18,
+                                                                        min_samples_split=17,
+                                                                        random_state=5,
+                                                                        subsample=0.9500000000000001))),
+                ('randomforestclassifier',
+                 RandomForestClassifier(criterion='entropy',
+                                        max_features=0.8500000000000001,
+                                        min_samples_leaf=3, random_state=5))])
+Performance in train: 
+0.5630276480383267
+
+Performance dic: 
+{'accuracy_score': 0.23304070231444532, 'balanced_accuracy_score': 0.1149111757892608, 'macro_precision_score': 0.10651301114663185, 'macro_recall_score': 0.1149111757892608, 'macro_f1_score': 0.10778045985354749, 'micro_precision_score': 0.23304070231444532, 'micro_recall_score': 0.23304070231444532, 'micro_f1_score': 0.23304070231444532}
+Fit time: 21819.950907468796 seconds
+
+Distinct evaluated pipelines: 689
+Mean pipeline size: 1.8476052249637156

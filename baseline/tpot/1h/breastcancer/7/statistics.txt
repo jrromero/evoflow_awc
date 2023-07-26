@@ -1,0 +1,25 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator',
+                 StackingEstimator(estimator=MLPClassifier(alpha=0.1,
+                                                           learning_rate_init=1.0,
+                                                           random_state=7))),
+                ('nystroem',
+                 Nystroem(gamma=0.2, kernel='poly', n_components=9,
+                          random_state=7)),
+                ('selectfrommodel',
+                 SelectFromModel(estimator=ExtraTreesClassifier(max_features=0.2,
+                                                                random_state=7),
+                                 threshold=0.15000000000000002)),
+                ('decisiontreeclassifier',
+                 DecisionTreeClassifier(criterion='entropy', max_depth=1,
+                                        min_samples_leaf=12,
+                                        min_samples_split=4, random_state=7))])
+Performance in train: 
+0.978688524590164
+
+Performance dic: 
+{'accuracy_score': 0.9914163090128756, 'balanced_accuracy_score': 0.9934640522875817, 'macro_precision_score': 0.9878048780487805, 'macro_recall_score': 0.9934640522875817, 'macro_f1_score': 0.9905376868096166, 'micro_precision_score': 0.9914163090128756, 'micro_recall_score': 0.9914163090128756, 'micro_f1_score': 0.9914163090128756}
+Fit time: 3607.383049249649 seconds
+
+Distinct evaluated pipelines: 6390
+Mean pipeline size: 31.737089201877936

@@ -1,0 +1,20 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('pipeline',
+                                                 Pipeline(steps=[('zerocount',
+                                                                  ZeroCount()),
+                                                                 ('fastica',
+                                                                  FastICA(random_state=17,
+                                                                          tol=0.65))])),
+                                                ('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7f2d5706c5f0>))])),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.8824888782398824
+
+Performance dic: 
+{'accuracy_score': 0.7953667953667953, 'balanced_accuracy_score': 0.8548719078912219, 'macro_precision_score': 0.642107771260997, 'macro_recall_score': 0.8548719078912219, 'macro_f1_score': 0.7098503336060763, 'micro_precision_score': 0.7953667953667953, 'micro_recall_score': 0.7953667953667953, 'micro_f1_score': 0.7953667953667954}
+Fit time: 3606.577642440796 seconds
+
+Distinct evaluated pipelines: 1354
+Mean pipeline size: 2.2149187592319053

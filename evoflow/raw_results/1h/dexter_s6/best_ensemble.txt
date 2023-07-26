@@ -1,0 +1,63 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0']
+{'accuracy_score': 0.95, 'balanced_accuracy_score': 0.9507739938080495, 'macro_precision_score': 0.9496047430830039, 'macro_recall_score': 0.9507739938080495, 'macro_f1_score': 0.9499242681833637, 'micro_precision_score': 0.95, 'micro_recall_score': 0.95, 'micro_f1_score': 0.9500000000000001}
+('0', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=4, random_state=6,
+                       sampling_strategy='not minority')),
+                ('1', SimpleImputer()),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.2627903951143095,
+                                             random_state=6))]))
+('1', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=6,
+                       sampling_strategy='not minority')),
+                ('1', VarianceThreshold()),
+                ('2',
+                 PassiveAggressiveClassifier(C=1.2527049495670804e-05,
+                                             fit_intercept=False,
+                                             random_state=6))]))
+('2', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1', MultinomialNB(alpha=69.70802903937508, fit_prior=False))]))
+('3', Pipeline(steps=[('0',
+                 PCA(n_components=0.9562811479948312, random_state=6,
+                     whiten=True)),
+                ('1',
+                 MLPClassifier(activation='tanh', alpha=0.006254932078559739,
+                               learning_rate_init=0.0038255636866794335,
+                               random_state=6, solver='lbfgs'))]))
+('4', Pipeline(steps=[('0',
+                 PCA(n_components=0.9054140021163959, random_state=6,
+                     whiten=True)),
+                ('1', StandardScaler()),
+                ('2',
+                 PassiveAggressiveClassifier(C=1.9592651772028111,
+                                             fit_intercept=False,
+                                             random_state=6))]))
+('5', Pipeline(steps=[('0', SelectPercentile(percentile=58.195816047589844)),
+                ('1',
+                 LinearSVC(C=0.0736565978053462, class_weight='balanced',
+                           random_state=6, tol=0.029698795061349845))]))
+('6', Pipeline(steps=[('0',
+                 PCA(n_components=0.6405336509342023, random_state=6,
+                     whiten=True)),
+                ('1',
+                 MLPClassifier(alpha=0.011892064373054385,
+                               learning_rate_init=0.0026791691063095414,
+                               random_state=6, solver='lbfgs'))]))
+('7', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=4, random_state=6,
+                       sampling_strategy='not majority')),
+                ('1', MaxAbsScaler()),
+                ('2',
+                 RandomForestClassifier(max_features='sqrt', min_samples_leaf=2,
+                                        min_samples_split=15, n_estimators=95,
+                                        random_state=6))]))
+('8', Pipeline(steps=[('0', SimpleImputer()), ('1', Normalizer(norm='l1')),
+                ('2', KNNImputer(n_neighbors=8, weights='distance')),
+                ('3',
+                 MLPClassifier(activation='tanh', alpha=0.00023998491142408987,
+                               learning_rate_init=0.08758530748354561,
+                               random_state=6, solver='lbfgs'))]))
+('9', Pipeline(steps=[('0',
+                 AdaBoostClassifier(algorithm='SAMME',
+                                    learning_rate=0.4798351260450432,
+                                    n_estimators=74, random_state=6))]))

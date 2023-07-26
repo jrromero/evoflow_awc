@@ -1,0 +1,12 @@
+['2', '2', '2', '2', '1', '2', '1', '1', '2', '2', '2', '2', '2', '1', '1', '1', '1', '2', '1', '1', '1', '2', '1', '2', '1', '1', '1', '2', '1', '2', '2', '1', '1', '2', '2', '1', '2', '1', '1', '2', '2', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '2', '2', '1', '1', '2', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '2', '2', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '1', '1', '1', '1', '2', '2', '1', '1', '2', '1', '2', '1', '2', '2', '2', '2', '2', '1', '2', '2', '1', '2', '1', '2', '2', '2', '2', '2']
+{'accuracy_score': 0.9572649572649573, 'balanced_accuracy_score': 0.9561904761904761, 'macro_precision_score': 0.951602765556254, 'macro_recall_score': 0.9561904761904761, 'macro_f1_score': 0.9538097118041847, 'micro_precision_score': 0.9572649572649573, 'micro_recall_score': 0.9572649572649573, 'micro_f1_score': 0.9572649572649573}
+randomOverSampler('minority');smoteTomek('not majority');fastICA(16,'deflation',False,'exp');randomForest(70,'entropy','log2',3,5,False,'balanced_subsample')
+randomOverSampler('minority');smoteTomek('not minority');fastICA(16,'deflation',False,'exp');randomForest(70,'entropy','log2',3,5,False,'balanced_subsample')
+randomOverSampler('minority');smoteTomek('minority');fastICA(16,'deflation',False,'exp');randomForest(70,'entropy','log2',3,5,False,'balanced_subsample')
+randomOverSampler('not majority');smoteTomek('minority');fastICA(16,'deflation',False,'exp');randomForest(70,'entropy','log2',3,5,False,'balanced_subsample')
+randomOverSampler('minority');robustScaler(False,False);fastICA(16,'deflation',False,'exp');randomForest(84,'gini','sqrt',8,7,False,'balanced')
+randomOverSampler('minority');smoteTomek('not minority');fastICA(16,'deflation',False,'exp');randomForest(84,'gini','sqrt',8,7,False,'balanced')
+randomOverSampler('minority');smoteTomek('not majority');fastICA(16,'deflation',False,'exp');randomForest(84,'gini','sqrt',8,7,False,'balanced')
+randomOverSampler('minority');maxAbsScaler();fastICA(16,'deflation',False,'exp');randomForest(84,'gini','sqrt',8,7,False,'balanced')
+randomOverSampler('minority');varianceThreshold();fastICA(16,'deflation',False,'exp');randomForest(84,'gini','sqrt',8,7,False,'balanced')
+randomOverSampler('minority');smoteTomek('minority');fastICA(16,'deflation',False,'exp');randomForest(84,'gini','sqrt',8,7,False,'balanced')

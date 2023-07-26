@@ -1,0 +1,23 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('pipeline',
+                                                 Pipeline(steps=[('selectfwe',
+                                                                  SelectFwe(alpha=0.005)),
+                                                                 ('selectpercentile',
+                                                                  SelectPercentile(percentile=65)),
+                                                                 ('minmaxscaler',
+                                                                  MinMaxScaler())])),
+                                                ('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7f05ff18b5f0>))])),
+                ('maxabsscaler', MaxAbsScaler()),
+                ('selectfwe', SelectFwe(alpha=0.033)),
+                ('kneighborsclassifier', KNeighborsClassifier(n_neighbors=9))])
+Performance in train: 
+0.7732963332749584
+
+Performance dic: 
+{'accuracy_score': 0.550561797752809, 'balanced_accuracy_score': 0.5335086181366099, 'macro_precision_score': 0.47472691314944837, 'macro_recall_score': 0.4801577563229489, 'macro_f1_score': 0.4725223414614151, 'micro_precision_score': 0.550561797752809, 'micro_recall_score': 0.550561797752809, 'micro_f1_score': 0.550561797752809}
+Fit time: 20764.840401887894 seconds
+
+Distinct evaluated pipelines: 9813
+Mean pipeline size: 6.306939773769489

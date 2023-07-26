@@ -1,0 +1,46 @@
+['1', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '1', '0', '1', '0', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1', '1', '0', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1']
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+('0', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', RobustScaler(with_scaling=False)),
+                ('3',
+                 SGDClassifier(alpha=0.0005261862079082271,
+                               class_weight='balanced',
+                               epsilon=0.0050975941222301015,
+                               eta0=1.516103097803824e-06,
+                               l1_ratio=0.00013372674472094472,
+                               loss='modified_huber',
+                               power_t=0.8652641323525037, random_state=8232,
+                               tol=0.007869649149764218))]))
+('1', Pipeline(steps=[('0', Normalizer(norm='max')), ('1', MaxAbsScaler()),
+                ('2', VarianceThreshold()),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))
+('2', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', RobustScaler(with_centering=False, with_scaling=False)),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))
+('3', Pipeline(steps=[('0', Normalizer(norm='max')), ('1', MaxAbsScaler()),
+                ('2', VarianceThreshold()),
+                ('3',
+                 KNeighborsClassifier(n_neighbors=3, p=1, weights='distance'))]))
+('4', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer()),
+                ('2', RobustScaler()),
+                ('3',
+                 MLPClassifier(activation='tanh', alpha=0.00042361682976155057,
+                               learning_rate_init=0.07930573834207662,
+                               random_state=8232))]))
+('5', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', RobustScaler()),
+                ('3',
+                 MLPClassifier(alpha=0.008355161552546286,
+                               learning_rate_init=0.0064562820344032604,
+                               random_state=8232, solver='lbfgs'))]))
+('6', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', RobustScaler(with_scaling=False)),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))
+('7', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer()),
+                ('2', RobustScaler(with_centering=False)),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))
+('8', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))
+('9', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', RobustScaler()),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))

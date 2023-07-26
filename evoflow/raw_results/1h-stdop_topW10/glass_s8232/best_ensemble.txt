@@ -1,0 +1,12 @@
+['1', '2', '3', '6', '4', '5', '1', '2', '1', '1', '1', '1', '2', '2', '2', '2', '4', '2', '1', '2', '2', '1', '2', '2', '2', '3', '2', '1', '6', '2', '2', '2', '6', '2', '2', '2', '6', '2', '6', '1', '1', '1', '6', '2', '1', '2', '2', '3', '1', '2', '2', '2', '2', '3', '1', '2', '4', '1', '1', '1', '1', '1', '6', '6', '1', '2', '3', '6', '6', '1', '1', '6']
+{'accuracy_score': 0.8472222222222222, 'balanced_accuracy_score': 0.7293292456335935, 'macro_precision_score': 0.8677070555631275, 'macro_recall_score': 0.7293292456335935, 'macro_f1_score': 0.7662118075161554, 'micro_precision_score': 0.8472222222222222, 'micro_recall_score': 0.8472222222222222, 'micro_f1_score': 0.8472222222222222}
+smote('not minority',2);randomOverSampler('minority');randomForest(27,'gini','log2',7,1,False,'balanced')
+smote('not minority',2);randomOverSampler('not majority');randomForest(27,'gini','log2',7,1,False,'balanced')
+smote('not minority',2);minMaxScaler();randomOverSampler('not majority');randomForest(27,'gini','log2',7,1,False,'balanced')
+smote('not minority',2);maxAbsScaler();randomOverSampler('not majority');randomForest(27,'gini','log2',7,1,False,'balanced')
+smote('not minority',2);standardScaler(True,False);randomOverSampler('not majority');randomForest(27,'gini','log2',7,1,False,'balanced')
+smote('not minority',2);maxAbsScaler();randomOverSampler('minority');randomForest(27,'gini','log2',7,1,False,'balanced')
+smote('not minority',2);minMaxScaler();randomOverSampler('minority');randomForest(27,'gini','log2',7,1,False,'balanced')
+varianceThreshold();smote('not minority',2);randomOverSampler('not majority');randomForest(27,'gini','log2',7,1,False,'balanced')
+smote('not minority',2);randomOverSampler('not majority');varianceThreshold();randomForest(27,'gini','log2',7,1,False,'balanced')
+smote('not minority',2);randomOverSampler('not majority');standardScaler(True,False);randomForest(27,'gini','log2',7,1,False,'balanced')

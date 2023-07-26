@@ -1,0 +1,29 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('pipeline',
+                                                 Pipeline(steps=[('rbfsampler',
+                                                                  RBFSampler(gamma=0.5,
+                                                                             random_state=43384)),
+                                                                 ('pca',
+                                                                  PCA(iterated_power=2,
+                                                                      random_state=43384,
+                                                                      svd_solver='randomized')),
+                                                                 ('normalizer',
+                                                                  Normalizer())])),
+                                                ('rbfsampler',
+                                                 RBFSampler(gamma=0.9,
+                                                            random_state=43384))])),
+                ('pca',
+                 PCA(iterated_power=2, random_state=43384,
+                     svd_solver='randomized')),
+                ('linearsvc',
+                 LinearSVC(C=5.0, dual=False, random_state=43384, tol=0.001))])
+Performance in train: 
+0.7678492108442051
+
+Performance dic: 
+{'accuracy_score': 0.6, 'balanced_accuracy_score': 0.5281128046553181, 'macro_precision_score': 0.4971409613811013, 'macro_recall_score': 0.47530152418978633, 'macro_f1_score': 0.4764409675780321, 'micro_precision_score': 0.6, 'micro_recall_score': 0.6, 'micro_f1_score': 0.6}
+Fit time: 21637.08738064766 seconds
+
+Distinct evaluated pipelines: 2672
+Mean pipeline size: 4.303892215568863

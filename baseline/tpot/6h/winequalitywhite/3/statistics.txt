@@ -1,0 +1,41 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('pipeline-1',
+                                                 Pipeline(steps=[('stackingestimator',
+                                                                  StackingEstimator(estimator=MultinomialNB(alpha=100.0,
+                                                                                                            fit_prior=False))),
+                                                                 ('fastica',
+                                                                  FastICA(random_state=3,
+                                                                          tol=0.8)),
+                                                                 ('selectfrommodel',
+                                                                  SelectFromModel(estimator=ExtraTreesClassifier(criterion='entropy',
+                                                                                                                 max_features=0.9000000000000001,
+                                                                                                                 r...
+                                                                                                            max_depth=10,
+                                                                                                            min_child_weight=8,
+                                                                                                            missing=nan,
+                                                                                                            monotone_constraints='()',
+                                                                                                            n_estimators=100,
+                                                                                                            n_jobs=1,
+                                                                                                            num_parallel_tree=1,
+                                                                                                            objective='multi:softprob',
+                                                                                                            random_state=3,
+                                                                                                            reg_alpha=0,
+                                                                                                            reg_lambda=1,
+                                                                                                            scale_pos_weight=None,
+                                                                                                            subsample=0.9500000000000001,
+                                                                                                            tree_method='exact',
+                                                                                                            validate_parameters=1,
+                                                                                                            verbosity=0))),
+                                                                 ('minmaxscaler',
+                                                                  MinMaxScaler())]))])),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6331222459794118
+
+Performance dic: 
+{'accuracy_score': 0.4771953710006807, 'balanced_accuracy_score': 0.32059376824895935, 'macro_precision_score': 0.2866931512813456, 'macro_recall_score': 0.32059376824895935, 'macro_f1_score': 0.29491170647377263, 'micro_precision_score': 0.4771953710006807, 'micro_recall_score': 0.4771953710006807, 'micro_f1_score': 0.4771953710006807}
+Fit time: 21643.529113531113 seconds
+
+Distinct evaluated pipelines: 2040
+Mean pipeline size: 49.21764705882353

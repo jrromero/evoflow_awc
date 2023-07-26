@@ -1,0 +1,38 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.9555555555555556, 'balanced_accuracy_score': 0.956656346749226, 'macro_precision_score': 0.9553031238424496, 'macro_recall_score': 0.956656346749226, 'macro_f1_score': 0.9555061179087876, 'micro_precision_score': 0.9555555555555556, 'micro_recall_score': 0.9555555555555556, 'micro_f1_score': 0.9555555555555556}
+('0', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='l1')),
+                ('2',
+                 PassiveAggressiveClassifier(C=0.43872356291897174,
+                                             fit_intercept=False,
+                                             random_state=1))]))
+('1', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer(norm='max')),
+                ('2', MultinomialNB(alpha=0.17755040316399678))]))
+('2', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer()),
+                ('2', MultinomialNB(alpha=0.17755040316399678))]))
+('3', Pipeline(steps=[('0',
+                 LinearSVC(C=0.021075604739466788, dual=False, random_state=1,
+                           tol=0.02017846503101811))]))
+('4', Pipeline(steps=[('0',
+                 LinearSVC(C=0.03904020610524895, dual=False, random_state=1,
+                           tol=1.1596352426938854e-05))]))
+('5', Pipeline(steps=[('0', VarianceThreshold()), ('1', Normalizer()),
+                ('2',
+                 MultinomialNB(alpha=0.17755040316399678, fit_prior=False))]))
+('6', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 LinearSVC(C=5.470393746262134, dual=False, random_state=1,
+                           tol=1.1596352426938854e-05))]))
+('7', Pipeline(steps=[('0',
+                 LinearSVC(C=5.470393746262134, dual=False, random_state=1,
+                           tol=6.674778502274653e-05))]))
+('8', Pipeline(steps=[('0', SelectPercentile(percentile=90.67425344238613)),
+                ('1', Normalizer(norm='l1')),
+                ('2',
+                 MLPClassifier(alpha=0.028429468511294072,
+                               learning_rate_init=0.4143480312901527,
+                               random_state=1, solver='lbfgs'))]))
+('9', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 AdaBoostClassifier(algorithm='SAMME',
+                                    learning_rate=0.5251000007520308,
+                                    n_estimators=89, random_state=1))]))

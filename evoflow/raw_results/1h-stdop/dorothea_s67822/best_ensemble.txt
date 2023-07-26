@@ -1,0 +1,68 @@
+['0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+{'accuracy_score': 0.9507246376811594, 'balanced_accuracy_score': 0.7956349206349207, 'macro_precision_score': 0.7830706445257529, 'macro_recall_score': 0.7956349206349207, 'macro_f1_score': 0.7891880234355344, 'micro_precision_score': 0.9507246376811594, 'micro_recall_score': 0.9507246376811594, 'micro_f1_score': 0.9507246376811594}
+('0', Pipeline(steps=[('0',
+                 SGDClassifier(alpha=0.0002924858816570282, average=True,
+                               class_weight='balanced',
+                               epsilon=4.210996341882978e-05,
+                               eta0=9.199287672774423e-07,
+                               l1_ratio=1.65574903868451e-09, loss='perceptron',
+                               power_t=0.5076723558374685, random_state=67822,
+                               tol=0.06559744771874365))]))
+('1', Pipeline(steps=[('0', SelectFwe(alpha=0.0022248193934194184)),
+                ('1', RobustScaler(with_centering=False, with_scaling=False)),
+                ('2',
+                 LogisticRegression(C=0.19534860409333332,
+                                    class_weight='balanced',
+                                    random_state=67822))]))
+('2', Pipeline(steps=[('0', PCA(n_components=0.5708538931136564, random_state=67822)),
+                ('1', MinMaxScaler()),
+                ('2', SelectPercentile(percentile=10.642256535487927)),
+                ('3',
+                 RandomForestClassifier(class_weight='balanced',
+                                        criterion='entropy',
+                                        max_features='sqrt',
+                                        min_samples_leaf=17,
+                                        min_samples_split=8, n_estimators=21,
+                                        random_state=67822))]))
+('3', Pipeline(steps=[('0', PCA(n_components=0.8233899948149973, random_state=67822)),
+                ('1', BernoulliNB(alpha=13.209926522629894, fit_prior=False))]))
+('4', Pipeline(steps=[('0',
+                 RandomUnderSampler(random_state=67822,
+                                    sampling_strategy='not minority')),
+                ('1', MinMaxScaler()),
+                ('2',
+                 AdaBoostClassifier(learning_rate=0.022261963068768056,
+                                    n_estimators=44, random_state=67822))]))
+('5', Pipeline(steps=[('0',
+                 MLPClassifier(activation='logistic',
+                               alpha=0.010887030310468875,
+                               learning_rate_init=0.8152645943818135,
+                               random_state=67822, solver='sgd'))]))
+('6', Pipeline(steps=[('0', TruncatedSVD(random_state=67822)),
+                ('1',
+                 ExtraTreesClassifier(class_weight='balanced_subsample',
+                                      max_features='log2', min_samples_leaf=8,
+                                      min_samples_split=17, n_estimators=95,
+                                      random_state=67822))]))
+('7', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 AdaBoostClassifier(learning_rate=0.04479433356344458,
+                                    n_estimators=24, random_state=67822))]))
+('8', Pipeline(steps=[('0', PCA(n_components=0.8233899948149973, random_state=67822)),
+                ('1',
+                 PassiveAggressiveClassifier(C=9.838514790874498,
+                                             random_state=67822))]))
+('9', Pipeline(steps=[('0', FastICA(fun='cube', n_components=94, random_state=67822)),
+                ('1',
+                 RBFSampler(gamma=0.41069954465117564, random_state=67822)),
+                ('2',
+                 RandomUnderSampler(random_state=67822,
+                                    sampling_strategy='not minority')),
+                ('3',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced_subsample',
+                                        criterion='entropy',
+                                        max_features='log2',
+                                        min_samples_leaf=18,
+                                        min_samples_split=14, n_estimators=86,
+                                        random_state=67822))]))

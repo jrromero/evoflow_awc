@@ -1,0 +1,49 @@
+['1', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '1', '0', '1', '0', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1', '1', '0', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1']
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+('0', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=72,
+                         random_state=5, whiten=False)),
+                ('1', Normalizer()), ('2', VarianceThreshold()),
+                ('3', KNeighborsClassifier(n_neighbors=6, weights='distance'))]))
+('1', Pipeline(steps=[('0', Normalizer(norm='l1')),
+                ('1', KNeighborsClassifier(n_neighbors=6, weights='distance'))]))
+('2', Pipeline(steps=[('0', Normalizer()),
+                ('1', KNeighborsClassifier(n_neighbors=6, weights='distance'))]))
+('3', Pipeline(steps=[('0', Normalizer(norm='l1')),
+                ('1',
+                 RandomForestClassifier(bootstrap=False,
+                                        class_weight='balanced_subsample',
+                                        max_features='log2', min_samples_leaf=3,
+                                        min_samples_split=18, n_estimators=33,
+                                        random_state=5))]))
+('4', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=72,
+                         random_state=5, whiten=False)),
+                ('1', MaxAbsScaler()), ('2', Normalizer()),
+                ('3', KNeighborsClassifier(n_neighbors=6, weights='distance'))]))
+('5', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=72,
+                         random_state=5, whiten=False)),
+                ('1', Normalizer()), ('2', VarianceThreshold()),
+                ('3', KNeighborsClassifier(n_neighbors=3, p=1))]))
+('6', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=72,
+                         random_state=5, whiten=False)),
+                ('1', MaxAbsScaler()), ('2', Normalizer()),
+                ('3', KNeighborsClassifier(n_neighbors=3, p=1))]))
+('7', Pipeline(steps=[('0',
+                 FastICA(algorithm='deflation', fun='exp', n_components=72,
+                         random_state=5, whiten=False)),
+                ('1', Normalizer(norm='l1')), ('2', VarianceThreshold()),
+                ('3', KNeighborsClassifier(n_neighbors=6, weights='distance'))]))
+('8', Pipeline(steps=[('0', Normalizer()),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True, max_features='sqrt',
+                                      min_samples_leaf=3, min_samples_split=3,
+                                      n_estimators=96, random_state=5))]))
+('9', Pipeline(steps=[('0', Normalizer()),
+                ('1',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_leaf=3,
+                                      min_samples_split=15, n_estimators=33,
+                                      random_state=5))]))

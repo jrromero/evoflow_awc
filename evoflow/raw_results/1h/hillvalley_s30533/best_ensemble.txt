@@ -1,0 +1,43 @@
+['1', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '1', '1', '1', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '1', '0', '1', '0', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '1', '0', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '0', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1', '1', '0', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1']
+{'accuracy_score': 1.0, 'balanced_accuracy_score': 1.0, 'macro_precision_score': 1.0, 'macro_recall_score': 1.0, 'macro_f1_score': 1.0, 'micro_precision_score': 1.0, 'micro_recall_score': 1.0, 'micro_f1_score': 1.0}
+('0', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=30533,
+                                   sampling_strategy='not minority')),
+                ('1', MaxAbsScaler()), ('2', Normalizer(norm='l1')),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))
+('1', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=30533,
+                                   sampling_strategy='minority')),
+                ('1', MaxAbsScaler()), ('2', Normalizer(norm='l1')),
+                ('3', KNeighborsClassifier(n_neighbors=3))]))
+('2', Pipeline(steps=[('0', MinMaxScaler()), ('1', MaxAbsScaler()),
+                ('2', Normalizer(norm='l1')),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))
+('3', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=30533,
+                                   sampling_strategy='not minority')),
+                ('1', MaxAbsScaler()), ('2', Normalizer(norm='l1')),
+                ('3', KNeighborsClassifier(n_neighbors=3, p=1))]))
+('4', Pipeline(steps=[('0', Normalizer(norm='l1')),
+                ('1', KNeighborsClassifier(n_neighbors=4, p=1))]))
+('5', Pipeline(steps=[('0', Normalizer()),
+                ('1', KNeighborsClassifier(n_neighbors=24))]))
+('6', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=30533,
+                                   sampling_strategy='not minority')),
+                ('1', MaxAbsScaler()), ('2', Normalizer()),
+                ('3',
+                 KNeighborsClassifier(n_neighbors=3, p=1, weights='distance'))]))
+('7', Pipeline(steps=[('0', VarianceThreshold()), ('1', MaxAbsScaler()),
+                ('2', Normalizer(norm='l1')),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))
+('8', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=30533,
+                                   sampling_strategy='not minority')),
+                ('1', MaxAbsScaler()), ('2', Normalizer()),
+                ('3', KNeighborsClassifier(n_neighbors=3, p=1))]))
+('9', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=30533,
+                                   sampling_strategy='not majority')),
+                ('1', MaxAbsScaler()), ('2', Normalizer(norm='l1')),
+                ('3', KNeighborsClassifier(n_neighbors=3, weights='distance'))]))

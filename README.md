@@ -15,3 +15,44 @@ Extracting valuable and novel insights from raw data is a complex process that e
 
 ## Supplementary material
 
+### Datasets and partitions
+
+Collection of datasets used in the experimentation, together with their train/test partitions
+
+### Evoflow
+
+This folder includes the source code, configurations, grammar, execution scripts and raw results of our proposal, EvoFlow.
+
+### Baselines
+
+The following folders and files contain requirements files and raw results obtained with the baseline
+
+#### AutoSklearn
+
+Raw results obtained in AutoSklearn, including the “requirements.txt” file
+
+url: https://github.com/automl/auto-sklearn
+version: 0.12.0
+
+#### TPOT
+
+Raw results obtained in TPOT, including the “requirements.txt” file
+
+url: https://github.com/EpistasisLab/tpot
+version: 0.11.6.post3
+
+#### RECIPE
+
+Raw results obtained in RECIPE, including the “requirements.txt” file
+
+url: https://github.com/laic-ufmg/Recipe
+version: n/a (version not updated as of July 2023)
+
+#### MLPlan
+
+Raw results obtained in RECIPE, including the “pom.xml” file (Java language)
+
+url: https://starlibs.github.io/AILibs/projects/mlplan/#installation
+version: 0.2.7
+
+

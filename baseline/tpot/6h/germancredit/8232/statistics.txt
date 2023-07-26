@@ -1,0 +1,29 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('featureunion',
+                                                 FeatureUnion(transformer_list=[('functiontransformer-1',
+                                                                                 FunctionTransformer(func=<function copy at 0x7fe45bfd8e60>)),
+                                                                                ('functiontransformer-2',
+                                                                                 FunctionTransformer(func=<function copy at 0x7fe45bfd8e60>))])),
+                                                ('pipeline',
+                                                 Pipeline(steps=[('featureunion',
+                                                                  FeatureUnion(transformer_li...er-1',
+                                                                                                  FunctionTransformer(func=<function copy at 0x7fe45bfd8e60>)),
+                                                                                                 ('functiontransformer-2',
+                                                                                                  FunctionTransformer(func=<function copy at 0x7fe45bfd8e60>))])),
+                                                                 ('polynomialfeatures',
+                                                                  PolynomialFeatures(include_bias=False)),
+                                                                 ('standardscaler',
+                                                                  StandardScaler()),
+                                                                 ('binarizer',
+                                                                  Binarizer(threshold=0.65))]))])),
+                ('bernoullinb', BernoulliNB(alpha=0.1, fit_prior=False))])
+Performance in train: 
+0.7597245627001724
+
+Performance dic: 
+{'accuracy_score': 0.71, 'balanced_accuracy_score': 0.6874621135582946, 'macro_precision_score': 0.676891176891177, 'macro_recall_score': 0.6874621135582946, 'macro_f1_score': 0.6806128317771877, 'micro_precision_score': 0.71, 'micro_recall_score': 0.71, 'micro_f1_score': 0.7100000000000001}
+Fit time: 14665.825367927551 seconds
+
+Distinct evaluated pipelines: 9381
+Mean pipeline size: 7.102867498134527

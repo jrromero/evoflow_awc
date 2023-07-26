@@ -1,0 +1,65 @@
+['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '-1', '1', '-1', '-1', '-1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '-1', '1', '1', '1', '1', '1', '1', '-1', '1', '-1', '1', '1', '-1', '1', '1', '1', '1', '-1', '1', '1', '1', '1', '1', '-1', '1', '1', '-1', '1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '1', '1', '-1', '-1', '-1', '-1', '1', '1', '-1', '-1', '-1', '1', '1', '1', '1', '1', '-1', '-1', '-1', '-1', '1', '1', '1', '-1', '1', '-1', '1', '-1', '1', '-1', '-1', '-1', '1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '1', '-1', '1', '1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '1', '-1', '1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '1', '1', '-1', '1', '1', '-1', '-1', '1', '-1', '-1', '-1', '1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '-1', '1', '-1', '-1', '-1', '-1', '-1', '-1', '-1']
+{'accuracy_score': 0.7297872340425532, 'balanced_accuracy_score': 0.5938143686411586, 'macro_precision_score': 0.5354013566986998, 'macro_recall_score': 0.5938143686411586, 'macro_f1_score': 0.5193229128918738, 'micro_precision_score': 0.7297872340425532, 'micro_recall_score': 0.7297872340425532, 'micro_f1_score': 0.7297872340425532}
+('0', Pipeline(steps=[('0', KNNImputer(weights='distance')), ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='minority')),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.42415704979836544))]))
+('1', Pipeline(steps=[('0', KNNImputer(weights='distance')), ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='not majority')),
+                ('3', BernoulliNB(alpha=0.6272607757775186))]))
+('2', Pipeline(steps=[('0', KNNImputer(weights='distance')), ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='minority')),
+                ('3', BernoulliNB(alpha=12.760692553062052))]))
+('3', Pipeline(steps=[('0', KNNImputer(n_neighbors=4, weights='distance')),
+                ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='minority')),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.587438823855989))]))
+('4', Pipeline(steps=[('0', KNNImputer()), ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='minority')),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.5954723315692699))]))
+('5', Pipeline(steps=[('0', KNNImputer(n_neighbors=9, weights='distance')),
+                ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='not majority')),
+                ('3',
+                 KNeighborsClassifier(n_neighbors=21, weights='distance'))]))
+('6', Pipeline(steps=[('0', KNNImputer(n_neighbors=7, weights='distance')),
+                ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='not majority')),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.4344187789596703))]))
+('7', Pipeline(steps=[('0', KNNImputer(n_neighbors=10, weights='distance')),
+                ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='not minority')),
+                ('3', BernoulliNB(alpha=0.02115820811256849, fit_prior=False))]))
+('8', Pipeline(steps=[('0', KNNImputer(n_neighbors=3, weights='distance')),
+                ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='not majority')),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.46008198133096434))]))
+('9', Pipeline(steps=[('0', KNNImputer(n_neighbors=9, weights='distance')),
+                ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=7,
+                                   sampling_strategy='not majority')),
+                ('3',
+                 KNeighborsClassifier(n_neighbors=21, weights='distance'))]))

@@ -1,0 +1,61 @@
+['0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '3', '1', '3', '3', '1', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '9', '4', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '3', '3', '7', '3', '3', '3', '3', '3', '6', '1', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '6', '1', '6', '6', '1', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '9', '9', '9', '9', '0', '0', '5', '0', '2', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '2', '9', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '8', '8', '2', '8', '8', '7', '8', '0', '9', '9', '9', '9', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '5', '3', '3', '3', '3', '3', '5', '4', '4', '1', '4', '4', '1', '4', '4', '4', '4', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '4', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '9', '9', '0', '9', '9', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '2', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '8', '8', '0', '8', '8', '8', '9', '9', '9', '2', '9', '9', '9', '9', '9', '8', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '2', '1', '1', '1', '1', '1', '1', '1', '2', '2', '4', '2', '4', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '0', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '1', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '9', '8', '8', '3', '8', '8', '9', '9', '9', '9', '9', '9', '9', '9', '9', '3', '9']
+{'accuracy_score': 0.9308176100628931, 'balanced_accuracy_score': 0.9279689232439807, 'macro_precision_score': 0.9324539700652092, 'macro_recall_score': 0.9279689232439807, 'macro_f1_score': 0.9291057747396577, 'micro_precision_score': 0.9308176100628931, 'micro_recall_score': 0.9308176100628931, 'micro_f1_score': 0.9308176100628931}
+('0', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2', PCA(n_components=0.8596369062088473, random_state=38727)),
+                ('3',
+                 QuadraticDiscriminantAnalysis(reg_param=0.2218908144527063))]))
+('1', Pipeline(steps=[('0', PCA(n_components=0.8736126142363712, random_state=38727)),
+                ('1',
+                 QuadraticDiscriminantAnalysis(reg_param=0.2218908144527063))]))
+('2', Pipeline(steps=[('0', PCA(n_components=0.8736126142363712, random_state=38727)),
+                ('1',
+                 MLPClassifier(alpha=0.010653145770412263,
+                               learning_rate_init=0.01707325229836655,
+                               random_state=38727, solver='sgd'))]))
+('3', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 ExtraTreesClassifier(criterion='entropy', max_features='sqrt',
+                                      min_samples_split=5, n_estimators=45,
+                                      random_state=38727))]))
+('4', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1', RobustScaler(with_scaling=False)),
+                ('2',
+                 ExtraTreesClassifier(criterion='entropy', max_features='sqrt',
+                                      min_samples_split=5, n_estimators=45,
+                                      random_state=38727))]))
+('5', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=38727,
+                                   sampling_strategy='not majority')),
+                ('1',
+                 MLPClassifier(activation='logistic', alpha=0.05290776001846517,
+                               learning_rate_init=0.057890565274062306,
+                               random_state=38727, solver='lbfgs'))]))
+('6', Pipeline(steps=[('0', VarianceThreshold()), ('1', MinMaxScaler()),
+                ('2',
+                 RandomOverSampler(random_state=38727,
+                                   sampling_strategy='not majority')),
+                ('3',
+                 MLPClassifier(activation='logistic', alpha=0.05290776001846517,
+                               learning_rate_init=0.057890565274062306,
+                               random_state=38727, solver='lbfgs'))]))
+('7', Pipeline(steps=[('0', PCA(n_components=0.7035775779105248, random_state=38727)),
+                ('1',
+                 MLPClassifier(alpha=0.010653145770412263,
+                               learning_rate_init=0.01707325229836655,
+                               random_state=38727, solver='sgd'))]))
+('8', Pipeline(steps=[('0',
+                 RandomUnderSampler(random_state=38727,
+                                    sampling_strategy='not majority')),
+                ('1',
+                 FastICA(n_components=11, random_state=38727, whiten=False)),
+                ('2', VarianceThreshold()),
+                ('3',
+                 MLPClassifier(activation='logistic', alpha=0.05290776001846517,
+                               learning_rate_init=0.057890565274062306,
+                               random_state=38727, solver='lbfgs'))]))
+('9', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2', PCA(n_components=0.8596369062088473, random_state=38727)),
+                ('3',
+                 MLPClassifier(activation='logistic', alpha=0.01798675371679104,
+                               learning_rate_init=0.8071545581593944,
+                               random_state=38727, solver='lbfgs'))]))

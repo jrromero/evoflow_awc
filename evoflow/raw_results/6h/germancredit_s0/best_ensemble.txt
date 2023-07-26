@@ -1,0 +1,68 @@
+['good', 'bad', 'good', 'bad', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'good', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'bad', 'good', 'good', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'good', 'good', 'good', 'good', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'bad', 'good', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good', 'bad', 'good', 'bad', 'good', 'good']
+{'accuracy_score': 0.7233333333333334, 'balanced_accuracy_score': 0.6842291371994342, 'macro_precision_score': 0.685211517952364, 'macro_recall_score': 0.6842291371994342, 'macro_f1_score': 0.6847103513770181, 'micro_precision_score': 0.7233333333333334, 'micro_recall_score': 0.7233333333333334, 'micro_f1_score': 0.7233333333333334}
+('0', Pipeline(steps=[('0',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_leaf=4,
+                                      min_samples_split=14, n_estimators=53,
+                                      random_state=0))]))
+('1', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_leaf=4,
+                                      min_samples_split=14, n_estimators=58,
+                                      random_state=0))]))
+('2', Pipeline(steps=[('0',
+                 ExtraTreesClassifier(bootstrap=True,
+                                      class_weight='balanced_subsample',
+                                      criterion='entropy', max_features='log2',
+                                      min_samples_split=8, n_estimators=43,
+                                      random_state=0))]))
+('3', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True,
+                                      class_weight='balanced_subsample',
+                                      criterion='entropy', max_features='log2',
+                                      min_samples_leaf=4, min_samples_split=8,
+                                      n_estimators=36, random_state=0))]))
+('4', Pipeline(steps=[('0', VarianceThreshold()), ('1', MaxAbsScaler()),
+                ('2', FastICA(fun='exp', n_components=52, random_state=0)),
+                ('3',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      criterion='entropy', max_features='log2',
+                                      min_samples_leaf=5, min_samples_split=13,
+                                      n_estimators=90, random_state=0))]))
+('5', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 SGDClassifier(alpha=2.163345478387263e-06, average=True,
+                               class_weight='balanced',
+                               epsilon=0.0036842382342897727,
+                               eta0=1.2301842257601355e-07,
+                               l1_ratio=0.028842586647804033, loss='log',
+                               power_t=0.6216722739754215, random_state=0,
+                               tol=0.01014238349693132))]))
+('6', Pipeline(steps=[('0', MinMaxScaler()), ('1', VarianceThreshold()),
+                ('2',
+                 ExtraTreesClassifier(bootstrap=True, class_weight='balanced',
+                                      criterion='entropy', max_features='sqrt',
+                                      min_samples_leaf=4, min_samples_split=8,
+                                      n_estimators=36, random_state=0))]))
+('7', Pipeline(steps=[('0',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_leaf=4,
+                                      min_samples_split=14, n_estimators=35,
+                                      random_state=0))]))
+('8', Pipeline(steps=[('0', RobustScaler(with_scaling=False)),
+                ('1',
+                 ExtraTreesClassifier(bootstrap=True, class_weight='balanced',
+                                      criterion='entropy', max_features='sqrt',
+                                      min_samples_leaf=4, min_samples_split=8,
+                                      n_estimators=27, random_state=0))]))
+('9', Pipeline(steps=[('0', MinMaxScaler()),
+                ('1',
+                 SGDClassifier(alpha=2.163345478387263e-06, average=True,
+                               class_weight='balanced',
+                               epsilon=0.005920362217976659,
+                               eta0=1.2301842257601355e-07,
+                               l1_ratio=0.028842586647804033, loss='log',
+                               power_t=0.6216722739754215, random_state=0,
+                               tol=0.01014238349693132))]))

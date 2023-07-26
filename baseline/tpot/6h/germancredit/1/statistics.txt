@@ -1,0 +1,18 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('zerocount', ZeroCount()),
+                                                ('selectpercentile',
+                                                 SelectPercentile(percentile=76))])),
+                ('robustscaler-1', RobustScaler()),
+                ('polynomialfeatures', PolynomialFeatures(include_bias=False)),
+                ('robustscaler-2', RobustScaler()),
+                ('bernoullinb', BernoulliNB(alpha=0.1))])
+Performance in train: 
+0.7594276915496427
+
+Performance dic: 
+{'accuracy_score': 0.6966666666666667, 'balanced_accuracy_score': 0.6618003637098404, 'macro_precision_score': 0.6578532354245725, 'macro_recall_score': 0.6618003637098404, 'macro_f1_score': 0.6595967530767216, 'micro_precision_score': 0.6966666666666667, 'micro_recall_score': 0.6966666666666667, 'micro_f1_score': 0.6966666666666667}
+Fit time: 21616.702341079712 seconds
+
+Distinct evaluated pipelines: 7835
+Mean pipeline size: 16.360051052967453

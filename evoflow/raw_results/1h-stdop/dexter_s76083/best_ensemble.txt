@@ -1,0 +1,44 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.95, 'balanced_accuracy_score': 0.9513931888544891, 'macro_precision_score': 0.95, 'macro_recall_score': 0.9513931888544891, 'macro_f1_score': 0.9499613899613901, 'micro_precision_score': 0.95, 'micro_recall_score': 0.95, 'micro_f1_score': 0.9500000000000001}
+('0', Pipeline(steps=[('0', MultinomialNB(alpha=73.37873467514855, fit_prior=False))]))
+('1', Pipeline(steps=[('0',
+                 LinearSVC(C=1.537254958202741, class_weight='balanced',
+                           dual=False, random_state=76083,
+                           tol=0.04017640193212308))]))
+('2', Pipeline(steps=[('0', KNNImputer(n_neighbors=2)),
+                ('1',
+                 LinearSVC(C=1.537254958202741, class_weight='balanced',
+                           dual=False, random_state=76083,
+                           tol=0.04017640193212308))]))
+('3', Pipeline(steps=[('0', StandardScaler(with_mean=False, with_std=False)),
+                ('1', SimpleImputer(strategy='median')),
+                ('2', MultinomialNB(alpha=73.37873467514855, fit_prior=False))]))
+('4', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=76083, sampling_strategy='minority')),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.011389159330677488,
+                                             loss='squared_hinge',
+                                             random_state=76083))]))
+('5', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=76083, sampling_strategy='minority')),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.23252226081962052,
+                                             loss='squared_hinge',
+                                             random_state=76083))]))
+('6', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=76083, sampling_strategy='minority')),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.0004308081877865805,
+                                             random_state=76083))]))
+('7', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=76083, sampling_strategy='minority')),
+                ('1',
+                 PassiveAggressiveClassifier(C=1.0181980261382233,
+                                             random_state=76083))]))
+('8', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=1.7106136765074693,
+                                             loss='squared_hinge',
+                                             random_state=76083))]))
+('9', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=0.0004308081877865805,
+                                             random_state=76083))]))

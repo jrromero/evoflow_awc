@@ -1,0 +1,41 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7f7e1a89ce60>)),
+                                                ('pca',
+                                                 PCA(iterated_power=1,
+                                                     random_state=67822,
+                                                     svd_solver='randomized'))])),
+                ('stackingestimator',
+                 StackingEstimator(estimator=XGBClassifier(base_score=0.5,
+                                                           booster='gbtree',
+                                                           colsample_bylevel=1,
+                                                           colsample_bynod...
+                                                           max_delta_step=0,
+                                                           max_depth=3,
+                                                           min_child_weight=4,
+                                                           missing=nan,
+                                                           monotone_constraints='()',
+                                                           n_estimators=100,
+                                                           n_jobs=1,
+                                                           num_parallel_tree=1,
+                                                           objective='multi:softprob',
+                                                           random_state=67822,
+                                                           reg_alpha=0,
+                                                           reg_lambda=1,
+                                                           scale_pos_weight=None,
+                                                           subsample=0.4,
+                                                           tree_method='exact',
+                                                           validate_parameters=1,
+                                                           verbosity=0))),
+                ('maxabsscaler', MaxAbsScaler()),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.6304839198839878
+
+Performance dic: 
+{'accuracy_score': 0.504424778761062, 'balanced_accuracy_score': 0.3216425293580349, 'macro_precision_score': 0.3095318719620766, 'macro_recall_score': 0.3216425293580349, 'macro_f1_score': 0.3107834188772288, 'micro_precision_score': 0.504424778761062, 'micro_recall_score': 0.504424778761062, 'micro_f1_score': 0.504424778761062}
+Fit time: 21617.160521507263 seconds
+
+Distinct evaluated pipelines: 2344
+Mean pipeline size: 8.890358361774744

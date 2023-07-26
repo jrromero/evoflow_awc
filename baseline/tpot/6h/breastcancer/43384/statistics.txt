@@ -1,0 +1,22 @@
+Best ind: 
+Pipeline(steps=[('zerocount', ZeroCount()),
+                ('featureagglomeration',
+                 FeatureAgglomeration(affinity='l2', linkage='average')),
+                ('stackingestimator',
+                 StackingEstimator(estimator=DecisionTreeClassifier(max_depth=7,
+                                                                    min_samples_leaf=6,
+                                                                    min_samples_split=10,
+                                                                    random_state=43384))),
+                ('decisiontreeclassifier',
+                 DecisionTreeClassifier(max_depth=3, min_samples_leaf=2,
+                                        min_samples_split=7,
+                                        random_state=43384))])
+Performance in train: 
+0.9772028688524591
+
+Performance dic: 
+{'accuracy_score': 0.9742489270386266, 'balanced_accuracy_score': 0.9684640522875817, 'macro_precision_score': 0.9742762613730356, 'macro_recall_score': 0.9684640522875817, 'macro_f1_score': 0.9712723984875884, 'micro_precision_score': 0.9742489270386266, 'micro_recall_score': 0.9742489270386266, 'micro_f1_score': 0.9742489270386266}
+Fit time: 6006.824400186539 seconds
+
+Distinct evaluated pipelines: 9814
+Mean pipeline size: 3.9059506826981862

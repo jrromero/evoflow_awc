@@ -1,0 +1,60 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '1', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.95, 'balanced_accuracy_score': 0.9513931888544891, 'macro_precision_score': 0.95, 'macro_recall_score': 0.9513931888544891, 'macro_f1_score': 0.9499613899613901, 'micro_precision_score': 0.95, 'micro_recall_score': 0.95, 'micro_f1_score': 0.9500000000000001}
+('0', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.0009586282324696108,
+                                             random_state=7))]))
+('1', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=3.785627153374065e-05,
+                                             fit_intercept=False,
+                                             random_state=7))]))
+('2', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.13402205259972527,
+                                             random_state=7))]))
+('3', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 LinearSVC(C=0.4063979664777017, dual=False, penalty='l1',
+                           random_state=7, tol=0.0035791229245830335))]))
+('4', Pipeline(steps=[('0', RobustScaler()),
+                ('1', SimpleImputer(strategy='most_frequent')),
+                ('2', SMOTETomek(random_state=7, sampling_strategy='minority')),
+                ('3',
+                 PassiveAggressiveClassifier(C=0.0021676392767999327,
+                                             fit_intercept=False,
+                                             random_state=7))]))
+('5', Pipeline(steps=[('0', KNNImputer(n_neighbors=2)),
+                ('1', SimpleImputer(strategy='median')),
+                ('2',
+                 SMOTETomek(random_state=7, sampling_strategy='not minority')),
+                ('3',
+                 MLPClassifier(activation='logistic',
+                               alpha=0.00011330460063204285,
+                               learning_rate_init=0.0774060454849001,
+                               random_state=7, solver='sgd'))]))
+('6', Pipeline(steps=[('0', RobustScaler()),
+                ('1', SimpleImputer(strategy='most_frequent')),
+                ('2', SMOTETomek(random_state=7, sampling_strategy='minority')),
+                ('3',
+                 PassiveAggressiveClassifier(C=0.0035764899914805157,
+                                             random_state=7))]))
+('7', Pipeline(steps=[('0', RobustScaler()),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.13402205259972527,
+                                             fit_intercept=False,
+                                             random_state=7))]))
+('8', Pipeline(steps=[('0', RobustScaler()),
+                ('1', SimpleImputer(strategy='most_frequent')),
+                ('2', SMOTETomek(random_state=7, sampling_strategy='minority')),
+                ('3',
+                 PassiveAggressiveClassifier(C=0.0021676392767999327,
+                                             fit_intercept=False,
+                                             loss='squared_hinge',
+                                             random_state=7))]))
+('9', Pipeline(steps=[('0', SMOTETomek(random_state=7, sampling_strategy='minority')),
+                ('1',
+                 MLPClassifier(activation='logistic',
+                               alpha=0.0009927111212544725,
+                               learning_rate_init=0.09273763850968789,
+                               random_state=7, solver='sgd'))]))

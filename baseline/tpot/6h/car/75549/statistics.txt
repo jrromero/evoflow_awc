@@ -1,0 +1,27 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7f46d6a62e60>)),
+                                                ('pipeline',
+                                                 Pipeline(steps=[('featureunion',
+                                                                  FeatureUnion(transformer_list=[('functiontransformer-1',
+                                                                                                  FunctionTransformer(func=<function copy at 0x7f46d6a62e60>)),
+                                                                                                 ('functiontransformer-2',
+                                                                                                  FunctionTransformer(func=<function copy at 0x7f46d6a62e60>))])),
+                                                                 ('nystroem',
+                                                                  Nystroem(gamma=0.8500000000000001,
+                                                                           kernel='laplacian',
+                                                                           n_components=8,
+                                                                           random_state=75549)),
+                                                                 ('selectpercentile',
+                                                                  SelectPercentile(percentile=66))]))])),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.8897987285225504
+
+Performance dic: 
+{'accuracy_score': 0.7953667953667953, 'balanced_accuracy_score': 0.8362938295209092, 'macro_precision_score': 0.6341000251681768, 'macro_recall_score': 0.8362938295209092, 'macro_f1_score': 0.6989509797969492, 'micro_precision_score': 0.7953667953667953, 'micro_recall_score': 0.7953667953667953, 'micro_f1_score': 0.7953667953667954}
+Fit time: 13542.645537853241 seconds
+
+Distinct evaluated pipelines: 9505
+Mean pipeline size: 2.2263019463440297

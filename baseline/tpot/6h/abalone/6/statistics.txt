@@ -1,0 +1,21 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator',
+                 StackingEstimator(estimator=MLPClassifier(alpha=0.1,
+                                                           learning_rate_init=0.01,
+                                                           random_state=6))),
+                ('normalizer', Normalizer(norm='max')),
+                ('rfe',
+                 RFE(estimator=ExtraTreesClassifier(criterion='entropy',
+                                                    max_features=0.3,
+                                                    random_state=6),
+                     step=0.25)),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.573486702153477
+
+Performance dic: 
+{'accuracy_score': 0.19553072625698323, 'balanced_accuracy_score': 0.13417173318252212, 'macro_precision_score': 0.11624602160695204, 'macro_recall_score': 0.12880486385522125, 'macro_f1_score': 0.0886377553579464, 'micro_precision_score': 0.19553072625698323, 'micro_recall_score': 0.19553072625698323, 'micro_f1_score': 0.19553072625698323}
+Fit time: 21643.345201969147 seconds
+
+Distinct evaluated pipelines: 797
+Mean pipeline size: 1.892095357590966

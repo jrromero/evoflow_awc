@@ -1,0 +1,32 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('featureunion',
+                                                 FeatureUnion(transformer_list=[('functiontransformer-1',
+                                                                                 FunctionTransformer(func=<function copy at 0x7fc08a653e60>)),
+                                                                                ('functiontransformer-2',
+                                                                                 FunctionTransformer(func=<function copy at 0x7fc08a653e60>))])),
+                                                ('pipeline',
+                                                 Pipeline(steps=[('featureunion',
+                                                                  FeatureUnion(transformer_li...
+                                                                                                                                                                  FunctionTransformer(func=<function copy at 0x7fc08a653e60>))])),
+                                                                                                                                 ('rbfsampler',
+                                                                                                                                  RBFSampler(gamma=0.35000000000000003,
+                                                                                                                                             random_state=8232))])),
+                                                                                                 ('functiontransformer',
+                                                                                                  FunctionTransformer(func=<function copy at 0x7fc08a653e60>))])),
+                                                                 ('nystroem',
+                                                                  Nystroem(gamma=0.2,
+                                                                           kernel='cosine',
+                                                                           n_components=6,
+                                                                           random_state=8232))]))])),
+                ('binarizer', Binarizer(threshold=0.1)),
+                ('gaussiannb', GaussianNB())])
+Performance in train: 
+0.8897662579857947
+
+Performance dic: 
+{'accuracy_score': 0.7953667953667953, 'balanced_accuracy_score': 0.8548719078912219, 'macro_precision_score': 0.642107771260997, 'macro_recall_score': 0.8548719078912219, 'macro_f1_score': 0.7098503336060763, 'micro_precision_score': 0.7953667953667953, 'micro_recall_score': 0.7953667953667953, 'micro_f1_score': 0.7953667953667954}
+Fit time: 15464.147018194199 seconds
+
+Distinct evaluated pipelines: 9313
+Mean pipeline size: 1.6152689788467733

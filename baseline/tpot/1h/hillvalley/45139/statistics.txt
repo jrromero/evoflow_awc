@@ -1,0 +1,23 @@
+Best ind: 
+Pipeline(steps=[('polynomialfeatures', PolynomialFeatures(include_bias=False)),
+                ('stackingestimator',
+                 StackingEstimator(estimator=MLPClassifier(alpha=0.001,
+                                                           learning_rate_init=0.1,
+                                                           random_state=45139))),
+                ('normalizer', Normalizer()),
+                ('gradientboostingclassifier',
+                 GradientBoostingClassifier(learning_rate=0.5, max_depth=5,
+                                            max_features=0.2,
+                                            min_samples_leaf=9,
+                                            min_samples_split=4,
+                                            random_state=45139,
+                                            subsample=0.4))])
+Performance in train: 
+0.9888271604938271
+
+Performance dic: 
+{'accuracy_score': 0.9925742574257426, 'balanced_accuracy_score': 0.9925742574257426, 'macro_precision_score': 0.9925863294365611, 'macro_recall_score': 0.9925742574257426, 'macro_f1_score': 0.9925742119290506, 'micro_precision_score': 0.9925742574257426, 'micro_recall_score': 0.9925742574257426, 'micro_f1_score': 0.9925742574257426}
+Fit time: 3786.0470604896545 seconds
+
+Distinct evaluated pipelines: 500
+Mean pipeline size: 1.658

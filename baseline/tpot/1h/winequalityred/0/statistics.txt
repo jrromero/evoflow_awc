@@ -1,0 +1,20 @@
+Best ind: 
+Pipeline(steps=[('stackingestimator',
+                 StackingEstimator(estimator=ExtraTreesClassifier(bootstrap=True,
+                                                                  max_features=0.4))),
+                ('maxabsscaler', MaxAbsScaler()),
+                ('onehotencoder',
+                 OneHotEncoder(minimum_fraction=0.2, sparse=False)),
+                ('randomforestclassifier',
+                 RandomForestClassifier(bootstrap=False, max_features=0.45,
+                                        min_samples_leaf=16,
+                                        min_samples_split=9))])
+Performance in train: 
+0.6741366798623776
+
+Performance dic: 
+{'accuracy_score': 0.649155722326454, 'balanced_accuracy_score': 0.3406563097417475, 'macro_precision_score': 0.3654209113164337, 'macro_recall_score': 0.3406563097417475, 'macro_f1_score': 0.3409787322735977, 'micro_precision_score': 0.649155722326454, 'micro_recall_score': 0.649155722326454, 'micro_f1_score': 0.649155722326454}
+Fit time: 3613.5710175037384 seconds
+
+Distinct evaluated pipelines: 1010
+Mean pipeline size: 6.9445544554455445

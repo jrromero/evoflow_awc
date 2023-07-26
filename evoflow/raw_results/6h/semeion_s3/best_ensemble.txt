@@ -1,0 +1,63 @@
+['0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '3', '1', '3', '3', '1', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '9', '4', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '3', '3', '7', '3', '3', '3', '3', '3', '6', '1', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '6', '1', '6', '6', '1', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '9', '9', '9', '4', '0', '0', '5', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '7', '1', '2', '9', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '7', '8', '8', '9', '9', '9', '9', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '8', '2', '2', '2', '2', '2', '2', '2', '5', '3', '3', '3', '3', '3', '5', '4', '4', '1', '4', '4', '1', '4', '4', '4', '4', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '9', '9', '0', '9', '9', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '4', '1', '1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '8', '8', '0', '8', '8', '8', '9', '9', '9', '2', '9', '9', '9', '9', '9', '8', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '2', '1', '1', '1', '1', '1', '1', '9', '2', '2', '4', '2', '4', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3', '3', '3', '3', '4', '4', '1', '4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '6', '6', '0', '6', '6', '6', '6', '6', '6', '7', '4', '7', '7', '1', '7', '7', '7', '7', '7', '7', '7', '7', '8', '8', '8', '8', '8', '8', '8', '9', '8', '8', '3', '8', '8', '9', '9', '9', '9', '9', '9', '9', '9', '9', '3', '9']
+{'accuracy_score': 0.9245283018867925, 'balanced_accuracy_score': 0.921972603534428, 'macro_precision_score': 0.9261368331424432, 'macro_recall_score': 0.921972603534428, 'macro_f1_score': 0.9234476954913848, 'micro_precision_score': 0.9245283018867925, 'micro_recall_score': 0.9245283018867925, 'micro_f1_score': 0.9245283018867925}
+('0', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', SelectFwe(alpha=0.0014811852890259678)),
+                ('2', RobustScaler(with_scaling=False)),
+                ('3',
+                 ExtraTreesClassifier(class_weight='balanced_subsample',
+                                      max_features='sqrt', min_samples_split=12,
+                                      n_estimators=65, random_state=3))]))
+('1', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=3, sampling_strategy='not majority')),
+                ('1', RobustScaler(with_scaling=False)),
+                ('2',
+                 ExtraTreesClassifier(bootstrap=True, class_weight='balanced',
+                                      max_features='log2', min_samples_leaf=2,
+                                      min_samples_split=4, n_estimators=82,
+                                      random_state=3))]))
+('2', Pipeline(steps=[('0', MinMaxScaler()), ('1', MaxAbsScaler()),
+                ('2',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_leaf=3,
+                                      min_samples_split=4, n_estimators=82,
+                                      random_state=3))]))
+('3', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1',
+                 ExtraTreesClassifier(class_weight='balanced',
+                                      max_features='log2', min_samples_split=7,
+                                      n_estimators=69, random_state=3))]))
+('4', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=2, random_state=3,
+                       sampling_strategy='minority')),
+                ('1',
+                 MLPClassifier(alpha=0.0011196988609536154,
+                               learning_rate_init=0.003483384082166304,
+                               random_state=3))]))
+('5', Pipeline(steps=[('0',
+                 MLPClassifier(activation='tanh', alpha=0.06456942214669265,
+                               learning_rate_init=0.008668925571183556,
+                               random_state=3))]))
+('6', Pipeline(steps=[('0',
+                 RandomOverSampler(random_state=3,
+                                   sampling_strategy='not minority')),
+                ('1', VarianceThreshold()),
+                ('2',
+                 LogisticRegression(C=1.156194667618536,
+                                    class_weight='balanced', random_state=3))]))
+('7', Pipeline(steps=[('0',
+                 SMOTE(k_neighbors=4, random_state=3,
+                       sampling_strategy='minority')),
+                ('1',
+                 MLPClassifier(alpha=0.0011196988609536154,
+                               learning_rate_init=0.003483384082166304,
+                               random_state=3))]))
+('8', Pipeline(steps=[('0', MaxAbsScaler()),
+                ('1', SelectFwe(alpha=0.039863802958372004)),
+                ('2',
+                 MLPClassifier(activation='logistic', alpha=0.02844281321600688,
+                               learning_rate_init=0.027549520812750562,
+                               random_state=3, solver='lbfgs'))]))
+('9', Pipeline(steps=[('0', RobustScaler(with_centering=False)),
+                ('1',
+                 LogisticRegression(C=1.156194667618536,
+                                    class_weight='balanced', random_state=3))]))

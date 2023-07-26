@@ -1,0 +1,21 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('featureunion',
+                                                 FeatureUnion(transformer_list=[('normalizer',
+                                                                                 Normalizer(norm='max')),
+                                                                                ('functiontransformer',
+                                                                                 FunctionTransformer(func=<function copy at 0x7f4e7cb3a5f0>))])),
+                                                ('functiontransformer',
+                                                 FunctionTransformer(func=<function copy at 0x7f4e7cb3a5f0>))])),
+                ('robustscaler', RobustScaler()),
+                ('polynomialfeatures', PolynomialFeatures(include_bias=False)),
+                ('bernoullinb', BernoulliNB(alpha=0.1, fit_prior=False))])
+Performance in train: 
+0.7603872875092387
+
+Performance dic: 
+{'accuracy_score': 0.7033333333333334, 'balanced_accuracy_score': 0.6772580319256416, 'macro_precision_score': 0.6685479609971661, 'macro_recall_score': 0.6772580319256416, 'macro_f1_score': 0.6717926024265221, 'micro_precision_score': 0.7033333333333334, 'micro_recall_score': 0.7033333333333334, 'micro_f1_score': 0.7033333333333334}
+Fit time: 21606.123483181 seconds
+
+Distinct evaluated pipelines: 8912
+Mean pipeline size: 12.469254937163376

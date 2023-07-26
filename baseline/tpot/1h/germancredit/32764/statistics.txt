@@ -1,0 +1,30 @@
+Best ind: 
+Pipeline(steps=[('featureunion',
+                 FeatureUnion(transformer_list=[('featureunion-1',
+                                                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                                                 FunctionTransformer(func=<function copy at 0x7fdc62080e60>)),
+                                                                                ('featureunion',
+                                                                                 FeatureUnion(transformer_list=[('pipeline',
+                                                                                                                 Pipeline(steps=[('featureunion',
+                                                                                                                                  FeatureUnion(transformer_list=[('nystroem',
+                                                                                                                                                                  Nystroem(gamma=0.4,
+                                                                                                                                                                           kern...
+                                                                                                                                                 FunctionTransformer(func=<function copy at 0x7fdc62080e60>)),
+                                                                                                                                                ('functiontransformer-2',
+                                                                                                                                                 FunctionTransformer(func=<function copy at 0x7fdc62080e60>))]))]))])),
+                                                ('featureunion-2',
+                                                 FeatureUnion(transformer_list=[('functiontransformer',
+                                                                                 FunctionTransformer(func=<function copy at 0x7fdc62080e60>)),
+                                                                                ('fastica',
+                                                                                 FastICA(random_state=32764,
+                                                                                         tol=0.7000000000000001))]))])),
+                ('bernoullinb', BernoulliNB(alpha=0.1, fit_prior=False))])
+Performance in train: 
+0.7601639566395664
+
+Performance dic: 
+{'accuracy_score': 0.7066666666666667, 'balanced_accuracy_score': 0.6823600727419681, 'macro_precision_score': 0.6727272727272727, 'macro_recall_score': 0.6823600727419681, 'macro_f1_score': 0.6762166405023549, 'micro_precision_score': 0.7066666666666667, 'micro_recall_score': 0.7066666666666667, 'micro_f1_score': 0.7066666666666667}
+Fit time: 3605.0650424957275 seconds
+
+Distinct evaluated pipelines: 2585
+Mean pipeline size: 25.16595744680851

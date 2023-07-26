@@ -1,0 +1,43 @@
+['0', '0', '0', '0', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '1', '0', '0', '1', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '1', '1', '0', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '1', '1', '0', '1', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '0', '0', '1', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0']
+{'accuracy_score': 0.95, 'balanced_accuracy_score': 0.9513931888544891, 'macro_precision_score': 0.95, 'macro_recall_score': 0.9513931888544891, 'macro_f1_score': 0.9499613899613901, 'micro_precision_score': 0.95, 'micro_recall_score': 0.95, 'micro_f1_score': 0.9500000000000001}
+('0', Pipeline(steps=[('0',
+                 MultinomialNB(alpha=27.273179323919344, fit_prior=False))]))
+('1', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 MultinomialNB(alpha=27.273179323919344, fit_prior=False))]))
+('2', Pipeline(steps=[('0',
+                 SMOTETomek(random_state=3, sampling_strategy='not minority')),
+                ('1', VarianceThreshold()),
+                ('2',
+                 LinearSVC(C=0.004693751840199815, class_weight='balanced',
+                           dual=False, random_state=3,
+                           tol=0.00021951672938344183))]))
+('3', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=2.7095378360753117,
+                                             random_state=3))]))
+('4', Pipeline(steps=[('0', SimpleImputer()),
+                ('1',
+                 PassiveAggressiveClassifier(C=0.0036742618742699857,
+                                             fit_intercept=False,
+                                             random_state=3))]))
+('5', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=0.005100057796245229,
+                                             loss='squared_hinge',
+                                             random_state=3))]))
+('6', Pipeline(steps=[('0',
+                 PassiveAggressiveClassifier(C=0.04676458799874319,
+                                             fit_intercept=False,
+                                             random_state=3))]))
+('7', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1', SimpleImputer(strategy='most_frequent')),
+                ('2', RobustScaler(with_scaling=False)),
+                ('3',
+                 PassiveAggressiveClassifier(C=2.7095378360753117,
+                                             random_state=3))]))
+('8', Pipeline(steps=[('0',
+                 LinearSVC(C=0.17938274300919646, dual=False, penalty='l1',
+                           random_state=3, tol=0.0008935531187093284))]))
+('9', Pipeline(steps=[('0', VarianceThreshold()),
+                ('1',
+                 LogisticRegression(C=0.040924917757908276,
+                                    class_weight='balanced', random_state=3))]))
