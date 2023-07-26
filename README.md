@@ -1,5 +1,5 @@
 # EvoFlow: Grammar-guided evolutionary automated workflow composition with domain-specific operators and ensemble diversity
-_Supplementary material_ 
+_Supplementary material_ (July 26, 2023)
 
 ## Authors
 - Rafael Barbudo (a,b)
@@ -31,28 +31,28 @@ The following folders and files contain requirements files and raw results obtai
 
 Raw results obtained in AutoSklearn, including the “requirements.txt” file
 
-url: https://github.com/automl/auto-sklearn
-version: 0.12.0
+- [Download](https://github.com/automl/auto-sklearn)
+- _version_: 0.12.0
 
 #### TPOT
 
 Raw results obtained in TPOT, including the “requirements.txt” file
 
-url: https://github.com/EpistasisLab/tpot
-version: 0.11.6.post3
+- [Download](https://github.com/EpistasisLab/tpot)
+- _version_: 0.11.6.post3
 
 #### RECIPE
 
 Raw results obtained in RECIPE, including the “requirements.txt” file
 
-url: https://github.com/laic-ufmg/Recipe
-version: n/a (version not updated as of July 2023)
+- [Download](https://github.com/laic-ufmg/Recipe)
+- _version_: n/a (version not updated as of July 2023)
 
 #### MLPlan
 
 Raw results obtained in RECIPE, including the “pom.xml” file (Java language)
 
-url: https://starlibs.github.io/AILibs/projects/mlplan/#installation
-version: 0.2.7
+- [Download](https://starlibs.github.io/AILibs/projects/mlplan/#installation)
+- _version_: 0.2.7
 
 
