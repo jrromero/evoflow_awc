@@ -23,7 +23,7 @@ To evaluate EvoFlow's effectiveness, we carried out empirical validation using a
 
 ### Datasets and partitions
 
-Collection of datasets used in the experimentation, together with their train/test partitions
+Collection of datasets used in the experimentation, together with their train/test partitions, as well as the description of the class distribution of the 22 datasets. 
 
 ### Evoflow
 
@@ -31,32 +31,32 @@ This folder includes the source code, configurations, grammar, execution scripts
 
 ### Baselines
 
-The following folders and files contain requirements files and raw results obtained with the baseline
+The following folders and files contain requirements files and raw results obtained with the baseline.
 
 #### AutoSklearn
 
-Raw results obtained in AutoSklearn, including the “requirements.txt” file
+Raw results obtained in AutoSklearn, including the “requirements.txt” file.
 
 - [Download](https://github.com/automl/auto-sklearn)
 - _version_: 0.12.0
 
 #### TPOT
 
-Raw results obtained in TPOT, including the “requirements.txt” file
+Raw results obtained in TPOT, including the “requirements.txt” file.
 
 - [Download](https://github.com/EpistasisLab/tpot)
 - _version_: 0.11.6.post3
 
 #### RECIPE
 
-Raw results obtained in RECIPE, including the “requirements.txt” file
+Raw results obtained in RECIPE, including the “requirements.txt” file.
 
 - [Download](https://github.com/laic-ufmg/Recipe)
 - _version_: n/a (version not updated as of July 2023)
 
 #### MLPlan
 
-Raw results obtained in RECIPE, including the “pom.xml” file (Java language)
+Raw results obtained in RECIPE, including the “pom.xml” file (Java language).
 
 - [Download](https://starlibs.github.io/AILibs/projects/mlplan/#installation)
 - _version_: 0.2.7
