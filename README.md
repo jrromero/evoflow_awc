@@ -1,5 +1,5 @@
-# EvoFlow: Grammar-guided evolutionary automated workflow composition with domain-specific operators and ensemble diversity
-_Supplementary material_ (July 26, 2023)
+# Automated workflow composition using G3P with domain-specific operators and ensemble diversity
+_Supplementary material_ (November 29, 2023)
 
 ## Authors
 - Rafael Barbudo (a,b)
@@ -12,7 +12,12 @@ _Supplementary material_ (July 26, 2023)
 
 
 ## Abstract 
-Extracting valuable and novel insights from raw data is a complex process that encompasses various intricate steps. Some of them are repetitive and time-consuming, lending themselves to (partially) automation. AutoML (Automated Machine Learning), a research field focused on methods that (semi-)automate the learning process, includes diverse tasks, such as algorithm selection and hyper-parameter optimisation for a given dataset. However, these methods predominantly concentrate on a single phase, typically model building. In this context, some authors have proposed methods for composing workflows that encompass preprocessing steps, thereby leading to more comprehensive support to the knowledge discovery process. This paper introduces EvoFlow, a grammar-based evolutionary approach for automating workflow composition. By employing a grammar-based approach, our method achieves flexibility, allowing practitioners to adapt EvoFlow to their specific requirements. Furthermore, EvoFlow incorporates two novel characteristics. Firstly, it defines a set of genetic operators explicitly tailored for workflow composition, considering both the optimisation of workflow structure and hyper-parameters. Secondly, it introduces an update mechanism that promotes diversity among individuals and constructs an ensemble of workflows capable of generating diverse predictions, consequently mitigating overfitting. To assess the performance of EvoFlow, we conduct empirical validation using a collection of classification benchmarks. Initially, we compare different variations of EvoFlow to confirm that the proposed enhancements yield improved results. Subsequently, we compare the results obtained with those achieved by other approaches in the literature, including diverse techniques. These comparisons are supported by statistical analyses, revealing that the use of specific genetic operators and the update mechanism significantly outperform the state-of-the-art in terms of predictive performance.
+The process of extracting valuable and novel insights from raw data involves a series of complex steps. In the realm of Automated Machine Learning (AutoML), a significant research focus is on automating aspects of this process, specifically tasks like selecting algorithms and optimising their hyper-parameters. A particularly challenging task in AutoML is automatic workflow composition (AWC). AWC aims to identify the most effective sequence of data preprocessing and machine learning algorithms, coupled with their best hyper-parameters, for a specific dataset. However, existing AWC methods are limited in how many and in what ways they can combine algorithms within a workflow.
+
+Addressing this gap, this paper introduces EvoFlow, a grammar-based evolutionary approach for AWC. EvoFlow enhances the flexibility in designing workflow structures, empowering practitioners to select algorithms that best fit their specific requirements. EvoFlow stands out by integrating two innovative features. First, it employs a suite of genetic operators, designed specifically for AWC, to optimise both the structure of workflows and their hyper-parameters. Second, it implements a novel updating mechanism that enriches the variety of predictions made by different workflows. Promoting this diversity helps prevent the algorithm from overfitting. With this aim, EvoFlow builds an ensemble whose workflows differ in their misclassified instances.
+
+To evaluate EvoFlow's effectiveness, we carried out empirical validation using a set of classification benchmarks. We begin with an ablation study to demonstrate the enhanced performance attributable to EvoFlow’s unique components. Then, we compare EvoFlow with other AWC approaches, encompassing both evolutionary and non-evolutionary techniques. Our findings show that EvoFlow's specialised genetic operators and updating mechanism substantially outperform current leading methods in predictive performance. Additionally, EvoFlow is capable of discovering workflow structures that other approaches in the literature have not considered.
+
 
 ## Supplementary material
 
@@ -56,4 +61,7 @@ Raw results obtained in RECIPE, including the “pom.xml” file (Java language)
 - [Download](https://starlibs.github.io/AILibs/projects/mlplan/#installation)
 - _version_: 0.2.7
 
+### Statistical analysis
+
+This folder includes a complete report with raw results of the conducted statistical analysis, including both the unadjusted and adjusted p-values.
 
