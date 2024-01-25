@@ -1,6 +1,9 @@
 # Automated workflow composition using G3P with domain-specific operators and ensemble diversity
 _Supplementary material_ (November 29, 2023)
 
+## Citation
+R. Barbudo, A. Ramírez, J.R. Romero. "Grammar-based evolutionary approach for automated workflow composition with domain-specific operators and ensemble diversity". Applied Soft Computing, Volume 153, March 2024, 111292. Elsevier. ISSN: 1568-4946. DOI. [10.1016/j.asoc.2024.111292](https://doi.org/10.1016/j.asoc.2024.111292)
+
 ## Authors
 - Rafael Barbudo (a,b)
 - Aurora Ramírez (a,b)
